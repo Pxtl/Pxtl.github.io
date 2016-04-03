@@ -1,0 +1,7 @@
+<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Pxtl.ca</title><link>http://www.pxtl.ca/rss.xml</link><description>Pxtl.ca</description><item><guid isPermaLink="true">http://www.pxtl.ca/2016/04/02/first-post/</guid><link>http://www.pxtl.ca/2016/04/02/first-post/</link><author>pxtl@hotmail.com</author><category>Blog</category><title>First Post</title><description>&lt;p&gt;Hello, World.&lt;/p&gt;
+
+&lt;p&gt;This site is intended to be a place to put news related to my hobby projects.&lt;/p&gt;
+</description><pubDate>Sat, 02 Apr 2016 04:00:00 Z</pubDate><a10:updated>2016-04-02T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;Hello, World.&lt;/p&gt;
+
+&lt;p&gt;This site is intended to be a place to put news related to my hobby projects.&lt;/p&gt;
+</a10:content></item></channel></rss>
