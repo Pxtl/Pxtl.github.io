@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="last-modified" content="2016-04-02T22:05:32.6656890-04:00" />
+    <meta http-equiv="last-modified" content="2016-09-12T23:03:21.3215723-04:00" />
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
@@ -35,6 +35,18 @@
                 <div id="content" role="main">
                   
   <ul class="posts">
+    <li class="fancy-container lightblue">
+      <h1>
+        <a href="/2016/09/12/xmlcommentmarkdowngenerator/">XmlCommentMarkDownGenerator</a> 
+        <span>posted on 12 Sep 2016</span>
+      </h1> 
+      
+      <p>I've released version 0.2 of <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator">XmlCommentMarkDownGenerator</a>.  If you're running a C#-based project on GitHub, it could be useful to you - it takes your Xml comments and converts them into GitHub-flavoured markdown.  This gives you a nice document page right in your repo that you can link to.  I've set it up as a NuGet package, so in your C# project all you have to do is add the NuGet package to your project and it will add a post-build step to your project to automatically run the tool and generate the markdown file.  I was surprised that NuGet makes that a thing - apparently it's called custom .targets.  See <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets">https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets</a> to see how that kind of "custom post-build-step as a nuget package" thing is implemented.</p>
+
+<p>It was forked from <a href="https://gist.github.com/lontivero/593fc51f1208555112e0">https://gist.github.com/lontivero/593fc51f1208555112e0</a>, but I'd like to think I've polished it up a fair bit.  This was really just a side-project while I worked on BigVariant and Nustache, but it's the one with the most stars and downloads so I thought I should give it a little TLC.  Pull requests are always welcome. </p>
+
+      <p><a href="/2016/09/12/xmlcommentmarkdowngenerator/">Read more...</a></p>
+    </li>
     <li class="fancy-container lightblue">
       <h1>
         <a href="/2016/04/02/first-post/">First Post</a> 
@@ -79,6 +91,7 @@
                 <aside id="archives-4" class="widget widget_archive">
                     <h1 class="widget-title">Archive</h1>
                     <ul class="posts">
+                          <li><a href="/archive#20169">September, 2016</a></li>
                           <li><a href="/archive#20164">April, 2016</a></li>
                     </ul>
                 </aside>

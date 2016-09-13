@@ -8,7 +8,7 @@
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
-    <link rel="canonical" href="http://www.pxtl.ca/category/blog/" />
+    <link rel="canonical" href="http://www.pxtl.ca/2016/09/12/xmlcommentmarkdowngenerator/" />
 </head>
 <body class="home blog">
     <div id="page" class="hfeed site">
@@ -35,24 +35,61 @@
                 <div id="content" role="main">
                   
 
-  <header>
-  <div class="head-inner">
-    <h1><a href="/category/">Categories</a> - Blog</h1>
-  </div>
-  </header>
+<div id="post">
+    <h1>XmlCommentMarkDownGenerator</h1>
 
-  <ul class="category-list fancy-container orange">
-      <li>
-        <a href="/2016/09/12/xmlcommentmarkdowngenerator/" title="XmlCommentMarkDownGenerator">XmlCommentMarkDownGenerator</a> 
-        <small>(12 Sep 2016)</small>
-      </li>
-      <li>
-        <a href="/2016/04/02/first-post/" title="First Post">First Post</a> 
-        <small>(02 Apr 2016)</small>
-      </li>
-  </ul>
-  
+    <div class="post-note">
+      posted on 12 Sep 2016
+       | <a href="/category/blog">Blog</a>
+      
+      <div class="addthis_toolbox addthis_default_style" style="float:right;">
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+        <a class="addthis_button_tweet"></a>
+        <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+        <a class="addthis_button_linkedin_counter"></a>
+        <a class="addthis_counter addthis_pill_style"></a>
+      </div>
+    </div>
+    
+    
+        
+    <p>I've released version 0.2 of <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator">XmlCommentMarkDownGenerator</a>.  If you're running a C#-based project on GitHub, it could be useful to you - it takes your Xml comments and converts them into GitHub-flavoured markdown.  This gives you a nice document page right in your repo that you can link to.  I've set it up as a NuGet package, so in your C# project all you have to do is add the NuGet package to your project and it will add a post-build step to your project to automatically run the tool and generate the markdown file.  I was surprised that NuGet makes that a thing - apparently it's called custom .targets.  See <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets">https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets</a> to see how that kind of "custom post-build-step as a nuget package" thing is implemented.</p>
 
+<p>It was forked from <a href="https://gist.github.com/lontivero/593fc51f1208555112e0">https://gist.github.com/lontivero/593fc51f1208555112e0</a>, but I'd like to think I've polished it up a fair bit.  This was really just a side-project while I worked on BigVariant and Nustache, but it's the one with the most stars and downloads so I thought I should give it a little TLC.  Pull requests are always welcome. </p>
+
+
+    <div id="disqus_thread"></div>
+<script>
+    var reset_disqus = function(){
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                //this.page.identifier = '';
+                this.page.url = 'http://www.pxtl.ca/2016/09/12/xmlcommentmarkdowngenerator/';
+                //this.page.title = '';
+            }
+        });
+    };
+
+    var disqus_shortname = 'pxtl';
+    var disqus_url = 'http://www.pxtl.ca/2016/09/12/xmlcommentmarkdowngenerator/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    window.addEventListener('orientationchange', reset_disqus);
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5700677916b13588"></script>
+
+
+</div>
                 </div>
                 <!-- #content -->
             </div>
