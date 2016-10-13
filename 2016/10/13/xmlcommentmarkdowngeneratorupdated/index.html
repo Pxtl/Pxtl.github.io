@@ -8,7 +8,7 @@
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
-    <link rel="canonical" href="http://www.pxtl.ca/about/" />
+    <link rel="canonical" href="http://www.pxtl.ca/2016/10/13/xmlcommentmarkdowngeneratorupdated/" />
 </head>
 <body class="home blog">
     <div id="page" class="hfeed site">
@@ -35,18 +35,64 @@
                 <div id="content" role="main">
                   
 
-  <header>
-  <div class="head-inner">
-    <h1>About me</h1>
-  </div>
-  </header>
+<div id="post">
+    <h1>XmlCommentMarkDownGenerator Updated</h1>
 
-  <div class="fancy-container lightblue">
+    <div class="post-note">
+      posted on 13 Oct 2016
+       | <a href="/category/blog">Blog</a>
+      
+      <div class="addthis_toolbox addthis_default_style" style="float:right;">
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+        <a class="addthis_button_tweet"></a>
+        <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+        <a class="addthis_button_linkedin_counter"></a>
+        <a class="addthis_counter addthis_pill_style"></a>
+      </div>
+    </div>
+    
+    
+        
+    <p>I'm an idiot.  Always commit everything.  Always.  And only push your build artifacts, not straight from the project.</p>
 
-    <p>A code-monkey living in Hamilton, Ontario and working for www.phri.ca</p>
+<p>I omitted the crucial line of the .nuspec that makes the .targets thing work, and so the cool build-generates-your-markdown wasn't actually available for users since version 0.1.5977.1837.<br />
+The latest version 0.2.6130.564 fixes the issue.</p>
 
-  </div>
+<p>A lesson learned, but I wonder how many people I infuriated in the meantime?</p>
 
+
+    <div id="disqus_thread"></div>
+<script>
+    var reset_disqus = function(){
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                //this.page.identifier = '';
+                this.page.url = 'http://www.pxtl.ca/2016/10/13/xmlcommentmarkdowngeneratorupdated/';
+                //this.page.title = '';
+            }
+        });
+    };
+
+    var disqus_shortname = 'pxtl';
+    var disqus_url = 'http://www.pxtl.ca/2016/10/13/xmlcommentmarkdowngeneratorupdated/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    window.addEventListener('orientationchange', reset_disqus);
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5700677916b13588"></script>
+
+
+</div>
                 </div>
                 <!-- #content -->
             </div>
