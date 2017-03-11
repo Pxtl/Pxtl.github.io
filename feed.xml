@@ -1,6 +1,12 @@
-<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2017-02-24T11:24:28-05:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2017/02/22/yorkblvdcentrebikelane/</id><title type="text">York Boulevard Centre-aligned Bike Track</title><summary type="html">&lt;h1&gt;York Boulevard Centre-Aligned Bike lanes&lt;/h1&gt;
-
-&lt;p&gt;The city has told us that the York and Dundurn bike lanes may need to be removed as York and Dundurn must carry westbound automotive traffic that will no longer fit on LRT-equipped King Street.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2017-03-11T15:04:19-05:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2017/03/11/xoutput/</id><title type="text">XOutput v0.2.0</title><summary type="html">&lt;p&gt;&lt;a href="https://github.com/Pxtl/XOutput/releases/tag/v0.2.0"&gt;I've released my first version of my fork of XOutput.&lt;/a&gt;&lt;br /&gt;
+It's a simple wrapper that allows you to rebind a DInput gamepad as an XInput gamepad.&lt;br /&gt;
+Since most games are standardized on XInput (XBox360 controllers), 
+this allows you to make an existing gamepad masquerade as an XBox360 controller. &lt;/p&gt;
+</summary><published>2017-03-11T05:00:00Z</published><updated>2017-03-11T05:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2017/03/11/xoutput/" /><content type="html">&lt;p&gt;&lt;a href="https://github.com/Pxtl/XOutput/releases/tag/v0.2.0"&gt;I've released my first version of my fork of XOutput.&lt;/a&gt;&lt;br /&gt;
+It's a simple wrapper that allows you to rebind a DInput gamepad as an XInput gamepad.&lt;br /&gt;
+Since most games are standardized on XInput (XBox360 controllers), 
+this allows you to make an existing gamepad masquerade as an XBox360 controller. &lt;/p&gt;
+</content></entry><entry><id>http://www.pxtl.ca/2017/02/22/yorkblvdcentrebikelane/</id><title type="text">York Boulevard Centre-aligned Bike Track</title><summary type="html">&lt;p&gt;The city has told us that the York and Dundurn bike lanes may need to be removed as York and Dundurn must carry westbound automotive traffic that will no longer fit on LRT-equipped King Street.&lt;/p&gt;
 
 &lt;p&gt;Since everyone else has thrown a design out there for saving the York bike track, I thought I'd do the same.&lt;/p&gt;
 
@@ -10,9 +16,7 @@
 
 &lt;p&gt;&lt;img src="http://www.pxtl.ca/images/yorkcentrebikelanes_queennoboxes.jpg" alt="picture of straight-through bike-lane at York/Queen/Cannon" /&gt;&lt;/p&gt;
 
-</summary><published>2017-02-22T05:00:00Z</published><updated>2017-02-22T05:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2017/02/22/yorkblvdcentrebikelane/" /><content type="html">&lt;h1&gt;York Boulevard Centre-Aligned Bike lanes&lt;/h1&gt;
-
-&lt;p&gt;The city has told us that the York and Dundurn bike lanes may need to be removed as York and Dundurn must carry westbound automotive traffic that will no longer fit on LRT-equipped King Street.&lt;/p&gt;
+</summary><published>2017-02-22T05:00:00Z</published><updated>2017-02-22T05:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2017/02/22/yorkblvdcentrebikelane/" /><content type="html">&lt;p&gt;The city has told us that the York and Dundurn bike lanes may need to be removed as York and Dundurn must carry westbound automotive traffic that will no longer fit on LRT-equipped King Street.&lt;/p&gt;
 
 &lt;p&gt;Since everyone else has thrown a design out there for saving the York bike track, I thought I'd do the same.&lt;/p&gt;
 
