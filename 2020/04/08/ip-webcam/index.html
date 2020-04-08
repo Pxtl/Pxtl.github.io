@@ -8,7 +8,7 @@
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
-    <link rel="canonical" href="http://www.pxtl.ca/2016/09/12/xmlcommentmarkdowngenerator/" />
+    <link rel="canonical" href="http://www.pxtl.ca/2020/04/08/ip-webcam/" />
 </head>
 <body class="home blog">
     <div id="page" class="hfeed site">
@@ -36,11 +36,11 @@
                   
 
 <div id="post">
-    <h1>XmlCommentMarkDownGenerator</h1>
+    <h1>Using your phone as a Webcam on Windows and Android</h1>
 
     <div class="post-note">
-      posted on 12 Sep 2016
-       | <a href="/category/programming">Programming</a>
+      posted on 08 Apr 2020
+       | <a href="/category/software">Software</a>
       
       <div class="addthis_toolbox addthis_default_style" style="float:right;">
         <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
@@ -53,9 +53,115 @@
     
     
         
-    <p>I've released version 0.2 of <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator">XmlCommentMarkDownGenerator</a>.  If you're running a C#-based project on GitHub, it could be useful to you - it takes your Xml comments and converts them into GitHub-flavoured markdown.  This gives you a nice document page right in your repo that you can link to.  I've set it up as a NuGet package, so in your C# project all you have to do is add the NuGet package to your project and it will add a post-build step to your project to automatically run the tool and generate the markdown file.  I was surprised that NuGet makes that a thing - apparently it's called custom .targets.  See <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets">https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets</a> to see how that kind of "custom post-build-step as a nuget package" thing is implemented.</p>
+    <p>What with covid-19, a lot of people are remoting and not a lot of people have
+webcams. But everybody's got a smartphone. So here's a guide on how to use your
+smartphone as a webcam with Android an Windows over wifi.</p>
 
-<p>It was forked from <a href="https://gist.github.com/lontivero/593fc51f1208555112e0">https://gist.github.com/lontivero/593fc51f1208555112e0</a>, but I'd like to think I've polished it up a fair bit.  This was really just a side-project while I worked on BigVariant and Nustache, but it's the one with the most stars and downloads so I thought I should give it a little TLC.  Pull requests are always welcome. </p>
+<p>This is pretty adminny. If you're not comfy with that you might need to look at
+other approaches.</p>
+
+<p><strong>Note that none of the software I'm recommending in this guide is open-source.
+I cannot guarantee that the software discussed below has no malicious secret
+intent.</strong></p>
+
+<h2>Setting up your phone as a server</h2>
+
+<p>First, you need to get your Android phone onto a static IP. So go to Settings ->
+About -> Status to find your Wi-fi MAC address, and in your router's DHCP/LAN
+settings, you need to bind that address to a fixed IP. Also take note of <em>which</em>
+wifi network your phone lives on, if you have more than one in your home or
+workplace.</p>
+
+<p>Next, you need to install <a href="https://play.google.com/store/apps/details?id=com.pas.webcam&amp;hl=en_CA">IP
+Webcam</a>
+on your android phone. This turns your phone into a video server - which is why
+it needs a static IP. Run IP Webcam.</p>
+
+<h3>Recommended settings:</h3>
+
+<ul>
+<li>IP WEBCAM SETTINGS -> Video Preferences
+<ul>
+<li>Set the "main" camera to the front-facing camera. I know the rear-camera is
+better but this is just easier to set up.</li>
+<li>Set the "Video Resolution" to 640x480 or lower. I found performance problems
+at higher resolution.</li>
+</ul></li>
+<li>CONNECTION SETTINGS -> Local Broadcasting
+<ul>
+<li>Set a Login and Password.</li>
+<li>I'm assuming your network is secure so we're not going to fuss with SSL, I
+couldn't make SSL work.</li>
+<li>Just to be safe, don't get naked in front of your phone while it's running
+the server</li>
+</ul></li>
+</ul>
+
+<h3>Notes on "run in background":</h3>
+
+<p>IP WebCam has the option to run in background, but I found the notification icon
+that indicates this is happening easy-to-miss and so it would be very easy to
+accidentally leave it broadcasting your life. It does save power because you can
+shut down the video view and do other things while it's streaming, but I
+recommend not using it. If power is a problem, get a power-cable for your
+computer desk.</p>
+
+<h3>Starting it up</h3>
+
+<p>Now that your settings are confirmed, click "start server". It will show the
+live video from your phoen that it is broadcasting, along with the address if
+the webserver your phone is running - eg http://192.168.1.X:8080. Note that this
+is <em>not</em> the address of the raw stream, but of a website you can use to
+configure your device. Feel free to hit that address with your browser to try
+it.</p>
+
+<p>The actual video feed lives at http://192.168.1.X:8080/video. Note the /video
+directory. It's over HTTP, so again you can hit it with your browser. You'll be
+prompted for username and password.</p>
+
+<p>Leave the server running while we set up the client.</p>
+
+<h2>Setting up your Windows PC as a client</h2>
+
+<p>First, confirm that your Windows PC is on the same WiFi network as your phone.</p>
+
+<p>Now we install the client software. We're using <a href="https://ip-webcam.appspot.com/">IP Camera
+Adapter</a> which will allow you to connect your
+Windows PC to the HTTP videostream and use it as a webcam.</p>
+
+<p>Install the software. When completed, open the app "Configure IP Camera Adapter"
+that is now present in your start menu.</p>
+
+<p>Then:</p>
+
+<ol>
+<li>Type in the camera feed URL - remember this is the one that ends in "/video".
+So in total it should be something like http://192.168.1.X:8080/video . 2)
+Key in your username and password.</li>
+<li>Click "Autodetect" - this will test our connection to your phone and read in
+its resolution. It should match whatever you set back in the server setup
+step.</li>
+<li>OK.</li>
+</ol>
+
+<p>Now use your video-chat program of choice's "video test" tool to confirm it
+works.</p>
+
+<p>Did it work? Yay!</p>
+
+<p>No? You're on your own, bud.</p>
+
+<h2>Workflow</h2>
+
+<p>I find it best to keep my video stream <em>off</em> and just keep the button to turn my
+phone into a camera on my phone's home-screen. You will see a wierd backwards
+text in your video-feed if your computer cannot reach the phone. So when a
+videochat starts, I open the app, scroll to the bottom and click "start", and
+then put my phone in place to work as a camera.</p>
+
+<p>Remember that the camera mode does run down the battery, so it may be handy to
+have a charge-cable near whatever cradle-like setup you've rigged for your phone
+at your desk.</p>
 
 
     <div id="disqus_thread"></div>
@@ -65,14 +171,14 @@
             reload: true,
             config: function () {
                 //this.page.identifier = '';
-                this.page.url = 'http://www.pxtl.ca/2016/09/12/xmlcommentmarkdowngenerator/';
+                this.page.url = 'http://www.pxtl.ca/2020/04/08/ip-webcam/';
                 //this.page.title = '';
             }
         });
     };
 
     var disqus_shortname = 'pxtl';
-    var disqus_url = 'http://www.pxtl.ca/2016/09/12/xmlcommentmarkdowngenerator/';
+    var disqus_url = 'http://www.pxtl.ca/2020/04/08/ip-webcam/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
