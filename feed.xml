@@ -1,4 +1,4 @@
-<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-04-08T14:38:54-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/04/08/ip-webcam/</id><title type="text">Using your phone as a Webcam on Windows and Android</title><summary type="html">&lt;p&gt;What with covid-19, a lot of people are remoting and not a lot of people have
+<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-04-08T14:44:58-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/04/08/ip-webcam/</id><title type="text">Using your phone as a Webcam on Windows and Android</title><summary type="html">&lt;p&gt;What with covid-19, a lot of people are remoting and not a lot of people have
 webcams. But everybody's got a smartphone. So here's a guide on how to use your
 smartphone as a webcam with Android an Windows over wifi.&lt;/p&gt;
 
@@ -9,104 +9,6 @@ other approaches.&lt;/p&gt;
 I cannot guarantee that the software discussed below has no malicious secret
 intent.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h2&gt;Setting up your phone as a server&lt;/h2&gt;
-
-&lt;p&gt;First, you need to get your Android phone onto a static IP. So go to Settings -&gt;
-About -&gt; Status to find your Wi-fi MAC address, and in your router's DHCP/LAN
-settings, you need to bind that address to a fixed IP. Also take note of &lt;em&gt;which&lt;/em&gt;
-wifi network your phone lives on, if you have more than one in your home or
-workplace.&lt;/p&gt;
-
-&lt;p&gt;Next, you need to install &lt;a href="https://play.google.com/store/apps/details?id=com.pas.webcam&amp;amp;hl=en_CA"&gt;IP
-Webcam&lt;/a&gt;
-on your android phone. This turns your phone into a video server - which is why
-it needs a static IP. Run IP Webcam.&lt;/p&gt;
-
-&lt;h3&gt;Recommended settings:&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;IP WEBCAM SETTINGS -&gt; Video Preferences
-&lt;ul&gt;
-&lt;li&gt;Set the "main" camera to the front-facing camera. I know the rear-camera is
-better but this is just easier to set up.&lt;/li&gt;
-&lt;li&gt;Set the "Video Resolution" to 640x480 or lower. I found performance problems
-at higher resolution.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;CONNECTION SETTINGS -&gt; Local Broadcasting
-&lt;ul&gt;
-&lt;li&gt;Set a Login and Password.&lt;/li&gt;
-&lt;li&gt;I'm assuming your network is secure so we're not going to fuss with SSL, I
-couldn't make SSL work.&lt;/li&gt;
-&lt;li&gt;Just to be safe, don't get naked in front of your phone while it's running
-the server&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3&gt;Notes on "run in background":&lt;/h3&gt;
-
-&lt;p&gt;IP WebCam has the option to run in background, but I found the notification icon
-that indicates this is happening easy-to-miss and so it would be very easy to
-accidentally leave it broadcasting your life. It does save power because you can
-shut down the video view and do other things while it's streaming, but I
-recommend not using it. If power is a problem, get a power-cable for your
-computer desk.&lt;/p&gt;
-
-&lt;h3&gt;Starting it up&lt;/h3&gt;
-
-&lt;p&gt;Now that your settings are confirmed, click "start server". It will show the
-live video from your phoen that it is broadcasting, along with the address if
-the webserver your phone is running - eg http://192.168.1.X:8080. Note that this
-is &lt;em&gt;not&lt;/em&gt; the address of the raw stream, but of a website you can use to
-configure your device. Feel free to hit that address with your browser to try
-it.&lt;/p&gt;
-
-&lt;p&gt;The actual video feed lives at http://192.168.1.X:8080/video. Note the /video
-directory. It's over HTTP, so again you can hit it with your browser. You'll be
-prompted for username and password.&lt;/p&gt;
-
-&lt;p&gt;Leave the server running while we set up the client.&lt;/p&gt;
-
-&lt;h2&gt;Setting up your Windows PC as a client&lt;/h2&gt;
-
-&lt;p&gt;First, confirm that your Windows PC is on the same WiFi network as your phone.&lt;/p&gt;
-
-&lt;p&gt;Now we install the client software. We're using &lt;a href="https://ip-webcam.appspot.com/"&gt;IP Camera
-Adapter&lt;/a&gt; which will allow you to connect your
-Windows PC to the HTTP videostream and use it as a webcam.&lt;/p&gt;
-
-&lt;p&gt;Install the software. When completed, open the app "Configure IP Camera Adapter"
-that is now present in your start menu.&lt;/p&gt;
-
-&lt;p&gt;Then:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Type in the camera feed URL - remember this is the one that ends in "/video".
-So in total it should be something like http://192.168.1.X:8080/video . 2)
-Key in your username and password.&lt;/li&gt;
-&lt;li&gt;Click "Autodetect" - this will test our connection to your phone and read in
-its resolution. It should match whatever you set back in the server setup
-step.&lt;/li&gt;
-&lt;li&gt;OK.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Now use your video-chat program of choice's "video test" tool to confirm it
-works.&lt;/p&gt;
-
-&lt;p&gt;Did it work? Yay!&lt;/p&gt;
-
-&lt;p&gt;No? You're on your own, bud.&lt;/p&gt;
-
-&lt;h2&gt;Workflow&lt;/h2&gt;
-
-&lt;p&gt;I find it best to keep my video stream &lt;em&gt;off&lt;/em&gt; and just keep the button to turn my
-phone into a camera on my phone's home-screen. You will see a wierd backwards
-text in your video-feed if your computer cannot reach the phone. So when a
-videochat starts, I open the app, scroll to the bottom and click "start", and
-then put my phone in place to work as a camera.&lt;/p&gt;
-
-&lt;p&gt;Remember that the camera mode does run down the battery, so it may be handy to
-have a charge-cable near whatever cradle-like setup you've rigged for your phone
-at your desk.&lt;/p&gt;
 </summary><published>2020-04-08T04:00:00Z</published><updated>2020-04-08T04:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2020/04/08/ip-webcam/" /><content type="html">&lt;p&gt;What with covid-19, a lot of people are remoting and not a lot of people have
 webcams. But everybody's got a smartphone. So here's a guide on how to use your
 smartphone as a webcam with Android an Windows over wifi.&lt;/p&gt;
@@ -117,6 +19,8 @@ other approaches.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note that none of the software I'm recommending in this guide is open-source.
 I cannot guarantee that the software discussed below has no malicious secret
 intent.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
 
 &lt;h2&gt;Setting up your phone as a server&lt;/h2&gt;
 
