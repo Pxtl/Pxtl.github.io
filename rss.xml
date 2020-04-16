@@ -22,6 +22,10 @@ intent.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;!--excerpt--&gt;
 
+&lt;p&gt;Before I get into the details: if you don't like my guide there is also &lt;a href="http://ip-webcam.appspot.com/static/doc.html"&gt;the
+official guide&lt;/a&gt; from the developer
+of the tools I'm describing.&lt;/p&gt;
+
 &lt;h2&gt;Setting up your phone as a server&lt;/h2&gt;
 
 &lt;p&gt;First, you need to get your Android phone onto a static IP. So go to Settings -&gt;
@@ -93,13 +97,13 @@ that is now present in your start menu.&lt;/p&gt;
 &lt;p&gt;Then:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Type in the camera feed URL - remember this is the one that ends in "/video".
-So in total it should be something like http://192.168.1.X:8080/video . 2)
-Key in your username and password.&lt;/li&gt;
-&lt;li&gt;Click "Autodetect" - this will test our connection to your phone and read in
+&lt;li&gt;&lt;p&gt;Type in the camera feed URL - remember this is the one that ends in "/video".
+So in total it should be something like http://192.168.1.X:8080/video . &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Key in your username and password.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Click "Autodetect" - this will test our connection to your phone and read in
 its resolution. It should match whatever you set back in the server setup
-step.&lt;/li&gt;
-&lt;li&gt;OK.&lt;/li&gt;
+step.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;OK.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Now use your video-chat program of choice's "video test" tool to confirm it
