@@ -5,7 +5,7 @@ for a birthday.  We'll call it an "after-action report".&lt;/p&gt;
 &lt;p&gt;Basically, we had to handle the challenge of "how do you run a 10th birthday
 party with kids under social distancing"?  My answer was cupcakes, Zoom, a
 Raspberry Pi 4, and the open-source clone of Minecraft called
-&lt;a href="https://minetest.net"&gt;Minetest&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://www.minetest.net"&gt;Minetest&lt;/a&gt;.&lt;/p&gt;
 
 </description><pubDate>Tue, 05 May 2020 04:00:00 Z</pubDate><a10:updated>2020-05-05T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;Okay, this is part one of a multi-part... well, I guess we can't use the term
 "postmortem" that's popular in software development, since it's kind of morbid
@@ -14,7 +14,7 @@ for a birthday.  We'll call it an "after-action report".&lt;/p&gt;
 &lt;p&gt;Basically, we had to handle the challenge of "how do you run a 10th birthday
 party with kids under social distancing"?  My answer was cupcakes, Zoom, a
 Raspberry Pi 4, and the open-source clone of Minecraft called
-&lt;a href="https://minetest.net"&gt;Minetest&lt;/a&gt;.&lt;/p&gt;
+&lt;a href="https://www.minetest.net"&gt;Minetest&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!--excerpt--&gt;
 
@@ -125,7 +125,7 @@ but the other one I made for my brother is overclocked).&lt;/p&gt;
 
 &lt;h2&gt;Setting Up Minetest&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href="https://minetest.net"&gt;Minetest&lt;/a&gt; is a free, open-source copy of Minecraft made
+&lt;p&gt;&lt;a href="https://www.minetest.net"&gt;Minetest&lt;/a&gt; is a free, open-source copy of Minecraft made
 by hobbyists.  For fans of Minecraft: yeah, it's a pale shadow of the original.
 The problem is that Minecraft has a proliferation of versions.  Tablet versions,
 two different PC versions, and two different incompatible server versions for
