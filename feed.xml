@@ -1,4 +1,4 @@
-<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-05-06T01:45:44-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/05/05/minetest-birthday/</id><title type="text">Minetest Birthday</title><summary type="html">&lt;p&gt;Okay, this is part one of a multi-part... well, I guess we can't use the term
+<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-05-06T01:47:18-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/05/05/minetest-birthday/</id><title type="text">Minetest Birthday</title><summary type="html">&lt;p&gt;Okay, this is part one of a multi-part... well, I guess we can't use the term
 "postmortem" that's popular in software development, since it's kind of morbid
 for a birthday.  We'll call it an "after-action report".&lt;/p&gt;
 
@@ -169,7 +169,7 @@ knows who they are because it shows the wrong name.&lt;/p&gt;
 
 &lt;h2&gt;Setting Up Mumble&lt;/h2&gt;
 
-&lt;p&gt;Another server running on my little Pi4 is Mumble.  Mumble is a wonderful
+&lt;p&gt;Another server running on my little Pi4 is &lt;a href="https://www.mumble.info/"&gt;Mumble&lt;/a&gt;.  Mumble is a wonderful
 open-source voicechat system designed for gaming.  It's fast, low-resource,
 low-latency and has a wonderful configuration wizard where it talks you through
 getting your computer's microphone configured just right to make sure all your
