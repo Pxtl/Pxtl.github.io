@@ -1,4 +1,4 @@
-<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-05-06T01:47:18-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/05/05/minetest-birthday/</id><title type="text">Minetest Birthday</title><summary type="html">&lt;p&gt;Okay, this is part one of a multi-part... well, I guess we can't use the term
+<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-05-06T01:51:46-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/05/05/minetest-birthday/</id><title type="text">Minetest Birthday</title><summary type="html">&lt;p&gt;Okay, this is part one of a multi-part... well, I guess we can't use the term
 "postmortem" that's popular in software development, since it's kind of morbid
 for a birthday.  We'll call it an "after-action report".&lt;/p&gt;
 
@@ -210,14 +210,14 @@ don't blame them one bit.  But a good crowd of kids joined the game.&lt;/p&gt;
 get the kids all into the same area to introduce them and give them the lay of
 the land:&lt;/p&gt;
 
-&lt;p&gt;1) Explain how to play and the differences between Minetest and Minecraft.
-   Everybody had it down inside of 10 minutes.&lt;/p&gt;
-
-&lt;p&gt;2) The world is backed up and we're reverting it after the party so anything you
-   make is going bye-bye.  This was mostly to prevent any tantrums if my
-   daughters meticulously-constructed villages got obliterated.&lt;/p&gt;
-
-&lt;p&gt;3) How to pick skins.  This was, of course, their first question.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Explain how to play and the differences between Minetest and Minecraft.
+Everybody had it down inside of 10 minutes.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The world is backed up and we're reverting it after the party so anything you
+make is going bye-bye.  This was mostly to prevent any tantrums if my
+daughters meticulously-constructed villages got obliterated.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How to pick skins.  This was, of course, their first question.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;p&gt;Also, apparently you can't teleport somebody out of a minecart in minetest.
 This was a problem when people would not know how to dismount (look down and
