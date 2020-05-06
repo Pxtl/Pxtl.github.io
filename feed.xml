@@ -1,4 +1,4 @@
-<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-05-06T02:00:11-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/05/05/minetest-birthday/</id><title type="text">Minetest Birthday</title><summary type="html">&lt;p&gt;Okay, this is part one of a multi-part... well, I guess we can't use the term
+<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-05-06T02:02:15-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/05/05/minetest-birthday/</id><title type="text">Minetest Birthday</title><summary type="html">&lt;p&gt;Okay, this is part one of a multi-part... well, I guess we can't use the term
 "postmortem" that's popular in software development, since it's kind of morbid
 for a birthday.  We'll call it an "after-action report".&lt;/p&gt;
 
@@ -162,7 +162,7 @@ way: you just connect to my Minetest world and you'll automatically download
 Mineclone 2.  Along with the 90 or so skins I've installed into it for the kids
 to choose from.  And any other mods the server is running.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2020-05-05-Minetest-birthday/birthday-banner.jpg" alt="Minetest Group Screenshot" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2020-05-05-Minetest-birthday/birthday-banner.jpg" alt="Birthday Banner" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Mineclone 2/Minetest also has an in-game skin-picker and lets you choose your
 name.  This seems like a small thing but I've seen too many games of Minecraft
