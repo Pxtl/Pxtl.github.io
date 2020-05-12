@@ -8,7 +8,7 @@
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
-    <link rel="canonical" href="http://www.pxtl.ca/" />
+    <link rel="canonical" href="http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/" />
 </head>
 <body class="home blog">
     <div id="page" class="hfeed site">
@@ -34,14 +34,18 @@
             <div id="primary" class="site-content">
                 <div id="content" role="main">
                   
-  <ul class="posts">
-    <li class="fancy-container lightblue">
-      <h1>
-        <a href="/2020/05/12/minetest-pi4-recipe/">Minetest Pi4 Recipe</a> 
-        <span>posted on 12 May 2020</span>
-      </h1> 
-      
-      <p>Continuing from my previous article on my daughter's Minetest birthday party,
+
+<div id="post">
+    <h1>Minetest Pi4 Recipe</h1>
+
+    <div class="post-note">
+      posted on 12 May 2020
+       | <a href="/category/software">Software</a>
+    </div>
+    
+    
+        
+    <p>Continuing from my previous article on my daughter's Minetest birthday party,
 here's how I built my Raspberry Pi 4 minetest server that powered the party.  To
 be clear: this is only my second time this century setting up a linux-based
 server from scratch, so I'm pretty novice at this.  I'm handy with a terminal
@@ -482,133 +486,37 @@ friends can play vanilla Minetest game on your pi4 server now.</p>
 
 <p>Next time, more stuff.</p>
 
-      <p><a href="/2020/05/12/minetest-pi4-recipe/">Read more...</a></p>
-    </li>
-    <li class="fancy-container lightblue">
-      <h1>
-        <a href="/2020/05/05/minetest-birthday/">Minetest Birthday</a> 
-        <span>posted on 05 May 2020</span>
-      </h1> 
-      
-      <p>Okay, this is part one of a multi-part... well, I guess we can't use the term
-"postmortem" that's popular in software development, since it's kind of morbid
-for a birthday.  We'll call it an "after-action report".</p>
 
-<p>Basically, we had to handle the challenge of "how do you run a 10th birthday
-party with kids under social distancing"?  My answer was cupcakes, Zoom, a
-Raspberry Pi 4, and the open-source clone of Minecraft called
-<a href="https://www.minetest.net">Minetest</a>.</p>
+    <div id="disqus_thread"></div>
+<script>
+    var reset_disqus = function(){
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                //this.page.identifier = '';
+                this.page.url = 'http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/';
+                //this.page.title = '';
+            }
+        });
+    };
 
+    var disqus_shortname = 'pxtl';
+    var disqus_url = 'http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/';
 
-      <p><a href="/2020/05/05/minetest-birthday/">Read more...</a></p>
-    </li>
-    <li class="fancy-container lightblue">
-      <h1>
-        <a href="/2020/04/08/ip-webcam/">Using your phone as a Webcam on Windows and Android</a> 
-        <span>posted on 08 Apr 2020</span>
-      </h1> 
-      
-      <p>What with covid-19, a lot of people are remoting and not a lot of people have
-webcams. But everybody's got a smartphone. So here's a guide on how to use your
-smartphone as a webcam with Android an Windows over wifi.</p>
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
 
-<p>This is pretty adminny. If you're not comfy with that you might need to look at
-other approaches.</p>
-
-<p>One important wrinkle is performance: It runs down the battery on my phone, and
-it slams the CPU on my desktop with interrupts.</p>
-
-<p><strong>Note that none of the software I'm recommending in this guide is open-source.
-I cannot guarantee that the software discussed below has no malicious secret
-intent.</strong></p>
-
-
-      <p><a href="/2020/04/08/ip-webcam/">Read more...</a></p>
-    </li>
-    <li class="fancy-container lightblue">
-      <h1>
-        <a href="/2017/03/11/xoutput/">XOutput v0.2.0</a> 
-        <span>posted on 11 Mar 2017</span>
-      </h1> 
-      
-      <p><a href="https://github.com/Pxtl/XOutput/releases/tag/v0.2.0">I've released my first version of my fork of XOutput.</a><br />
-It's a simple wrapper that allows you to rebind a DInput gamepad as an XInput gamepad.<br />
-Since most games are standardized on XInput (XBox360 controllers), 
-this allows you to make an existing gamepad masquerade as an XBox360 controller. </p>
-
-      <p><a href="/2017/03/11/xoutput/">Read more...</a></p>
-    </li>
-    <li class="fancy-container lightblue">
-      <h1>
-        <a href="/2017/02/22/yorkblvdcentrebikelane/">York Boulevard Centre-aligned Bike Track</a> 
-        <span>posted on 22 Feb 2017</span>
-      </h1> 
-      
-      <p>The city has told us that the York and Dundurn bike lanes may need to be removed as York and Dundurn must carry westbound automotive traffic that will no longer fit on LRT-equipped King Street.</p>
-
-<p>Since everyone else has thrown a design out there for saving the York bike track, I thought I'd do the same.</p>
-
-<p>There are a handful of cities that have implemented centre-aligned bike lanes.  There are some advantages to this flow: Drivers expect to see oncoming traffic on the left.  In one-way traffic like Cannon, this means putting the cycle track on the left side (south for Cannon).  In a two-way street, this means using the centre - it's on the left for both directions of traffic.  This allows us to unify the two bike lanes into a  single protected bidirectional cycle track without having oncoming traffic on the right.</p>
-
-<p>Also, a feature very particular to York and Cannon; Cannon merges with York Boulevard at Queen to form a single road.  The Cannon lanes, if continued, would end in the centre of this road.  So let's see what that looks like: The Cannon lanes continue right to Queen, and only have to deal with left-turning traffic turning across the bike lane.  </p>
-
-<p><img src="/images/yorkcentrebikelanes_queennoboxes.jpg" alt="picture of straight-through bike-lane at York/Queen/Cannon" /></p>
-
-
-      <p><a href="/2017/02/22/yorkblvdcentrebikelane/">Read more...</a></p>
-    </li>
-    <li class="fancy-container lightblue">
-      <h1>
-        <a href="/2016/10/13/xmlcommentmarkdowngeneratorupdated/">XmlCommentMarkDownGenerator Updated</a> 
-        <span>posted on 13 Oct 2016</span>
-      </h1> 
-      
-      <p>I'm an idiot.  Always commit everything.  Always.  And only push your build artifacts, not straight from the project.</p>
-
-<p>I omitted the crucial line of the .nuspec that makes the .targets thing work, and so the cool build-generates-your-markdown wasn't actually available for users since version 0.1.5977.1837.<br />
-The latest version 0.2.6130.564 fixes the issue.</p>
-
-<p>A lesson learned, but I wonder how many people I infuriated in the meantime?</p>
-
-      <p><a href="/2016/10/13/xmlcommentmarkdowngeneratorupdated/">Read more...</a></p>
-    </li>
-    <li class="fancy-container lightblue">
-      <h1>
-        <a href="/2016/09/12/xmlcommentmarkdowngenerator/">XmlCommentMarkDownGenerator</a> 
-        <span>posted on 12 Sep 2016</span>
-      </h1> 
-      
-      <p>I've released version 0.2 of <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator">XmlCommentMarkDownGenerator</a>.  If you're running a C#-based project on GitHub, it could be useful to you - it takes your Xml comments and converts them into GitHub-flavoured markdown.  This gives you a nice document page right in your repo that you can link to.  I've set it up as a NuGet package, so in your C# project all you have to do is add the NuGet package to your project and it will add a post-build step to your project to automatically run the tool and generate the markdown file.  I was surprised that NuGet makes that a thing - apparently it's called custom .targets.  See <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets">https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets</a> to see how that kind of "custom post-build-step as a nuget package" thing is implemented.</p>
-
-<p>It was forked from <a href="https://gist.github.com/lontivero/593fc51f1208555112e0">https://gist.github.com/lontivero/593fc51f1208555112e0</a>, but I'd like to think I've polished it up a fair bit.  This was really just a side-project while I worked on BigVariant and Nustache, but it's the one with the most stars and downloads so I thought I should give it a little TLC.  Pull requests are always welcome. </p>
-
-      <p><a href="/2016/09/12/xmlcommentmarkdowngenerator/">Read more...</a></p>
-    </li>
-    <li class="fancy-container lightblue">
-      <h1>
-        <a href="/2016/04/02/first-post/">First Post</a> 
-        <span>posted on 02 Apr 2016</span>
-      </h1> 
-      
-      <p>Hello, World.</p>
-
-<p>This site is intended to be a place to put news related to my hobby projects.</p>
-
-      <p><a href="/2016/04/02/first-post/">Read more...</a></p>
-    </li>
-  </ul> 
-
-  <!-- Pagination links -->
-  <div id="post-pagination" class="pagination">
-
-   
-
-      <!--<a href="/">Previous Page</a>-->
-
-
-  </div>
-
-
+    window.addEventListener('orientationchange', reset_disqus);
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5700677916b13588"></script> 
+</div>
                 </div>
                 <!-- #content -->
             </div>
