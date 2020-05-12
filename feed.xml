@@ -1,4 +1,4 @@
-<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-05-12T01:43:06-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/</id><title type="text">Minetest Pi4 Recipe</title><summary type="html">&lt;p&gt;Continuing from my previous article on my daughter's Minetest birthday party,
+<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-05-12T01:49:32-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/</id><title type="text">Minetest Pi4 Recipe</title><summary type="html">&lt;p&gt;Continuing from my previous article on my daughter's Minetest birthday party,
 here's how I built my Raspberry Pi 4 minetest server that powered the party.  To
 be clear: this is only my second time this century setting up a linux-based
 server from scratch, so I'm pretty novice at this.  I'm handy with a terminal
@@ -86,9 +86,8 @@ raspi.  &lt;/p&gt;
 
 &lt;p&gt;Open a terminal and run the command.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-ifconfig
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ifconfig
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;will list your IP addresses and MAC addresses.  The you want &lt;code&gt;eth0&lt;/code&gt; for wired,
 and &lt;code&gt;wlan0&lt;/code&gt; for wireless.  The ipv4 address we're focusing on will be labeled
@@ -108,9 +107,8 @@ to static bind.&lt;/p&gt;
 
 &lt;p&gt;Again, in the terminal type&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-sudo raspi-config
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo raspi-config
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This will launch a simple UI for editing settings.  Use in "interface options"
 enable SSH and VNC.  VNC will let you remote in for a GUI and SSH will let you
@@ -179,11 +177,10 @@ Buster version of Raspbian/Debian.&lt;/p&gt;
 
 &lt;p&gt;In our terminal, we run the following:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E0B11894F66AEC98
+&lt;pre&gt;&lt;code&gt;sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E0B11894F66AEC98
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7638D0442B90D010
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553
-&lt;/code&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;I'm going to be honest, I don't know what it actually does in detail, and
 generally copying pasting sudo commands into your machine is a bad idea,
@@ -198,9 +195,8 @@ That'll be handy for copying commands from here to paste in there.&lt;/p&gt;
 installation sources.  This mammoth command adds the configuration to connect to
 "buster-backports" into our sources list for installing software.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-echo 'deb http://httpredir.debian.org/debian buster-backports main contrib non-free' | sudo tee -a /etc/apt/sources.list.d/debian-backports.list
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;echo 'deb http://httpredir.debian.org/debian buster-backports main contrib non-free' | sudo tee -a /etc/apt/sources.list.d/debian-backports.list
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This script I can explain.  Skip this if you're experienced in the ways of
 Linux.  &lt;code&gt;echo 'deb http://yadda&lt;/code&gt; just means "output the quoted text" the &lt;code&gt;|&lt;/code&gt;
@@ -215,9 +211,8 @@ now install software from there.&lt;/p&gt;
 &lt;p&gt;Now, we have to let the "apt" installation system know that there's the new
 source available to it, so we'll do&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-sudo apt-get update
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;and finally we're ready to start installing software.&lt;/p&gt;
 
@@ -255,9 +250,8 @@ server, but for now you should meet them.&lt;/p&gt;
 of a file or folder to our service-user, who is named &lt;code&gt;Debian-minetest&lt;/code&gt; of group
 &lt;code&gt;games&lt;/code&gt;.  So to assign a file to &lt;code&gt;Debian-minetest&lt;/code&gt;, we do&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-sudo chown Debian-minetest:games &amp;lt;filename&amp;gt;
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo chown Debian-minetest:games &amp;lt;filename&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Optionally with a &lt;code&gt;--recursive&lt;/code&gt; flag if you want to do it to every file in a
 directory-tree.&lt;/p&gt;
@@ -269,9 +263,8 @@ is "change mode" but is really about modifying file permissions.&lt;/p&gt;
 &lt;code&gt;chmod&lt;/code&gt;, we use &lt;code&gt;+&lt;/code&gt; parameters - this is something I have not gotten used to
 since it is &lt;em&gt;not&lt;/em&gt; a thing in windows/powershell scripting.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-sudo chmod +rwx &amp;lt;filename&amp;gt;
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo chmod +rwx &amp;lt;filename&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This grants the owner &lt;strong&gt;r&lt;/strong&gt;ead, &lt;strong&gt;w&lt;/strong&gt;rite, and e&lt;strong&gt;x&lt;/strong&gt;ecute permissions to a
 file.&lt;/p&gt;
@@ -294,29 +287,22 @@ sideways, you now have enough to unmangle a file permission or two.&lt;/p&gt;
 &lt;p&gt;So, install minetest-server from the buster-backports source we just finished
 hooking into.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-sudo apt-get -t buster-backports install minetest-server
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get -t buster-backports install minetest-server
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Then create and setup our config file.  That's where a lot of the meat will be
 happening - we've got the game installed, but our server is private and
 unsecured and all that.  We want something we can &lt;em&gt;control&lt;/em&gt;.  My daughter and
 her friends are playing in there.&lt;/p&gt;
 
-&lt;p&gt;```&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#unzip the starting config - I'm pretty sure this step is unnecessary 
+#and might ruin privileges on minetest.conf .
+#Only do this if /etc/minetest/minetest.conf wasn't created automatically
+sudo zcat /usr/share/doc/minetest/minetest.conf.example.gz &amp;gt; /etc/minetest/minetest.conf
 
-&lt;h1&gt;unzip the starting config - I'm pretty sure this step is unnecessary and might ruin&lt;/h1&gt;
-
-&lt;h1&gt;privileges on minetest.conf - only do this if /etc/minetest/minetest.conf wasn't created&lt;/h1&gt;
-
-&lt;h1&gt;automatically&lt;/h1&gt;
-
-&lt;p&gt;sudo zcat /usr/share/doc/minetest/minetest.conf.example.gz &gt; /etc/minetest/minetest.conf&lt;/p&gt;
-
-&lt;h1&gt;open the config up in the editor to get to work&lt;/h1&gt;
-
-&lt;p&gt;sudo nano /etc/minetest/minetest.conf
-```&lt;/p&gt;
+#open the config up in the editor to get to work
+sudo nano /etc/minetest/minetest.conf
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The file &lt;code&gt;/etc/minetest/minetest.conf&lt;/code&gt; contains a pretty-well-annotated config
 of everything about our minetest server.  The only big gotcha is that you &lt;em&gt;must&lt;/em&gt;
@@ -347,12 +333,9 @@ like &lt;code&gt;ctrl&lt;/code&gt;+&lt;code&gt;w&lt;/code&gt; to search, &lt;cod
 
 &lt;p&gt;Finally, our first chmod command:&lt;/p&gt;
 
-&lt;p&gt;```&lt;/p&gt;
-
-&lt;h1&gt;enable writing of the log file for all users so we can see what’s going on&lt;/h1&gt;
-
-&lt;p&gt;sudo chmod a+rw /var/log/minetest/minetest.log
-```&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#enable writing of the log file for all users so we can see what’s going on
+sudo chmod a+rw /var/log/minetest/minetest.log
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;We need Minetest to be allowed to write to the minetest log file.  The "a" in
 that chmod means "all users", we're going to keep this simple.  I know you have
@@ -369,9 +352,8 @@ fingers and start it up.&lt;/p&gt;
 &lt;p&gt;First, meet &lt;code&gt;systemctl&lt;/code&gt;.  That's systemd's tool for you to manage services that
 it runs for you.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-sudo systemctl start minetest-server
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo systemctl start minetest-server
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;This means we let it rip.  For future reference, there's also &lt;code&gt;systemctl stop&lt;/code&gt;
 and &lt;code&gt;systemctl restart&lt;/code&gt; that do what they sound like.&lt;/p&gt;
@@ -404,9 +386,8 @@ friends.&lt;/p&gt;
 &lt;p&gt;We're going to do a bit more tweaking of the minetest.conf, so let's stop the
 server for a minute with &lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-sudo systemctl stop minetest-server
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo systemctl stop minetest-server
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;... you're getting the hang of this right?  Remember, use ctrl-R to find old
 commands in the history so you're not typing that mouthful over and over again.
@@ -430,9 +411,8 @@ get all incoming UDP traffic coming to 30000 forwarded to that
 
 &lt;p&gt;Now, let's start it back up.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;
-sudo systemctl start minetest-server
-&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo systemctl start minetest-server
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The system will take a minute to start up - you can tail the log to check on its
 progress.  Give it a minute or two and then search of your &lt;code&gt;server-name&lt;/code&gt; in the

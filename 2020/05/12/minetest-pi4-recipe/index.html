@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="last-modified" content="2020-05-12T01:43:03.2204213-04:00" />
+    <meta http-equiv="last-modified" content="2020-05-12T01:49:29.9474216-04:00" />
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
@@ -134,9 +134,8 @@ raspi.  </p>
 
 <p>Open a terminal and run the command.</p>
 
-<p><code>
-ifconfig
-</code></p>
+<pre><code>ifconfig
+</code></pre>
 
 <p>will list your IP addresses and MAC addresses.  The you want <code>eth0</code> for wired,
 and <code>wlan0</code> for wireless.  The ipv4 address we're focusing on will be labeled
@@ -156,9 +155,8 @@ to static bind.</p>
 
 <p>Again, in the terminal type</p>
 
-<p><code>
-sudo raspi-config
-</code></p>
+<pre><code>sudo raspi-config
+</code></pre>
 
 <p>This will launch a simple UI for editing settings.  Use in "interface options"
 enable SSH and VNC.  VNC will let you remote in for a GUI and SSH will let you
@@ -227,11 +225,10 @@ Buster version of Raspbian/Debian.</p>
 
 <p>In our terminal, we run the following:</p>
 
-<p><code>
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E0B11894F66AEC98
+<pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E0B11894F66AEC98
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7638D0442B90D010
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553
-</code></p>
+</code></pre>
 
 <p>I'm going to be honest, I don't know what it actually does in detail, and
 generally copying pasting sudo commands into your machine is a bad idea,
@@ -246,9 +243,8 @@ That'll be handy for copying commands from here to paste in there.</p>
 installation sources.  This mammoth command adds the configuration to connect to
 "buster-backports" into our sources list for installing software.</p>
 
-<p><code>
-echo 'deb http://httpredir.debian.org/debian buster-backports main contrib non-free' | sudo tee -a /etc/apt/sources.list.d/debian-backports.list
-</code></p>
+<pre><code>echo 'deb http://httpredir.debian.org/debian buster-backports main contrib non-free' | sudo tee -a /etc/apt/sources.list.d/debian-backports.list
+</code></pre>
 
 <p>This script I can explain.  Skip this if you're experienced in the ways of
 Linux.  <code>echo 'deb http://yadda</code> just means "output the quoted text" the <code>|</code>
@@ -263,9 +259,8 @@ now install software from there.</p>
 <p>Now, we have to let the "apt" installation system know that there's the new
 source available to it, so we'll do</p>
 
-<p><code>
-sudo apt-get update
-</code></p>
+<pre><code>sudo apt-get update
+</code></pre>
 
 <p>and finally we're ready to start installing software.</p>
 
@@ -303,9 +298,8 @@ server, but for now you should meet them.</p>
 of a file or folder to our service-user, who is named <code>Debian-minetest</code> of group
 <code>games</code>.  So to assign a file to <code>Debian-minetest</code>, we do</p>
 
-<p><code>
-sudo chown Debian-minetest:games &lt;filename&gt;
-</code></p>
+<pre><code>sudo chown Debian-minetest:games &lt;filename&gt;
+</code></pre>
 
 <p>Optionally with a <code>--recursive</code> flag if you want to do it to every file in a
 directory-tree.</p>
@@ -317,9 +311,8 @@ is "change mode" but is really about modifying file permissions.</p>
 <code>chmod</code>, we use <code>+</code> parameters - this is something I have not gotten used to
 since it is <em>not</em> a thing in windows/powershell scripting.</p>
 
-<p><code>
-sudo chmod +rwx &lt;filename&gt;
-</code></p>
+<pre><code>sudo chmod +rwx &lt;filename&gt;
+</code></pre>
 
 <p>This grants the owner <strong>r</strong>ead, <strong>w</strong>rite, and e<strong>x</strong>ecute permissions to a
 file.</p>
@@ -342,29 +335,22 @@ sideways, you now have enough to unmangle a file permission or two.</p>
 <p>So, install minetest-server from the buster-backports source we just finished
 hooking into.</p>
 
-<p><code>
-sudo apt-get -t buster-backports install minetest-server
-</code></p>
+<pre><code>sudo apt-get -t buster-backports install minetest-server
+</code></pre>
 
 <p>Then create and setup our config file.  That's where a lot of the meat will be
 happening - we've got the game installed, but our server is private and
 unsecured and all that.  We want something we can <em>control</em>.  My daughter and
 her friends are playing in there.</p>
 
-<p>```</p>
+<pre><code>#unzip the starting config - I'm pretty sure this step is unnecessary 
+#and might ruin privileges on minetest.conf .
+#Only do this if /etc/minetest/minetest.conf wasn't created automatically
+sudo zcat /usr/share/doc/minetest/minetest.conf.example.gz &gt; /etc/minetest/minetest.conf
 
-<h1>unzip the starting config - I'm pretty sure this step is unnecessary and might ruin</h1>
-
-<h1>privileges on minetest.conf - only do this if /etc/minetest/minetest.conf wasn't created</h1>
-
-<h1>automatically</h1>
-
-<p>sudo zcat /usr/share/doc/minetest/minetest.conf.example.gz > /etc/minetest/minetest.conf</p>
-
-<h1>open the config up in the editor to get to work</h1>
-
-<p>sudo nano /etc/minetest/minetest.conf
-```</p>
+#open the config up in the editor to get to work
+sudo nano /etc/minetest/minetest.conf
+</code></pre>
 
 <p>The file <code>/etc/minetest/minetest.conf</code> contains a pretty-well-annotated config
 of everything about our minetest server.  The only big gotcha is that you <em>must</em>
@@ -395,12 +381,9 @@ like <code>ctrl</code>+<code>w</code> to search, <code>ctrl</code>+<code>o</code
 
 <p>Finally, our first chmod command:</p>
 
-<p>```</p>
-
-<h1>enable writing of the log file for all users so we can see what’s going on</h1>
-
-<p>sudo chmod a+rw /var/log/minetest/minetest.log
-```</p>
+<pre><code>#enable writing of the log file for all users so we can see what’s going on
+sudo chmod a+rw /var/log/minetest/minetest.log
+</code></pre>
 
 <p>We need Minetest to be allowed to write to the minetest log file.  The "a" in
 that chmod means "all users", we're going to keep this simple.  I know you have
@@ -417,9 +400,8 @@ fingers and start it up.</p>
 <p>First, meet <code>systemctl</code>.  That's systemd's tool for you to manage services that
 it runs for you.</p>
 
-<p><code>
-sudo systemctl start minetest-server
-</code></p>
+<pre><code>sudo systemctl start minetest-server
+</code></pre>
 
 <p>This means we let it rip.  For future reference, there's also <code>systemctl stop</code>
 and <code>systemctl restart</code> that do what they sound like.</p>
@@ -452,9 +434,8 @@ friends.</p>
 <p>We're going to do a bit more tweaking of the minetest.conf, so let's stop the
 server for a minute with </p>
 
-<p><code>
-sudo systemctl stop minetest-server
-</code></p>
+<pre><code>sudo systemctl stop minetest-server
+</code></pre>
 
 <p>... you're getting the hang of this right?  Remember, use ctrl-R to find old
 commands in the history so you're not typing that mouthful over and over again.
@@ -478,9 +459,8 @@ get all incoming UDP traffic coming to 30000 forwarded to that
 
 <p>Now, let's start it back up.</p>
 
-<p><code>
-sudo systemctl start minetest-server
-</code></p>
+<pre><code>sudo systemctl start minetest-server
+</code></pre>
 
 <p>The system will take a minute to start up - you can tail the log to check on its
 progress.  Give it a minute or two and then search of your <code>server-name</code> in the
