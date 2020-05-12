@@ -5,439 +5,6 @@ server from scratch, so I'm pretty novice at this.  I'm handy with a terminal
 console but only on Windows.  The intended reader of this article is... well,
 somebody like me.  Somebody new to Linux but very comfy with Windows.&lt;/p&gt;
 
-&lt;h1&gt;Hardware&lt;/h1&gt;
-
-&lt;h2&gt;Pi Hardware&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.buyapi.ca/product/raspberry-pi-4-model-b-2gb/"&gt;2GB Raspberry Pi4 with official USB
-power-supply&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;32GB microSD card (some name-brand one; never buy no-name SDs on Amazon,
-they'll only break your heart)&lt;/li&gt;
-&lt;li&gt;good brands: Kingston, Samsung, Patriot, etc.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://www.amazon.ca/Miuzei-Raspberry-Cooling-Aluminum-Model/dp/B07WJ8KHS6"&gt;Miuzei air-cooled case kit (includes heat-sinks and
-fan)&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;like all off-brand stuff on Amazon, individual listings are ephemeral, so
-you may have to search for a different listing. I paid $15CAD.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Ethernet cable&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The Miuzei case comes with good easy-to-follow instructions for assembly.  There
-are two possible configurations of the fan, a low-power mode and a high-power
-mode.  We used the low-power mode, even on an overclocked emulation box.  It's
-more than enough for our minetest server.&lt;/p&gt;
-
-&lt;h2&gt;Supporting Hardware&lt;/h2&gt;
-
-&lt;p&gt;This stuff you'll need for the setup process.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;A computer capable of running PuTTY and Minetest
-&lt;ul&gt;
-&lt;li&gt;I've also done some of this this from Linux and Android (don't recommend
-that), but I'm going to be using Windows tools.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Spare keyboard&lt;/li&gt;
-&lt;li&gt;Spare mouse&lt;/li&gt;
-&lt;li&gt;Spare monitor/TV with HDMI hookup
-&lt;ul&gt;
-&lt;li&gt;Note the Pi4 uses micro-HDMI, which is &lt;em&gt;not&lt;/em&gt; common. I bought &lt;a href="https://www.amazon.ca/Cable-Matters-Plated-Female-Adapter/dp/B00JDRHQ58"&gt;these
-adapters&lt;/a&gt;
-for my Pi devices.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Wifi or ethernet accessible to the location with all the above equipment.&lt;/li&gt;
-&lt;li&gt;A router you're comfy setting port-forwarding and static-IPs on.  You might
-need to Google how to do that on your router.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;OS Setup&lt;/h1&gt;
-
-&lt;p&gt;You can download-and-burn the image onto a MicroSD using &lt;a href="https://www.raspberrypi.org/downloads/"&gt;Raspberry Pi
-Imager&lt;/a&gt;, but I prefer to download the
-image manually and burn it to the MicroSD using &lt;a href="https://www.balena.io/etcher/"&gt;Balena
-Etcher&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Once you have the image burned and inserted into the Pi, you'll need to get it
-set up for remoting - but the first time it's going to need a mouse, keyboard,
-and HDMI-connected monitor until we can setup remoting.  I plugged the setup
-into a TV and mouse/keyboard. For operating system: The system is running
-Raspbian Buster (Raspbian is the Linux variant, Buster is the version number).&lt;/p&gt;
-
-&lt;p&gt;Raspbian will walk through a pretty easy wizard after startup to connect to wifi
-and set a password.&lt;/p&gt;
-
-&lt;h2&gt;Remoting&lt;/h2&gt;
-
-&lt;p&gt;The first step to setting up remoting is getting a static IP bound to your
-raspi.  &lt;/p&gt;
-
-&lt;p&gt;Open a terminal and run the command.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sh
-ifconfig
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;will list your IP addresses and MAC addresses.  The you want &lt;code&gt;eth0&lt;/code&gt; for wired,
-and &lt;code&gt;wlan0&lt;/code&gt; for wireless.  The ipv4 address we're focusing on will be labeled
-&lt;code&gt;inet&lt;/code&gt;, and the mac address will be labeled &lt;code&gt;ether&lt;/code&gt; - the ipv4 address will be
-generally be of the form &lt;code&gt;192.168.something.something&lt;/code&gt;.  The next steps are
-router-specific: write down the &lt;code&gt;ether&lt;/code&gt; MAC info from &lt;code&gt;ifconfig&lt;/code&gt; and use it to
-set up static IP for your router - still local, we're still in
-&lt;code&gt;192.168.something.something&lt;/code&gt;, but we need a static one that won't change every
-time we reboot.  I generally set my router to start dynamic IP addresses at
-&lt;code&gt;192.168.1.100&lt;/code&gt; and use numbers &lt;code&gt;192.168.1.10&lt;/code&gt; to &lt;code&gt;192.168.1.99&lt;/code&gt; for any
-computer I want to give a static address. This will make port forwarding easier
-in the future. The only wrinkle is that the wifi and ethernet interfaces will
-each have their own MAC address and IP, and you'll have to decide which you want
-to static bind.&lt;/p&gt;
-
-&lt;p&gt;The important steps afterwards are to enable SSH and the VNC Server.  &lt;/p&gt;
-
-&lt;p&gt;Again, in the terminal type&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sh
-sudo raspi-config
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This will launch a simple UI for editing settings.  Use in "interface options"
-enable SSH and VNC.  VNC will let you remote in for a GUI and SSH will let you
-remote a terminal/text-console and file-transfers in.&lt;/p&gt;
-
-&lt;h2&gt;Remoting Clients&lt;/h2&gt;
-
-&lt;p&gt;You need to install some remote admin software on your PC if you don't have it
-already:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;RealVNC (gui remoting)&lt;/li&gt;
-&lt;li&gt;PuTTY (terminal remoting)&lt;/li&gt;
-&lt;li&gt;WinSCP (file transfer)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;All are available from &lt;a href="https://ninite.com/"&gt;ninite.com&lt;/a&gt;.  Personally I prefer
-mRemoteNG to PuTTY, but it's got a less memorable name and a more elaborate UI.&lt;/p&gt;
-
-&lt;p&gt;Confirm that you can connect PuTTY and RealVNC to your new Pi server.  You'll
-need to use the IP address you set up on your router and the username (pi,
-generally) and password you set up earlier in the Raspbian setup wizard.&lt;/p&gt;
-
-&lt;h2&gt;Moving into headless mode&lt;/h2&gt;
-
-&lt;p&gt;At this point, your pi is now ready to be remote-only.  Unhook it from the
-mouse, keyboard, and monitor and put it in its final resting place, and wire it
-up with just ethernet and power.  You may have to tweak your Router settings to
-switch over from Wifi to wired for static IP if you're going from a wireless
-connection to wired (I actually forgot this step, so all my traffic to my pi4
-was going over wifi even though it was plugged in).&lt;/p&gt;
-
-&lt;h1&gt;Using the Terminal to hook into the Debian Buster Backports software repository&lt;/h1&gt;
-
-&lt;p&gt;Before we can install the minetest server, we have a problem: Raspbian and
-Debian Buster tend to have somewhat stale software.  We need a fresher version
-of Minetest, so we're going to link up to the buster-backports system for that.&lt;/p&gt;
-
-&lt;h2&gt;Welcome to the terminal&lt;/h2&gt;
-
-&lt;p&gt;We're going to be doing all this in the terminal.  On your desktop, open up
-PuTTY, connect to your Pi4 device using the static-IP, the pi username, and the
-password.  The linux terminal isn't as scary as you think -- after all, by
-default it's so locked down you can't actually do any damage without &lt;code&gt;sudo&lt;/code&gt;,
-which is basically Linux' way of saying "this line does something scary".  &lt;/p&gt;
-
-&lt;p&gt;We'll be using &lt;code&gt;sudo&lt;/code&gt; a lot.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://en.wikibooks.org/wiki/Guide_to_Unix/Commands/File_System_Utilities"&gt;The basic list of commands we'll be working with are listed
-here&lt;/a&gt;.
-In particular, &lt;code&gt;cd&lt;/code&gt;, &lt;code&gt;ls&lt;/code&gt;, &lt;code&gt;cp&lt;/code&gt;, &lt;code&gt;mv&lt;/code&gt;, &lt;code&gt;rm&lt;/code&gt;, &lt;code&gt;chmod&lt;/code&gt; and &lt;code&gt;chown&lt;/code&gt;.  Be fearless
-and stupid.  We're mostly just installing software and tweaking some files.
-Worst case scenario, don't be afraid to wipe the thing and start over.&lt;/p&gt;
-
-&lt;h2&gt;Hooking into Buster-Backports&lt;/h2&gt;
-
-&lt;p&gt;As mentioned earlier, raspbian Buster is &lt;em&gt;almost&lt;/em&gt; Debian.  Debian being a large,
-popular Linux software distro, has an extensive library of programs available
-for it.  And Raspbian can run Debian software... but by default, it's not hooked
-up to access Debian's latest software apt software repository.  For this
-Raspbian Buster device, the repository we need to connect to is called "Buster
-Backports", which is to say back-ports of cutting-edge software to the "stable"
-Buster version of Raspbian/Debian.&lt;/p&gt;
-
-&lt;p&gt;So, first, we need to let Raspbian know it's safe to talk to the Backports repo.&lt;/p&gt;
-
-&lt;p&gt;In our terminal, we run the following:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sh
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E0B11894F66AEC98
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7638D0442B90D010
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;I'm going to be honest, I don't know what it actually does in detail, and
-generally copying pasting sudo commands into your machine is a bad idea,
-especially stuff involving security keys.  But in this case, its's obviously
-wiring into a something provided by Ubuntu, who being one of the big daddies of
-Linux right now I tend to trust.&lt;/p&gt;
-
-&lt;p&gt;If you're new to linux and PuTTY: &lt;code&gt;right-click&lt;/code&gt; or &lt;code&gt;shift&lt;/code&gt;+&lt;code&gt;insert&lt;/code&gt; means paste.
-That'll be handy for copying commands from here to paste in there.&lt;/p&gt;
-
-&lt;p&gt;Next, we add the &lt;code&gt;buster-backports&lt;/code&gt; repository to the registry of apt
-installation sources.  This mammoth command adds the configuration to connect to
-"buster-backports" into our sources list for installing software.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sh
-echo 'deb http://httpredir.debian.org/debian buster-backports main contrib non-free' | sudo tee -a /etc/apt/sources.list.d/debian-backports.list
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This script I can explain.  Skip this if you're experienced in the ways of
-Linux.  &lt;code&gt;echo 'deb http://yadda&lt;/code&gt; just means "output the quoted text" the &lt;code&gt;|&lt;/code&gt;
-means "take the output of the command on the left of the &lt;code&gt;|&lt;/code&gt; and shove it into
-the command on the right.  &lt;code&gt;tee -a somefilepath&lt;/code&gt; means "open somefilepath and
-append the stuff shoved into this command at the end of that file and also echo
-it to the screen so we can see it".  So we're taking the quoted line and
-stuffing it at the end of the file &lt;code&gt;debian-backports.list&lt;/code&gt;, which will
-effectively add the buster backports repository to our sources list so we can
-now install software from there.&lt;/p&gt;
-
-&lt;p&gt;Now, we have to let the "apt" installation system know that there's the new
-source available to it, so we'll do&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sh
-sudo apt-get update
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;and finally we're ready to start installing software.&lt;/p&gt;
-
-&lt;h1&gt;Installing and Configuring minetest-server&lt;/h1&gt;
-
-&lt;p&gt;I worked heavily from &lt;a href="https://wiki.minetest.net/Setting_up_a_server/Debian"&gt;this guide on the minetest
-wiki&lt;/a&gt; but found it didn't
-have much context for a novice like me so I'm going to slow it down and give you
-a deep dive on the linuxisms involved.&lt;/p&gt;
-
-&lt;h2&gt;Minetest-server, systemd, and an intro to file permissions&lt;/h2&gt;
-
-&lt;p&gt;We're not going to do raw minetest, but rather "minetest-server" which installs
-minetest &lt;em&gt;and&lt;/em&gt; sets it up into the service system in Raspbian so it runs
-securely with its own user (the user &lt;code&gt;Debian-minetest&lt;/code&gt; of group &lt;code&gt;games&lt;/code&gt;).  The
-only warning is that this server-daemon approach means that a lot of the support
-documents about minetest are going to be confusing for you because &lt;em&gt;we never
-actually run minetest&lt;/em&gt;, which is something the docs talk about a lot.  Instead,
-we tell &lt;code&gt;systemd&lt;/code&gt;, Raspbian's service manager, to do that for us.  It does on
-startup and handles the details. Helpful, but opaque.&lt;/p&gt;
-
-&lt;h3&gt;Quick intro to file-permissions and Linux users&lt;/h3&gt;
-
-&lt;p&gt;One wrinkle about this is that our &lt;code&gt;pi&lt;/code&gt; user isn't actually involved in running
-the software.  Minetest-server actually uses its own linux user - so there's a
-separate account responsible for running the server, and any time it needs to
-look at a file we have to grant permission or ownership to that user to muck
-with that file.&lt;/p&gt;
-
-&lt;p&gt;So we're going to be needing to get acquainted with some linux commands.  We
-won't be using them much until we really get into the weeds with our minetest
-server, but for now you should meet them.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;chown&lt;/code&gt; is "change file owner/group".  We need to use this to assign ownership
-of a file or folder to our service-user, who is named &lt;code&gt;Debian-minetest&lt;/code&gt; of group
-&lt;code&gt;games&lt;/code&gt;.  So to assign a file to &lt;code&gt;Debian-minetest&lt;/code&gt;, we do&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sh
-sudo chown Debian-minetest:games &amp;lt;filename&amp;gt;
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Optionally with a &lt;code&gt;--recursive&lt;/code&gt; flag if you want to do it to every file in a
-directory-tree.&lt;/p&gt;
-
-&lt;p&gt;Similarly, to grant permissions for that user, we're going to use &lt;code&gt;chmod&lt;/code&gt;, which
-is "change mode" but is really about modifying file permissions.&lt;/p&gt;
-
-&lt;p&gt;You'll notice we usually call commands with &lt;code&gt;-&lt;/code&gt; parameters, but in the case of
-&lt;code&gt;chmod&lt;/code&gt;, we use &lt;code&gt;+&lt;/code&gt; parameters - this is something I have not gotten used to
-since it is &lt;em&gt;not&lt;/em&gt; a thing in windows/powershell scripting.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sh
-sudo chmod +rwx &amp;lt;filename&amp;gt;
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This grants the owner &lt;strong&gt;r&lt;/strong&gt;ead, &lt;strong&gt;w&lt;/strong&gt;rite, and e&lt;strong&gt;x&lt;/strong&gt;ecute permissions to a
-file.&lt;/p&gt;
-
-&lt;p&gt;Again, you can use a directory (or a wildcard like *) instead of a filename, and
-you can have it do the action to everything in the directory tree by using
-&lt;code&gt;--recursive&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Finally, &lt;code&gt;ls&lt;/code&gt; is how to list the contents of a directory, but we want &lt;code&gt;ls -l&lt;/code&gt; to
-list them and show the owner and permissions so we can be sure we did the above
-right.&lt;/p&gt;
-
-&lt;p&gt;I know I'm getting pretty deep into the weeds, but file permissions were 99% of
-my struggle since they're barely a thing on Windows, so I figured it was worth
-breaking it down here before we go any deeper - hopefully if anything goes
-sideways, you now have enough to unmangle a file permission or two.&lt;/p&gt;
-
-&lt;h2&gt;Install and config&lt;/h2&gt;
-
-&lt;p&gt;So, install minetest-server from the buster-backports source we just finished
-hooking into.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;
-sudo apt-get -t buster-backports install minetest-server
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Then create and setup our config file.  That's where a lot of the meat will be
-happening - we've got the game installed, but our server is private and
-unsecured and all that.  We want something we can &lt;em&gt;control&lt;/em&gt;.  My daughter and
-her friends are playing in there.&lt;/p&gt;
-
-&lt;p&gt;```sh&lt;/p&gt;
-
-&lt;h1&gt;unzip the starting config - I'm pretty sure this step is unnecessary and might ruin&lt;/h1&gt;
-
-&lt;h1&gt;privileges on minetest.conf - only do this if /etc/minetest/minetest.conf wasn't created&lt;/h1&gt;
-
-&lt;h1&gt;automatically&lt;/h1&gt;
-
-&lt;p&gt;sudo zcat /usr/share/doc/minetest/minetest.conf.example.gz &gt; /etc/minetest/minetest.conf&lt;/p&gt;
-
-&lt;h1&gt;open the config up in the editor to get to work&lt;/h1&gt;
-
-&lt;p&gt;sudo nano /etc/minetest/minetest.conf
-```&lt;/p&gt;
-
-&lt;p&gt;The file &lt;code&gt;/etc/minetest/minetest.conf&lt;/code&gt; contains a pretty-well-annotated config
-of everything about our minetest server.  The only big gotcha is that you &lt;em&gt;must&lt;/em&gt;
-set a &lt;code&gt;bind_address&lt;/code&gt; to make your server accessible to anybody.  The default is
-0.0.0.0, which is supposed to mean "accept all incoming connections" but somehow
-either minetest or systemd get cranky and instead accept &lt;em&gt;no&lt;/em&gt; connections.  So
-take that static IP you set on your server way back at the beginning of this
-recipe, and put it in &lt;code&gt;bind_address&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;Second, you want a password, at least until you're ready to unleash this thing
-on the public world.  Set &lt;code&gt;default_password&lt;/code&gt;.  &lt;/p&gt;
-
-&lt;p&gt;You can set a nice name, grant players some default privileges, and publicize it
-in the server browser so players can search you out in the listing.&lt;/p&gt;
-
-&lt;p&gt;To start?  Probably focus on &lt;code&gt;bind_address&lt;/code&gt;, a &lt;code&gt;server_name&lt;/code&gt;, the name of your
-admin user (&lt;code&gt;name&lt;/code&gt;) and a &lt;code&gt;default_password&lt;/code&gt;.  Maybe decide if you want your
-first world to be creative mode or not&lt;/p&gt;
-
-&lt;p&gt;If you've never used &lt;em&gt;Nano&lt;/em&gt; before, it's actually pretty easy in a linuxy way -
-normal cursor controls (don't try to mouse-scroll though), but doesn't use
-windows-standard hotkeys.  Everywhere in linux, ctrl-C means "break whatever's
-going on", so copy-paste is highlight and rclick instead.  Don't try to undo
-with ctrl-Z either, that means suspend the current program and switch to console
-(&lt;code&gt;fg %1&lt;/code&gt; to come back, meaning put suspended app &lt;strong&gt;1&lt;/strong&gt; back in the
-&lt;strong&gt;f&lt;/strong&gt;ore&lt;strong&gt;g&lt;/strong&gt;round).  &lt;code&gt;Ctrl&lt;/code&gt; + the keys listed along the bottom are the hotkeys,
-like &lt;code&gt;ctrl&lt;/code&gt;+&lt;code&gt;w&lt;/code&gt; to search, &lt;code&gt;ctrl&lt;/code&gt;+&lt;code&gt;o&lt;/code&gt; to save, &lt;code&gt;ctrl&lt;/code&gt;+&lt;code&gt;x&lt;/code&gt; to quit.&lt;/p&gt;
-
-&lt;p&gt;Finally, our first chmod command:&lt;/p&gt;
-
-&lt;p&gt;```sh&lt;/p&gt;
-
-&lt;h1&gt;enable writing of the log file for all users so we can see what’s going on&lt;/h1&gt;
-
-&lt;p&gt;sudo chmod a+rw /var/log/minetest/minetest.log
-```&lt;/p&gt;
-
-&lt;p&gt;We need Minetest to be allowed to write to the minetest log file.  The "a" in
-that chmod means "all users", we're going to keep this simple.  I know you have
-to do this step because I &lt;em&gt;didn't&lt;/em&gt; do it and it errored out when I tried to
-start up the server... I don't know, if the file doesn't exist yet just start
-the server and then chmod it afterwards. Or like &lt;code&gt;echo '' |
-/var/log/minetest/minetest.log&lt;/code&gt; to create it blank.  Whatever.&lt;/p&gt;
-
-&lt;h2&gt;Start it up&lt;/h2&gt;
-
-&lt;p&gt;Now that our Minetest server is installed and configured, it's time to cross our
-fingers and start it up.&lt;/p&gt;
-
-&lt;p&gt;First, meet &lt;code&gt;systemctl&lt;/code&gt;.  That's systemd's tool for you to manage services that
-it runs for you.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sh
-sudo systemctl start minetest-server
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This means we let it rip.  For future reference, there's also &lt;code&gt;systemctl stop&lt;/code&gt;
-and &lt;code&gt;systemctl restart&lt;/code&gt; that do what they sound like.&lt;/p&gt;
-
-&lt;p&gt;Install the minetest desktop program onto another machine, or even an Android
-phone (or hell, vnc into the raspi and install the desktop version of minetest -
-it's barely usable but enough to check connections) and try to connect to your
-server by the local &lt;code&gt;192.168.something.something&lt;/code&gt; static address.  This will
-confirm you've got the minetest server running.  Don't forget your
-&lt;code&gt;default_password&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;If it doesn't work?  Check &lt;code&gt;/var/log/minetest/minetest.log&lt;/code&gt;.  You can read the
-whole file with the command &lt;code&gt;cat /var/log/minetest/minetest.log&lt;/code&gt;, or just the
-very end of the file with &lt;code&gt;tail /var/log/minetest/minetest.log&lt;/code&gt;.  You really
-want to see the line&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Server for gameid="minetest" listening on 192.168.something.something:30000.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;If you don't see it yet, keep checking with &lt;code&gt;tail
-/var/log/minetest/minetest.log&lt;/code&gt; for about a minute. If there's an error in
-there, take it seriously and try to figure it out.&lt;/p&gt;
-
-&lt;p&gt;If it does work and you connect?  Celebrate!  And while you're in there, log in
-with your admin user (the one you set as &lt;code&gt;name&lt;/code&gt; in the minetest.conf) and use
-the gui to change their password, since you'll be giving that one away to your
-friends.&lt;/p&gt;
-
-&lt;h2&gt;Getting your server into the public internet.&lt;/h2&gt;
-
-&lt;p&gt;We're going to do a bit more tweaking of the minetest.conf, so let's stop the
-server for a minute with &lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sh
-sudo systemctl stop minetest-server
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;... you're getting the hang of this right?  Remember, use ctrl-R to find old
-commands in the history so you're not typing that mouthful over and over again.
-Also tab-completion.  Als the up and down keys to find previous commands.&lt;/p&gt;
-
-&lt;p&gt;This part's a bit awkward because I have a domain name pointing at my house, and
-you might not have that.  If you do have one, then set that on &lt;code&gt;server-address&lt;/code&gt;
-in your minetest.conf to point it there.  Otherwise, leave the &lt;code&gt;server-address&lt;/code&gt;
-line commented out with a &lt;code&gt;#&lt;/code&gt;... I've read it &lt;em&gt;should&lt;/em&gt; work but I haven't tried
-it myself.&lt;/p&gt;
-
-&lt;p&gt;While you're in minetest.conf, you can also set &lt;code&gt;server_announce = true&lt;/code&gt; because
-your server is passworded with a secure password so you won't get random
-griefers smashing it up.  You set a &lt;code&gt;default_password&lt;/code&gt;, right?&lt;/p&gt;
-
-&lt;p&gt;Anyways, the next step here is setting up port-forwarding on your router.  By
-default, the minetest server runs on port 30000.  That's thirty-thousand, not
-three-thousand (had to explain it to my daughter a few times).  In your router,
-get all incoming UDP traffic coming to 30000 forwarded to that
-192.168.something.something static IP.  Now you're on the public internet.&lt;/p&gt;
-
-&lt;p&gt;Now, let's start it back up.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sh
-sudo systemctl start minetest-server
-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;The system will take a minute to start up - you can tail the log to check on its
-progress.  Give it a minute or two and then search of your &lt;code&gt;server-name&lt;/code&gt; in the
-minetest desktop GUI server-browser.  Hopefully it's online and you can connect!&lt;/p&gt;
-
-&lt;h1&gt;Yay, it Works!&lt;/h1&gt;
-
-&lt;p&gt;Except that it's just vanilla minetest game.  It's not Mineclone2. Also, where's
-our Mumble server, you want me to type chat into the console like a caveman?
-Still, at the end of this article, we've got something useful!  You and your
-friends can play vanilla Minetest game on your pi4 server now.&lt;/p&gt;
-
-&lt;p&gt;Next time, more stuff.&lt;/p&gt;
 </description><pubDate>Tue, 12 May 2020 04:00:00 Z</pubDate><a10:updated>2020-05-12T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;Continuing from my previous article on my daughter's Minetest birthday party,
 here's how I built my Raspberry Pi 4 minetest server that powered the party.  To
 be clear: this is only my second time this century setting up a linux-based
@@ -445,21 +12,22 @@ server from scratch, so I'm pretty novice at this.  I'm handy with a terminal
 console but only on Windows.  The intended reader of this article is... well,
 somebody like me.  Somebody new to Linux but very comfy with Windows.&lt;/p&gt;
 
+&lt;!--excerpt--&gt;
+
 &lt;h1&gt;Hardware&lt;/h1&gt;
 
 &lt;h2&gt;Pi Hardware&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.buyapi.ca/product/raspberry-pi-4-model-b-2gb/"&gt;2GB Raspberry Pi4 with official USB
-power-supply&lt;/a&gt;
-&lt;ul&gt;
+power-supply&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;32GB microSD card (some name-brand one; never buy no-name SDs on Amazon,
-they'll only break your heart)&lt;/li&gt;
+they'll only break your heart)
+&lt;ul&gt;
 &lt;li&gt;good brands: Kingston, Samsung, Patriot, etc.&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href="https://www.amazon.ca/Miuzei-Raspberry-Cooling-Aluminum-Model/dp/B07WJ8KHS6"&gt;Miuzei air-cooled case kit (includes heat-sinks and
-fan)&lt;/a&gt;&lt;/p&gt;
-
+&lt;li&gt;&lt;a href="https://www.amazon.ca/Miuzei-Raspberry-Cooling-Aluminum-Model/dp/B07WJ8KHS6"&gt;Miuzei air-cooled case kit (includes heat-sinks and
+fan)&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;like all off-brand stuff on Amazon, individual listings are ephemeral, so
 you may have to search for a different listing. I paid $15CAD.&lt;/li&gt;
@@ -518,7 +86,7 @@ raspi.  &lt;/p&gt;
 
 &lt;p&gt;Open a terminal and run the command.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sh
+&lt;p&gt;&lt;code&gt;
 ifconfig
 &lt;/code&gt;&lt;/p&gt;
 
@@ -540,7 +108,7 @@ to static bind.&lt;/p&gt;
 
 &lt;p&gt;Again, in the terminal type&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sh
+&lt;p&gt;&lt;code&gt;
 sudo raspi-config
 &lt;/code&gt;&lt;/p&gt;
 
@@ -611,7 +179,7 @@ Buster version of Raspbian/Debian.&lt;/p&gt;
 
 &lt;p&gt;In our terminal, we run the following:&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sh
+&lt;p&gt;&lt;code&gt;
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E0B11894F66AEC98
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7638D0442B90D010
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553
@@ -630,7 +198,7 @@ That'll be handy for copying commands from here to paste in there.&lt;/p&gt;
 installation sources.  This mammoth command adds the configuration to connect to
 "buster-backports" into our sources list for installing software.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sh
+&lt;p&gt;&lt;code&gt;
 echo 'deb http://httpredir.debian.org/debian buster-backports main contrib non-free' | sudo tee -a /etc/apt/sources.list.d/debian-backports.list
 &lt;/code&gt;&lt;/p&gt;
 
@@ -647,7 +215,7 @@ now install software from there.&lt;/p&gt;
 &lt;p&gt;Now, we have to let the "apt" installation system know that there's the new
 source available to it, so we'll do&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sh
+&lt;p&gt;&lt;code&gt;
 sudo apt-get update
 &lt;/code&gt;&lt;/p&gt;
 
@@ -687,7 +255,7 @@ server, but for now you should meet them.&lt;/p&gt;
 of a file or folder to our service-user, who is named &lt;code&gt;Debian-minetest&lt;/code&gt; of group
 &lt;code&gt;games&lt;/code&gt;.  So to assign a file to &lt;code&gt;Debian-minetest&lt;/code&gt;, we do&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sh
+&lt;p&gt;&lt;code&gt;
 sudo chown Debian-minetest:games &amp;lt;filename&amp;gt;
 &lt;/code&gt;&lt;/p&gt;
 
@@ -701,7 +269,7 @@ is "change mode" but is really about modifying file permissions.&lt;/p&gt;
 &lt;code&gt;chmod&lt;/code&gt;, we use &lt;code&gt;+&lt;/code&gt; parameters - this is something I have not gotten used to
 since it is &lt;em&gt;not&lt;/em&gt; a thing in windows/powershell scripting.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sh
+&lt;p&gt;&lt;code&gt;
 sudo chmod +rwx &amp;lt;filename&amp;gt;
 &lt;/code&gt;&lt;/p&gt;
 
@@ -735,7 +303,7 @@ happening - we've got the game installed, but our server is private and
 unsecured and all that.  We want something we can &lt;em&gt;control&lt;/em&gt;.  My daughter and
 her friends are playing in there.&lt;/p&gt;
 
-&lt;p&gt;```sh&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
 
 &lt;h1&gt;unzip the starting config - I'm pretty sure this step is unnecessary and might ruin&lt;/h1&gt;
 
@@ -779,7 +347,7 @@ like &lt;code&gt;ctrl&lt;/code&gt;+&lt;code&gt;w&lt;/code&gt; to search, &lt;cod
 
 &lt;p&gt;Finally, our first chmod command:&lt;/p&gt;
 
-&lt;p&gt;```sh&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
 
 &lt;h1&gt;enable writing of the log file for all users so we can see what’s going on&lt;/h1&gt;
 
@@ -801,7 +369,7 @@ fingers and start it up.&lt;/p&gt;
 &lt;p&gt;First, meet &lt;code&gt;systemctl&lt;/code&gt;.  That's systemd's tool for you to manage services that
 it runs for you.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sh
+&lt;p&gt;&lt;code&gt;
 sudo systemctl start minetest-server
 &lt;/code&gt;&lt;/p&gt;
 
@@ -836,7 +404,7 @@ friends.&lt;/p&gt;
 &lt;p&gt;We're going to do a bit more tweaking of the minetest.conf, so let's stop the
 server for a minute with &lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sh
+&lt;p&gt;&lt;code&gt;
 sudo systemctl stop minetest-server
 &lt;/code&gt;&lt;/p&gt;
 
@@ -862,7 +430,7 @@ get all incoming UDP traffic coming to 30000 forwarded to that
 
 &lt;p&gt;Now, let's start it back up.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;sh
+&lt;p&gt;&lt;code&gt;
 sudo systemctl start minetest-server
 &lt;/code&gt;&lt;/p&gt;
 
