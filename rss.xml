@@ -1,16 +1,324 @@
-<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Pxtl.ca</title><link>http://www.pxtl.ca/rss.xml</link><description>Pxtl.ca</description><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/</guid><link>http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/</link><author>pxtl@hotmail.com</author><category>Software</category><title>Minetest Pi4 Recipe</title><description>&lt;p&gt;Continuing from my previous article on my daughter's Minetest birthday party,
-here's how I built my Raspberry Pi 4 minetest server that powered the party.  To
-be clear: this is only my second time this century setting up a linux-based
-server from scratch, so I'm pretty novice at this.  I'm handy with a terminal
-console but only on Windows.  The intended reader of this article is... well,
-somebody like me.  Somebody new to Linux but very comfy with Windows.&lt;/p&gt;
+<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Pxtl.ca</title><link>http://www.pxtl.ca/rss.xml</link><description>Pxtl.ca</description><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/23/minetest-mods/</guid><link>http://www.pxtl.ca/2020/05/23/minetest-mods/</link><author>pxtl@hotmail.com</author><category>Software</category><title>Minetest Mods (rpi minetest-server part 3)</title><description>&lt;p&gt;Now that we've got our Minetest server built (see &lt;a href="http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/"&gt;previous
+entry&lt;/a&gt; ), now it's time to learn how to
+install mods and games into it, and how to run multiple instances of minetest.
+In particular, we're going to be installing Mineclone 2 and a pile of skins.&lt;/p&gt;
 
-</description><pubDate>Tue, 12 May 2020 04:00:00 Z</pubDate><a10:updated>2020-05-12T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;Continuing from my previous article on my daughter's Minetest birthday party,
-here's how I built my Raspberry Pi 4 minetest server that powered the party.  To
-be clear: this is only my second time this century setting up a linux-based
-server from scratch, so I'm pretty novice at this.  I'm handy with a terminal
-console but only on Windows.  The intended reader of this article is... well,
-somebody like me.  Somebody new to Linux but very comfy with Windows.&lt;/p&gt;
+</description><pubDate>Sat, 23 May 2020 04:00:00 Z</pubDate><a10:updated>2020-05-23T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;Now that we've got our Minetest server built (see &lt;a href="http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/"&gt;previous
+entry&lt;/a&gt; ), now it's time to learn how to
+install mods and games into it, and how to run multiple instances of minetest.
+In particular, we're going to be installing Mineclone 2 and a pile of skins.&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;h1&gt;Mods and Games in Minetest&lt;/h1&gt;
+
+&lt;p&gt;First off, you have to understand how minetest manages content.  Minetest has
+two concepts: &lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;mods&lt;/strong&gt;: small bits of code that will add one feature to a game.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;games&lt;/strong&gt;: big, mutually-exclusive affairs that will bundle many mods together
+and act as a basis for more mods.  Also sometimes called a "subgame".&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Next, we have to consider two &lt;strong&gt;games&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Minetest Game&lt;/strong&gt;: the basic standard game for Minetest.  It's a
+hyper-simplified version of Minecraft with no mobs or anything.   This is the
+basis for most Minetest mods - most Minetest mods are only playable on
+&lt;strong&gt;Minetest game&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mineclone 2&lt;/strong&gt;: a game for mineclone that makes the game stylistically and
+gameplay-wise as similar to Minecraft as is feasible.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Minetest games and mods are typically downloaded from the Minetest &lt;a href="https://content.minetest.net/"&gt;Content
+DB&lt;/a&gt;), which has a nice, easy-to-use browser built
+into Minetest.&lt;/p&gt;
+
+&lt;p&gt;However, the contentDB downloader is designed to be used from the offline client
+- it can be executed within our online dedicated server running on the Pi4.  So
+  we have to deploy the mods and games into Minetest &lt;em&gt;manually&lt;/em&gt;.  Fortunately,
+  it's not as bad as all that.&lt;/p&gt;
+
+&lt;h1&gt;Mods and Games in minetest-server on Raspbian/Debian&lt;/h1&gt;
+
+&lt;p&gt;The meat of the work we're going to be doing is in
+&lt;code&gt;/var/games/minetest-server/.minetest&lt;/code&gt;.  Note that &lt;code&gt;.minetest&lt;/code&gt; is a dot-folder,
+and so is hidden from &lt;code&gt;ls&lt;/code&gt; unless you use &lt;code&gt;ls -a&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;There are three directories within the "minetest" directory that we care about.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.minetest    
+├── games
+├── mods
+└── worlds
+    └── world
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;These same three directories exist on your local copy of minetest running on
+your Windows machine (or Android tablet), and will contain the same kind of
+files.&lt;/p&gt;
+
+&lt;p&gt;What this means is that you can download and debug mods using the "Content DB"
+system in the minetest client, and then deploy the packaged-up game or world up
+to the minetest server.&lt;/p&gt;
+
+&lt;p&gt;However, to start we're going to keep it simple.  We're going to download
+MineClone 2, create a world with it, and then deploy it to our server.&lt;/p&gt;
+
+&lt;h2&gt;Warning about the worlds folder&lt;/h2&gt;
+
+&lt;p&gt;Until we're setting up multiple servers and I'll go into more details, a word of
+warning: The only folder in your &lt;code&gt;worlds&lt;/code&gt; folder on the Pi4 minetest-server can
+be &lt;code&gt;world&lt;/code&gt;.  We'll get into more elaborate changes later.  For now - if you put
+anything else in that folder, minetest-server stops working.&lt;/p&gt;
+
+&lt;h1&gt;Getting Started with MineClone 2&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href="https://forum.minetest.net/viewtopic.php?t=16407"&gt;MineClone 2 can be downloaded from the minetest
+forum&lt;/a&gt; where its development
+is publicly run, but &lt;a href="https://content.minetest.net/packages/Wuzzy/mineclone2/"&gt;it can also be obtained from
+contentdb&lt;/a&gt;, and the
+forum crashes pretty often.&lt;/p&gt;
+
+&lt;p&gt;Download it and unzip it into your &lt;code&gt;minetest\games&lt;/code&gt; folder on your Windows PC.
+Or you can fetch it from minetest contentdb itself, but we're going to use the
+process I used when setting up.  So, for example, if minetest is in &lt;code&gt;c:\games&lt;/code&gt;,
+then you should have &lt;code&gt;c:\games\minetest\games\mineclone2&lt;/code&gt;.  Remember this is an
+opensource project, which means linux, which means case-sensitive filepaths. Get
+used to thinking in all-lower-case.&lt;/p&gt;
+
+&lt;p&gt;Create a new world in minetest, using "Start Game" --&gt; "New"&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2020-05-23-Minetest-mods/minetest-new-world.jpg" alt="Minetest new world
+screen" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Select the "MineClone 2" game, provide a seed (I recommend &lt;code&gt;6&lt;/code&gt;, because I found
+it had a pleasent starting area) and a name (call it "world" - I'll explain why
+later), and click "Create". This will make our new Mineclone world.&lt;/p&gt;
+
+&lt;p&gt;Now we have the mod and the world running on our local copy of Minetest and we
+can deploy it to our server.&lt;/p&gt;
+
+&lt;h1&gt;Deploying MineClone 2 and our new World&lt;/h1&gt;
+
+&lt;h2&gt;Moving files onto the Pi4&lt;/h2&gt;
+
+&lt;p&gt;We'll be using &lt;code&gt;WinSCP&lt;/code&gt; to copy the files to our server.  We can't deploy them
+&lt;em&gt;direct&lt;/em&gt; to the target location because of permissions, so we'll copy them to
+the "downloads" folder and then go from there.&lt;/p&gt;
+
+&lt;p&gt;Use &lt;code&gt;WinSCP&lt;/code&gt; and your &lt;code&gt;pi&lt;/code&gt; credentials to connect to the pi server.  Let's
+create a "minetest" folder under &lt;code&gt;/home/pi/Downloads&lt;/code&gt; (aka &lt;code&gt;~/Downloads&lt;/code&gt;). Then,
+move our world and the game in there using the WinSCP upload command.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2020-05-23-Minetest-mods/winscp.jpg" alt="WinSCP" /&gt;&lt;/p&gt;
+
+&lt;p&gt;So after uploading, we should have &lt;code&gt;/home/pi/Downloads/minetest/world&lt;/code&gt; and
+&lt;code&gt;/home/pi/Downloads/minetest/mineclone2&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Moving files around on the Pi4&lt;/h2&gt;
+
+&lt;p&gt;Now that's the end of GUI work, time to switch to our console.  Connect a
+terminal to the Pi4 server using PutTTY.  We're going to copy some files around.&lt;/p&gt;
+
+&lt;p&gt;First, we have to stop our minetest server so that it doesn't complain when we
+start moving things around.  &lt;code&gt;sudo systemctl stop minetest-server&lt;/code&gt;.  Our
+minetest server is shut down.&lt;/p&gt;
+
+&lt;p&gt;Now let's get started with the files &lt;code&gt;cd /var/games/minetest-server/.minetest/&lt;/code&gt;
+and then &lt;code&gt;sudo mkdir backup&lt;/code&gt;. We're going to make a backup folder for our extra
+worlds and the like. Next we have to remove the existing world so we can replace
+it with our mineclone2 world.  &lt;code&gt;sudo mv ./worlds/world/ backup&lt;/code&gt; will move the
+world into the backup folder.&lt;/p&gt;
+
+&lt;p&gt;Next, let's move in our new world and our new game.&lt;/p&gt;
+
+&lt;p&gt;If there isn't a folder called &lt;code&gt;games&lt;/code&gt; yet, &lt;code&gt;sudo mkdir games&lt;/code&gt;.  Next, we'll
+bring in mineclone2:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo mv /home/pi/Downloads/minetest/mineclone2 ./games/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, we'll bring in our world&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo mv /home/pi/Downloads/minetest/world ./worlds/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now we've copied the files over.&lt;/p&gt;
+
+&lt;h2&gt;Permissions&lt;/h2&gt;
+
+&lt;p&gt;Now we have to transfer ownership of these 2 folders to the minetest-server
+user, &lt;code&gt;Debian-minetest&lt;/code&gt; of group &lt;code&gt;games&lt;/code&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; sudo chown Debian-minetest:games ./games/mineclone2 -R
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;-R&lt;/code&gt; means &lt;code&gt;--recursive&lt;/code&gt;.  Now the world&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; sudo chown Debian-minetest:games ./games/world -R
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And now we're ready.   Let's restart the server.&lt;/p&gt;
+
+&lt;h2&gt;Restart the World&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo systemctl start minetest-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And we're up.  On your desktop minetest, connect to the server.&lt;/p&gt;
+
+&lt;p&gt;Note that by default minetest stores credentials inside the world folder so we
+blew away all our users... you might have to restart with fresh users again.&lt;/p&gt;
+
+&lt;p&gt;You should find your world up and running.&lt;/p&gt;
+
+&lt;p&gt;Again, if anything's funny, check &lt;code&gt;tail /var/log/minetest/minetest.log&lt;/code&gt; for
+information about your server.&lt;/p&gt;
+
+&lt;h1&gt;Mods&lt;/h1&gt;
+
+&lt;p&gt;Mods are deployed by the same process as games, but with an extra feature - each
+mod is referenced by the World.  You can see this in the Minetest gui when
+configuring a world - you've a long list of mods you can toggle on and off.  In
+the file-structure, enter your &lt;code&gt;worlds/worldname&lt;/code&gt; folder and open &lt;code&gt;world.mt&lt;/code&gt; in
+Nano (&lt;code&gt;sudo nano world.mt&lt;/code&gt;).  Then to enable a mod that's been installed into
+your &lt;code&gt;mods&lt;/code&gt; folder, add a line to the file stating &lt;code&gt;load_mod_&amp;lt;modname&amp;gt; = true&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://dev.minetest.net/Installing_Mods"&gt;More information on this process is
+here&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;More Worlds!&lt;/h1&gt;
+
+&lt;p&gt;At this point we've covered most of the ways running a minetest server is
+different from running it locally and so you're off to the races... but what if
+you want to run more than one?&lt;/p&gt;
+
+&lt;p&gt;This is where we go back into working with Debian/systemd.  In order to run more
+worlds, we're going to run a second minetest-server instance.&lt;/p&gt;
+
+&lt;h2&gt;Fixing the Minetest World Folder&lt;/h2&gt;
+
+&lt;p&gt;Okay, first we need to get into the weeds.  By default minetest runs the world
+named &lt;code&gt;world&lt;/code&gt;, right?  That is, the world located at
+&lt;code&gt;/var/games/minetest-server/.minetest/worlds/2-mineclone-survival/&lt;/code&gt;, right?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;WRONG&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Minetest-server by default &lt;em&gt;names&lt;/em&gt; the folder world.  But what it actually runs
+is "the only world folder in &lt;code&gt;/var/games/minetest-server/.minetest/worlds/&lt;/code&gt;".
+What does that mean if there's 2 folders in
+&lt;code&gt;/var/games/minetest-server/.minetest/worlds/&lt;/code&gt;?  Crashy crashy.  And we're going
+to put a second world in there!  So before we do that, we have to make the
+implicit explicit and tell minetest where to find our &lt;em&gt;first&lt;/em&gt; world.&lt;/p&gt;
+
+&lt;p&gt;Before we start, &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo systemctl stop minetest-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Okay, we're ready to operate.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo nano /etc/minetest/minetest.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, look for &lt;code&gt;map-dir&lt;/code&gt; and set it as follows&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;map-dir = /var/games/minetest-server/.minetest/worlds/world/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now it no longer has to &lt;em&gt;guess&lt;/em&gt; where to find the world, it has an exact
+location.  So we can create a 2nd world-folder and not confuse it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo systemctl start minetest-server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;And check to make sure everything's hunky dory with our existing server.&lt;/p&gt;
+
+&lt;h2&gt;Creating a new Config File&lt;/h2&gt;
+
+&lt;p&gt;To get started on our 2nd world, we need to create a new config file.  We
+already have &lt;code&gt;/etc/minetest/minetest.conf&lt;/code&gt;, we're going to be copying that file
+into a new 2nd file for our 2nd minetest server instance.  We can name it
+whatever we like, but I like to name my worlds starting with their port number.
+This is going to run on port 30002, so we'll call it &lt;code&gt;2-mineclone-survival&lt;/code&gt;,
+since our first world was creative.  Well, mine was.  If yours wasn't, feel free
+to make your 2nd world whatever else.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo cp /etc/minetest/minetest.conf /etc/minetest/2-mineclone-survival.conf
+sudo nano /etc/minetest/2-mineclone-survival.conf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will create our 2nd file and edit it.  This will work much the same as the
+first time &lt;em&gt;except&lt;/em&gt; we need to give it a new world-folder since our other
+world-folder is already in use, and set a port.&lt;/p&gt;
+
+&lt;p&gt;First, look for &lt;code&gt;port&lt;/code&gt; and set it as follows&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;port = 30002
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Next, look for &lt;code&gt;map-dir&lt;/code&gt; and set it as follows&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;map-dir = /var/games/minetest-server/.minetest/worlds/2-mineclone-survival/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Now, my world is named &lt;code&gt;2-mineclone-survival&lt;/code&gt; but you do you.  Now, mineclone
+doesn't need to edit this file, so we don't have to &lt;code&gt;chmod&lt;/code&gt; or &lt;code&gt;chown&lt;/code&gt; it or
+anything.  That file is ready.&lt;/p&gt;
+
+&lt;h2&gt;Forwarding ports&lt;/h2&gt;
+
+&lt;p&gt;Remember earlier I told you that you &lt;em&gt;had&lt;/em&gt; to forward 30000, but I recommended
+doing 30000-30010?  If you didn't take my advice, take it now.  We're setting up
+a service on 30002, you need to forward that on your router.&lt;/p&gt;
+
+&lt;h2&gt;Creating your 2nd world&lt;/h2&gt;
+
+&lt;p&gt;So, next step is up to you.  If you want to let minetest &lt;em&gt;create&lt;/em&gt; your 2nd world
+for you, it should do that based on the settings in your conf file.  I haven't
+tried that.  But if you have opinions on seed and want to hand-craft it in the
+minetest client, then you can go through the previous process of deploying the
+world into &lt;code&gt;2-mineclone-survival&lt;/code&gt;.  Create it, move it into place, &lt;code&gt;chown&lt;/code&gt; it,
+etc.&lt;/p&gt;
+
+&lt;h2&gt;Registering the Server&lt;/h2&gt;
+
+&lt;p&gt;There's a simple command to create a 2nd server-instance:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;systemctl start minetest-server@2-mineclone-survival.service
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You'll notice that I've used "2-mineclone-survival" again.  That name &lt;em&gt;must&lt;/em&gt;
+match the name of your conf file.  So if you named your 2nd conf file "fred"?
+&lt;code&gt;minetest-server@fred.service&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Anyhow, that &lt;em&gt;should&lt;/em&gt; be it.  2nd world is up and running.  Go see the server
+browser and you should find two worlds on your address, one on 30000 and one on
+30002.&lt;/p&gt;
+
+&lt;p&gt;And you're done!&lt;/p&gt;
+
+&lt;h1&gt;Next Time&lt;/h1&gt;
+
+&lt;p&gt;Readyyyyyy toooooooo Mumble!&lt;/p&gt;
+</a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/</guid><link>http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/</link><author>pxtl@hotmail.com</author><category>Software</category><title>Minetest Pi4 Recipe (rpi minetest-server part 2)</title><description>&lt;p&gt;Continuing from my &lt;a href="http://www.pxtl.ca/2020/05/05/minetest-birthday/"&gt;previous article&lt;/a&gt; on my
+daughter's Minetest birthday party, here's how I built my Raspberry Pi 4
+minetest server that powered the party.  To be clear: this is only my second
+time this century setting up a linux-based server from scratch, so I'm pretty
+novice at this.  I'm handy with a terminal console but only on Windows.  The
+intended reader of this article is... well, somebody like me.  Somebody new to
+Linux but very comfy with Windows.&lt;/p&gt;
+
+</description><pubDate>Tue, 12 May 2020 04:00:00 Z</pubDate><a10:updated>2020-05-12T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;Continuing from my &lt;a href="http://www.pxtl.ca/2020/05/05/minetest-birthday/"&gt;previous article&lt;/a&gt; on my
+daughter's Minetest birthday party, here's how I built my Raspberry Pi 4
+minetest server that powered the party.  To be clear: this is only my second
+time this century setting up a linux-based server from scratch, so I'm pretty
+novice at this.  I'm handy with a terminal console but only on Windows.  The
+intended reader of this article is... well, somebody like me.  Somebody new to
+Linux but very comfy with Windows.&lt;/p&gt;
 
 &lt;!--excerpt--&gt;
 
@@ -425,8 +733,8 @@ our Mumble server, you want me to type chat into the console like a caveman?
 Still, at the end of this article, we've got something useful!  You and your
 friends can play vanilla Minetest game on your pi4 server now.&lt;/p&gt;
 
-&lt;p&gt;Next time, more stuff.&lt;/p&gt;
-</a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/05/minetest-birthday/</guid><link>http://www.pxtl.ca/2020/05/05/minetest-birthday/</link><author>pxtl@hotmail.com</author><category>Blog</category><title>Minetest Birthday</title><description>&lt;p&gt;Okay, this is part one of a multi-part... well, I guess we can't use the term
+&lt;p&gt;&lt;a href="http://www.pxtl.ca/2020/05/23/2020-05-23-Minetest-mods/"&gt;Next time, more stuff.&lt;/a&gt;&lt;/p&gt;
+</a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/05/minetest-birthday/</guid><link>http://www.pxtl.ca/2020/05/05/minetest-birthday/</link><author>pxtl@hotmail.com</author><category>Blog</category><title>Minetest Birthday (rpi minetest-server part 1)</title><description>&lt;p&gt;Okay, this is part one of a multi-part... well, I guess we can't use the term
 "postmortem" that's popular in software development, since it's kind of morbid
 for a birthday.  We'll call it an "after-action report".&lt;/p&gt;
 
@@ -694,8 +1002,8 @@ trying to figure out what game to try next.&lt;/p&gt;
 
 &lt;h1&gt;Next Time&lt;/h1&gt;
 
-&lt;p&gt;Next post, I'll get into the weeds of the setup process and gotchas for getting
-these servers set up on a Pi4.  Recipes!  Linux!  Sudo all the things!&lt;/p&gt;
+&lt;p&gt;Next post, &lt;a href="http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/"&gt;I'll get into the weeds of the setup process and gotchas for getting
+these servers set up on a Pi4.  Recipes!  Linux!  Sudo all the things!&lt;/a&gt;&lt;/p&gt;
 </a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2020/04/08/ip-webcam/</guid><link>http://www.pxtl.ca/2020/04/08/ip-webcam/</link><author>pxtl@hotmail.com</author><category>Software</category><title>Using your phone as a Webcam on Windows and Android</title><description>&lt;p&gt;What with covid-19, a lot of people are remoting and not a lot of people have
 webcams. But everybody's got a smartphone. So here's a guide on how to use your
 smartphone as a webcam with Android an Windows over wifi.&lt;/p&gt;
