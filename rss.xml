@@ -1,12 +1,12 @@
 <rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Pxtl.ca</title><link>http://www.pxtl.ca/rss.xml</link><description>Pxtl.ca</description><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/23/minetest-mods/</guid><link>http://www.pxtl.ca/2020/05/23/minetest-mods/</link><author>pxtl@hotmail.com</author><category>Software</category><title>Minetest Mods (rpi minetest-server part 3)</title><description>&lt;p&gt;Now that we've got our Minetest server built (see &lt;a href="http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/"&gt;previous
 entry&lt;/a&gt; ), now it's time to learn how to
 install mods and games into it, and how to run multiple instances of minetest.
-In particular, we're going to be installing Mineclone 2 and a pile of skins.&lt;/p&gt;
+In particular, we're going to be installing Mineclone 2.&lt;/p&gt;
 
 </description><pubDate>Sat, 23 May 2020 04:00:00 Z</pubDate><a10:updated>2020-05-23T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;Now that we've got our Minetest server built (see &lt;a href="http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/"&gt;previous
 entry&lt;/a&gt; ), now it's time to learn how to
 install mods and games into it, and how to run multiple instances of minetest.
-In particular, we're going to be installing Mineclone 2 and a pile of skins.&lt;/p&gt;
+In particular, we're going to be installing Mineclone 2.&lt;/p&gt;
 
 &lt;!--excerpt--&gt;
 
