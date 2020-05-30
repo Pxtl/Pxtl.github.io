@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="last-modified" content="2020-05-30T17:58:34.0885045-04:00" />
+    <meta http-equiv="last-modified" content="2020-05-30T18:00:17.1230431-04:00" />
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
@@ -71,14 +71,16 @@ collections of mods), but it only includes two skins by default. The skins are
 located in the <code>mineclone2</code> game folder under <code>mods/PLAYER/mcl_skins</code>, so on our
 Raspbian server it will be located at</p>
 
-<p>/var/games/minetest-server/.minetest/games/mineclone2/mods/PLAYER/mcl_skins</p>
+<pre><code>/var/games/minetest-server/.minetest/games/mineclone2/mods/PLAYER/mcl_skins
+</code></pre>
 
 <p>This is the root folder for the minetest skins mod.  Each skin requires 2 files
 and 1 optional file.  Each skin requires</p>
 
-<p>textures/mcl<em>skins</em>character<em>N.png --the actual skin file
-   textures/mcl</em>skins<em>player</em>N.png --the preview of the skin file that you'll see in the picker
-   meta/mcl<em>skins</em>character_N.txt --the text description of the skin (optional)</p>
+<pre><code>textures/mcl_skins_character_N.png --the actual skin file
+textures/mcl_skins_player_N.png --the preview of the skin file that you'll see in the picker
+meta/mcl_skins_character_N.txt --the text description of the skin (optional)
+</code></pre>
 
 <p>where N is the skin's number.  The skins are sequentially numbered wih no gaps -
 so I had skins 1 through 94.  If you have a gap in the number mcl_skins will
