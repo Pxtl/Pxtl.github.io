@@ -31,9 +31,9 @@ Raspbian server it will be located at&lt;/p&gt;
 &lt;p&gt;This is the root folder for the minetest skins mod.  Each skin requires 2 files
 and 1 optional file.  Each skin requires&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;textures/mcl_skins_character_N.png --the actual skin file
-textures/mcl_skins_player_N.png --the preview of the skin file that you'll see in the picker
-meta/mcl_skins_character_N.txt --the text description of the skin (optional)
+&lt;pre&gt;&lt;code&gt;- `textures/mcl_skins_character_N.png` --the actual skin file
+- `textures/mcl_skins_player_N.png` --the preview of the skin file that you'll see in the picker
+- `meta/mcl_skins_character_N.txt` --the text description of the skin (optional)
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;where N is the skin's number.  The skins are sequentially numbered wih no gaps -
