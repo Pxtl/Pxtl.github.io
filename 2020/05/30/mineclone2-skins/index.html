@@ -8,7 +8,7 @@
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
-    <link rel="canonical" href="http://www.pxtl.ca/2016/10/13/xmlcommentmarkdowngeneratorupdated/" />
+    <link rel="canonical" href="http://www.pxtl.ca/2020/05/30/mineclone2-skins/" />
 </head>
 <body class="home blog">
     <div id="page" class="hfeed site">
@@ -36,11 +36,11 @@
                   
 
 <div id="post">
-    <h1>XmlCommentMarkDownGenerator Updated</h1>
+    <h1>Mineclone2 Skins (rpi minetest-server part 4)</h1>
 
     <div class="post-note">
-      posted on 13 Oct 2016
-       | <a href="/category/programming">Programming</a>
+      posted on 30 May 2020
+       | <a href="/category/software">Software</a>
       
       <div class="addthis_toolbox addthis_default_style" style="float:right;">
         <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
@@ -53,12 +53,78 @@
     
     
         
-    <p>I'm an idiot.  Always commit everything.  Always.  And only push your build artifacts, not straight from the project.</p>
+    <p>Continuing on our marathon process of setting up the perfect Mineclone2 server,
+this is going to be a brief side-guide - how set up skins in mineclone 2.  I
+tried several approaches to this problem - the popular  skin mods in minetest
+are meant to manage a connection to an online database of skins, and I just
+wanted to pre-load enough skins so the kids would have a library to choose from.</p>
 
-<p>I omitted the crucial line of the .nuspec that makes the .targets thing work, and so the cool build-generates-your-markdown wasn't actually available for users since version 0.1.5977.1837.<br />
-The latest version 0.2.6130.564 fixes the issue.</p>
+<p>I couldn't get any of the existing skins mods to work fully, so we're going to
+just set the files up manually.</p>
 
-<p>A lesson learned, but I wonder how many people I infuriated in the meantime?</p>
+<!--excerpt-->
+
+<h1>The MineClone2 Skins Mod</h1>
+
+<p>MineClone2 has a built-in skins mod (remember that minetest games are
+collections of mods), but it only includes two skins by default. The skins are
+located in the <code>mineclone2</code> game folder under <code>mods/PLAYER/mcl_skins</code>, so on our
+Raspbian server it will be located at</p>
+
+<p>/var/games/minetest-server/.minetest/games/mineclone2/mods/PLAYER/mcl_skins</p>
+
+<p>This is the root folder for the minetest skins mod.  Each skin requires 2 files
+and 1 optional file.  Each skin requires</p>
+
+<p>textures/mcl<em>skins</em>character<em>N.png --the actual skin file
+   textures/mcl</em>skins<em>player</em>N.png --the preview of the skin file that you'll see in the picker
+   meta/mcl<em>skins</em>character_N.txt --the text description of the skin (optional)</p>
+
+<p>where N is the skin's number.  The skins are sequentially numbered wih no gaps -
+so I had skins 1 through 94.  If you have a gap in the number mcl_skins will
+stop searching.</p>
+
+<p><img src="images/2020-05-30-Mineclone2-skins/files.jpg" alt="example files" /></p>
+
+<h2>The meta txt file</h2>
+
+<p>One of the three files is the meta text description of the skin.  It seems to only
+ever contain 2 lines:</p>
+
+<pre><code>name = "Example_skin",
+author = "exampleauthor",
+</code></pre>
+
+<p>I'm a stickler for credit so I always included the author name, but the
+MineClone2 skin picker didn't seem to show it anywhere.</p>
+
+<h1>The source</h1>
+
+<p>Mineclone2 skins are downloaded from the <a href="http://minetest.fensta.bplaced.net/">skins
+db</a>. Pick the skins you like, download the
+skin file and then rclick-save to download the thumbnail.</p>
+
+<h1>The process</h1>
+
+<p>So basically, our way to manually set up the skins is</p>
+
+<p>1) On the <a href="http://minetest.fensta.bplaced.net/">skins website</a>, download the
+   skin and thumbnail of the skin you like.</p>
+
+<p>2) Rename the thumbnail and skin to match the mineclone2 skin-mod standard,
+   being sure to copy out the part of the name that includes the author and
+   skin-name.</p>
+
+<p>3) Create a meta txt file with the name and author as described above.</p>
+
+<p>4) Upload the files to your server and put them into the correct folder.</p>
+
+<p>You shouldn't need to <code>chmod</code>/<code>chown</code> anything because the minetest server users
+only need to read the files.</p>
+
+<h1>Next time</h1>
+
+<p>Readdyyyy toooooo Mummmbbblle!</p>
 
 
     <div id="disqus_thread"></div>
@@ -68,14 +134,14 @@ The latest version 0.2.6130.564 fixes the issue.</p>
             reload: true,
             config: function () {
                 //this.page.identifier = '';
-                this.page.url = 'http://www.pxtl.ca/2016/10/13/xmlcommentmarkdowngeneratorupdated/';
+                this.page.url = 'http://www.pxtl.ca/2020/05/30/mineclone2-skins/';
                 //this.page.title = '';
             }
         });
     };
 
     var disqus_shortname = 'pxtl';
-    var disqus_url = 'http://www.pxtl.ca/2016/10/13/xmlcommentmarkdowngeneratorupdated/';
+    var disqus_url = 'http://www.pxtl.ca/2020/05/30/mineclone2-skins/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

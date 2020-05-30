@@ -1,4 +1,85 @@
-<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-05-23T21:33:54-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/05/23/minetest-mods/</id><title type="text">Minetest Mods (rpi minetest-server part 3)</title><summary type="html">&lt;p&gt;Now that we've got our Minetest server built (see &lt;a href="http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/"&gt;previous
+<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2020-05-30T17:54:22-04:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2020/05/30/mineclone2-skins/</id><title type="text">Mineclone2 Skins (rpi minetest-server part 4)</title><summary type="html">&lt;p&gt;Continuing on our marathon process of setting up the perfect Mineclone2 server,
+this is going to be a brief side-guide - how set up skins in mineclone 2.  I
+tried several approaches to this problem - the popular  skin mods in minetest
+are meant to manage a connection to an online database of skins, and I just
+wanted to pre-load enough skins so the kids would have a library to choose from.&lt;/p&gt;
+
+&lt;p&gt;I couldn't get any of the existing skins mods to work fully, so we're going to
+just set the files up manually.&lt;/p&gt;
+
+</summary><published>2020-05-30T04:00:00Z</published><updated>2020-05-30T04:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2020/05/30/mineclone2-skins/" /><content type="html">&lt;p&gt;Continuing on our marathon process of setting up the perfect Mineclone2 server,
+this is going to be a brief side-guide - how set up skins in mineclone 2.  I
+tried several approaches to this problem - the popular  skin mods in minetest
+are meant to manage a connection to an online database of skins, and I just
+wanted to pre-load enough skins so the kids would have a library to choose from.&lt;/p&gt;
+
+&lt;p&gt;I couldn't get any of the existing skins mods to work fully, so we're going to
+just set the files up manually.&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;h1&gt;The MineClone2 Skins Mod&lt;/h1&gt;
+
+&lt;p&gt;MineClone2 has a built-in skins mod (remember that minetest games are
+collections of mods), but it only includes two skins by default. The skins are
+located in the &lt;code&gt;mineclone2&lt;/code&gt; game folder under &lt;code&gt;mods/PLAYER/mcl_skins&lt;/code&gt;, so on our
+Raspbian server it will be located at&lt;/p&gt;
+
+&lt;p&gt;/var/games/minetest-server/.minetest/games/mineclone2/mods/PLAYER/mcl_skins&lt;/p&gt;
+
+&lt;p&gt;This is the root folder for the minetest skins mod.  Each skin requires 2 files
+and 1 optional file.  Each skin requires&lt;/p&gt;
+
+&lt;p&gt;textures/mcl&lt;em&gt;skins&lt;/em&gt;character&lt;em&gt;N.png --the actual skin file
+   textures/mcl&lt;/em&gt;skins&lt;em&gt;player&lt;/em&gt;N.png --the preview of the skin file that you'll see in the picker
+   meta/mcl&lt;em&gt;skins&lt;/em&gt;character_N.txt --the text description of the skin (optional)&lt;/p&gt;
+
+&lt;p&gt;where N is the skin's number.  The skins are sequentially numbered wih no gaps -
+so I had skins 1 through 94.  If you have a gap in the number mcl_skins will
+stop searching.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2020-05-30-Mineclone2-skins/files.jpg" alt="example files" /&gt;&lt;/p&gt;
+
+&lt;h2&gt;The meta txt file&lt;/h2&gt;
+
+&lt;p&gt;One of the three files is the meta text description of the skin.  It seems to only
+ever contain 2 lines:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;name = "Example_skin",
+author = "exampleauthor",
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I'm a stickler for credit so I always included the author name, but the
+MineClone2 skin picker didn't seem to show it anywhere.&lt;/p&gt;
+
+&lt;h1&gt;The source&lt;/h1&gt;
+
+&lt;p&gt;Mineclone2 skins are downloaded from the &lt;a href="http://minetest.fensta.bplaced.net/"&gt;skins
+db&lt;/a&gt;. Pick the skins you like, download the
+skin file and then rclick-save to download the thumbnail.&lt;/p&gt;
+
+&lt;h1&gt;The process&lt;/h1&gt;
+
+&lt;p&gt;So basically, our way to manually set up the skins is&lt;/p&gt;
+
+&lt;p&gt;1) On the &lt;a href="http://minetest.fensta.bplaced.net/"&gt;skins website&lt;/a&gt;, download the
+   skin and thumbnail of the skin you like.&lt;/p&gt;
+
+&lt;p&gt;2) Rename the thumbnail and skin to match the mineclone2 skin-mod standard,
+   being sure to copy out the part of the name that includes the author and
+   skin-name.&lt;/p&gt;
+
+&lt;p&gt;3) Create a meta txt file with the name and author as described above.&lt;/p&gt;
+
+&lt;p&gt;4) Upload the files to your server and put them into the correct folder.&lt;/p&gt;
+
+&lt;p&gt;You shouldn't need to &lt;code&gt;chmod&lt;/code&gt;/&lt;code&gt;chown&lt;/code&gt; anything because the minetest server users
+only need to read the files.&lt;/p&gt;
+
+&lt;h1&gt;Next time&lt;/h1&gt;
+
+&lt;p&gt;Readdyyyy toooooo Mummmbbblle!&lt;/p&gt;
+</content></entry><entry><id>http://www.pxtl.ca/2020/05/23/minetest-mods/</id><title type="text">Minetest Mods (rpi minetest-server part 3)</title><summary type="html">&lt;p&gt;Now that we've got our Minetest server built (see &lt;a href="http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/"&gt;previous
 entry&lt;/a&gt; ), now it's time to learn how to
 install mods and games into it, and how to run multiple instances of minetest.
 In particular, we're going to be installing Mineclone 2.&lt;/p&gt;
@@ -207,7 +288,7 @@ named &lt;code&gt;world&lt;/code&gt;, right?  That is, the world located at
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;WRONG&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Minetest-server by default &lt;em&gt;names&lt;/em&gt; the folder world.  But what it actually runs
+&lt;p&gt;Minetest-server by default &lt;em&gt;names&lt;/em&gt; the folder "world".  But what it actually runs
 is "the only world folder in &lt;code&gt;/var/games/minetest-server/.minetest/worlds/&lt;/code&gt;".
 What does that mean if there's 2 folders in
 &lt;code&gt;/var/games/minetest-server/.minetest/worlds/&lt;/code&gt;?  Crashy crashy.  And we're going
@@ -303,7 +384,7 @@ browser and you should find two worlds on your address, one on 30000 and one on
 
 &lt;h1&gt;Next Time&lt;/h1&gt;
 
-&lt;p&gt;Readyyyyyy toooooooo Mumble!&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.pxtl.ca/2020/05/30/2020-05-30-Mineclone2-skins/"&gt;The skinny on skins.&lt;/a&gt;&lt;/p&gt;
 </content></entry><entry><id>http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/</id><title type="text">Minetest Pi4 Recipe (rpi minetest-server part 2)</title><summary type="html">&lt;p&gt;Continuing from my &lt;a href="http://www.pxtl.ca/2020/05/05/minetest-birthday/"&gt;previous article&lt;/a&gt; on my
 daughter's Minetest birthday party, here's how I built my Raspberry Pi 4
 minetest server that powered the party.  To be clear: this is only my second
