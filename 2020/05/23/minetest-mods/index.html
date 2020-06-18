@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="last-modified" content="2020-05-30T18:04:39.7660777-04:00" />
+    <meta http-equiv="last-modified" content="2020-06-18T15:18:34.4998963-04:00" />
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
@@ -208,7 +208,7 @@ user, <code>Debian-minetest</code> of group <code>games</code>.</p>
 
 <p>The <code>-R</code> means <code>--recursive</code>.  Now the world</p>
 
-<pre><code> sudo chown Debian-minetest:games ./games/world -R
+<pre><code> sudo chown Debian-minetest:games ./worlds/world -R
 </code></pre>
 
 <p>And now we're ready.   Let's restart the server.</p>
@@ -253,7 +253,7 @@ worlds, we're going to run a second minetest-server instance.</p>
 
 <p>Okay, first we need to get into the weeds.  By default minetest runs the world
 named <code>world</code>, right?  That is, the world located at
-<code>/var/games/minetest-server/.minetest/worlds/2-mineclone-survival/</code>, right?</p>
+<code>/var/games/minetest-server/.minetest/worlds/world/</code>, right?</p>
 
 <p><strong><em>WRONG</em></strong>.</p>
 
@@ -406,6 +406,7 @@ browser and you should find two worlds on your address, one on 30000 and one on
                 <aside id="archives-4" class="widget widget_archive">
                     <h1 class="widget-title">Archive</h1>
                     <ul class="posts">
+                          <li><a href="/archive#20206">June, 2020</a></li>
                           <li><a href="/archive#20205">May, 2020</a></li>
                           <li><a href="/archive#20204">April, 2020</a></li>
                           <li><a href="/archive#20173">March, 2017</a></li>

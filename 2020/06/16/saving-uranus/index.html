@@ -8,7 +8,7 @@
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
-    <link rel="canonical" href="http://www.pxtl.ca/category/hamont/" />
+    <link rel="canonical" href="http://www.pxtl.ca/2020/06/16/saving-uranus/" />
 </head>
 <body class="home blog">
     <div id="page" class="hfeed site">
@@ -35,20 +35,119 @@
                 <div id="content" role="main">
                   
 
-  <header>
-  <div class="head-inner">
-    <h1><a href="/category/">Categories</a> - HamOnt</h1>
-  </div>
-  </header>
+<div id="post">
+    <h1>Saving Uranus</h1>
 
-  <ul class="category-list fancy-container orange">
-      <li>
-        <a href="/2017/02/22/yorkblvdcentrebikelane/" title="York Boulevard Centre-aligned Bike Track">York Boulevard Centre-aligned Bike Track</a> 
-        <small>(22 Feb 2017)</small>
-      </li>
-  </ul>
-  
+    <div class="post-note">
+      posted on 16 Jun 2020
+       | <a href="/category/software">Software</a>
+      
+      <div class="addthis_toolbox addthis_default_style" style="float:right;">
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+        <a class="addthis_button_tweet"></a>
+        <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+        <a class="addthis_button_linkedin_counter"></a>
+        <a class="addthis_counter addthis_pill_style"></a>
+      </div>
+    </div>
+    
+    
+        
+    <p>So I'm finally getting myself a new computer.  Had it all figured out - new
+off-lease desktops were coming available for my kids, and I was going to buy
+myself a brand-new gaming machine.  No hard feelings because everybody's getting
+a new machine at once.</p>
 
+<p>Just had to wait until August.</p>
+
+<p>Which is why it's awesome that my kids' computer (named Uranus) died.  And died in an
+infuriating way - it was murdered by its own software.</p>
+
+<!--excerpt-->
+
+<p>See, suddenly my son was upset that he couldn't open the shutdown menu.  Or
+search the start menu.  On closer examination, the problem was pervasive -
+couldn't open sub-menus in start, couldn't use the address bar in IE, couldn't
+open uninstall dialogs in the add/remove program screen. Any new-windows-UI
+screen that tried to create a floating widget failed.</p>
+
+<p>So I went through the expected stack of approaches that every forum will rattle off:</p>
+
+<ul>
+<li>sfc /scannow</li>
+<li>dism (both variants)</li>
+<li>various built-in troubleshooters</li>
+<li>installing all updates</li>
+<li>uninstalling recent updates</li>
+<li>a big crazy powershell scripts that reinstalls as much of the Universal
+Windows Platform (UWP) apps.</li>
+<li>switching to other user profiles - each of my children have their own user
+account and they all have this bug </li>
+<li>turning off all startup programs in task manager restart with msconfig with
+all non-microsoft services turned off </li>
+<li>safe mode... which worked!  But you can't live in safe mode.</li>
+<li>reinstall the OS (without removing software)</li>
+</ul>
+
+<p>Aside, "answers.microsoft.com" should be renamed "questions" because there are a
+lot of people asking things there and not a lot of answers besides "sfc
+/scannow".</p>
+
+<p>Ultimately, this came down to "okay, let's reinstall windows".  Which sucked
+because it meant sitting down with each of my kids and backing up their stuff.</p>
+
+<p>Even that didn't work.</p>
+
+<p>I pulled out all the stops.  I crawled through procmon and process explorer.  I
+tried rolling back windows versions (couldn't do it).  So many infuriating
+obstacles - the CD/DVD drive acted up, I couldn't boot from USB.</p>
+
+<p>Eventually, in a moment of frustration, I gave my PC a thump on the top.  And
+that knocked the dvd out of its tray.  So it got scratched up, and I didn't even
+have a windows DVD.  Did you know you can only burn the official windows ISOs to
+dual-layer DVDs?  They're bigger than 4.7GB now.  Somehow, though, Windows Home
+can burn images of itself, and they're smaller than 4.7GB.</p>
+
+<p>In the end, I considered it a huge victory when I got it back to its old broken
+state.  I think it was windows update 2004 that broke it, but I no longer care
+enough to find out.</p>
+
+<p>So that was my weekend.  The plus side is I'm getting a new computer so I can
+hand-down my old one.</p>
+
+
+    <div id="disqus_thread"></div>
+<script>
+    var reset_disqus = function(){
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                //this.page.identifier = '';
+                this.page.url = 'http://www.pxtl.ca/2020/06/16/saving-uranus/';
+                //this.page.title = '';
+            }
+        });
+    };
+
+    var disqus_shortname = 'pxtl';
+    var disqus_url = 'http://www.pxtl.ca/2020/06/16/saving-uranus/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    window.addEventListener('orientationchange', reset_disqus);
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5700677916b13588"></script>
+
+
+</div>
                 </div>
                 <!-- #content -->
             </div>

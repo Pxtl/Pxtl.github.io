@@ -1,4 +1,75 @@
-<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Pxtl.ca</title><link>http://www.pxtl.ca/rss.xml</link><description>Pxtl.ca</description><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/30/mineclone2-skins/</guid><link>http://www.pxtl.ca/2020/05/30/mineclone2-skins/</link><author>pxtl@hotmail.com</author><category>Software</category><title>Mineclone2 Skins (rpi minetest-server part 4)</title><description>&lt;p&gt;Continuing on our marathon process of setting up the perfect Mineclone2 server,
+<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Pxtl.ca</title><link>http://www.pxtl.ca/rss.xml</link><description>Pxtl.ca</description><item><guid isPermaLink="true">http://www.pxtl.ca/2020/06/16/saving-uranus/</guid><link>http://www.pxtl.ca/2020/06/16/saving-uranus/</link><author>pxtl@hotmail.com</author><category>Software</category><title>Saving Uranus</title><description>&lt;p&gt;So I'm finally getting myself a new computer.  Had it all figured out - new
+off-lease desktops were coming available for my kids, and I was going to buy
+myself a brand-new gaming machine.  No hard feelings because everybody's getting
+a new machine at once.&lt;/p&gt;
+
+&lt;p&gt;Just had to wait until August.&lt;/p&gt;
+
+&lt;p&gt;Which is why it's awesome that my kids' computer (named Uranus) died.  And died in an
+infuriating way - it was murdered by its own software.&lt;/p&gt;
+
+</description><pubDate>Tue, 16 Jun 2020 04:00:00 Z</pubDate><a10:updated>2020-06-16T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;So I'm finally getting myself a new computer.  Had it all figured out - new
+off-lease desktops were coming available for my kids, and I was going to buy
+myself a brand-new gaming machine.  No hard feelings because everybody's getting
+a new machine at once.&lt;/p&gt;
+
+&lt;p&gt;Just had to wait until August.&lt;/p&gt;
+
+&lt;p&gt;Which is why it's awesome that my kids' computer (named Uranus) died.  And died in an
+infuriating way - it was murdered by its own software.&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;p&gt;See, suddenly my son was upset that he couldn't open the shutdown menu.  Or
+search the start menu.  On closer examination, the problem was pervasive -
+couldn't open sub-menus in start, couldn't use the address bar in IE, couldn't
+open uninstall dialogs in the add/remove program screen. Any new-windows-UI
+screen that tried to create a floating widget failed.&lt;/p&gt;
+
+&lt;p&gt;So I went through the expected stack of approaches that every forum will rattle off:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;sfc /scannow&lt;/li&gt;
+&lt;li&gt;dism (both variants)&lt;/li&gt;
+&lt;li&gt;various built-in troubleshooters&lt;/li&gt;
+&lt;li&gt;installing all updates&lt;/li&gt;
+&lt;li&gt;uninstalling recent updates&lt;/li&gt;
+&lt;li&gt;a big crazy powershell scripts that reinstalls as much of the Universal
+Windows Platform (UWP) apps.&lt;/li&gt;
+&lt;li&gt;switching to other user profiles - each of my children have their own user
+account and they all have this bug &lt;/li&gt;
+&lt;li&gt;turning off all startup programs in task manager restart with msconfig with
+all non-microsoft services turned off &lt;/li&gt;
+&lt;li&gt;safe mode... which worked!  But you can't live in safe mode.&lt;/li&gt;
+&lt;li&gt;reinstall the OS (without removing software)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Aside, "answers.microsoft.com" should be renamed "questions" because there are a
+lot of people asking things there and not a lot of answers besides "sfc
+/scannow".&lt;/p&gt;
+
+&lt;p&gt;Ultimately, this came down to "okay, let's reinstall windows".  Which sucked
+because it meant sitting down with each of my kids and backing up their stuff.&lt;/p&gt;
+
+&lt;p&gt;Even that didn't work.&lt;/p&gt;
+
+&lt;p&gt;I pulled out all the stops.  I crawled through procmon and process explorer.  I
+tried rolling back windows versions (couldn't do it).  So many infuriating
+obstacles - the CD/DVD drive acted up, I couldn't boot from USB.&lt;/p&gt;
+
+&lt;p&gt;Eventually, in a moment of frustration, I gave my PC a thump on the top.  And
+that knocked the dvd out of its tray.  So it got scratched up, and I didn't even
+have a windows DVD.  Did you know you can only burn the official windows ISOs to
+dual-layer DVDs?  They're bigger than 4.7GB now.  Somehow, though, Windows Home
+can burn images of itself, and they're smaller than 4.7GB.&lt;/p&gt;
+
+&lt;p&gt;In the end, I considered it a huge victory when I got it back to its old broken
+state.  I think it was windows update 2004 that broke it, but I no longer care
+enough to find out.&lt;/p&gt;
+
+&lt;p&gt;So that was my weekend.  The plus side is I'm getting a new computer so I can
+hand-down my old one.&lt;/p&gt;
+</a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/30/mineclone2-skins/</guid><link>http://www.pxtl.ca/2020/05/30/mineclone2-skins/</link><author>pxtl@hotmail.com</author><category>Software</category><title>Mineclone2 Skins (rpi minetest-server part 4)</title><description>&lt;p&gt;Continuing on our marathon process of setting up the perfect Mineclone2 server,
 this is going to be a brief side-guide - how set up skins in mineclone 2.  I
 tried several approaches to this problem - the popular  skin mods in minetest
 are meant to manage a connection to an online database of skins, and I just
@@ -37,7 +108,7 @@ and 1 optional file.  Each skin requires&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;meta/mcl_skins_character_N.txt&lt;/code&gt; -- the text description of the skin (optional)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;where N is the skin's number.  The skins are sequentially numbered wih no gaps -
+&lt;p&gt;where N is the skin's number.  The skins are sequentially numbered with no gaps -
 so I had skins 1 through 94.  If you have a gap in the number mcl_skins will
 stop searching.&lt;/p&gt;
 
@@ -242,7 +313,7 @@ user, &lt;code&gt;Debian-minetest&lt;/code&gt; of group &lt;code&gt;games&lt;/co
 
 &lt;p&gt;The &lt;code&gt;-R&lt;/code&gt; means &lt;code&gt;--recursive&lt;/code&gt;.  Now the world&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt; sudo chown Debian-minetest:games ./games/world -R
+&lt;pre&gt;&lt;code&gt; sudo chown Debian-minetest:games ./worlds/world -R
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And now we're ready.   Let's restart the server.&lt;/p&gt;
@@ -287,7 +358,7 @@ worlds, we're going to run a second minetest-server instance.&lt;/p&gt;
 
 &lt;p&gt;Okay, first we need to get into the weeds.  By default minetest runs the world
 named &lt;code&gt;world&lt;/code&gt;, right?  That is, the world located at
-&lt;code&gt;/var/games/minetest-server/.minetest/worlds/2-mineclone-survival/&lt;/code&gt;, right?&lt;/p&gt;
+&lt;code&gt;/var/games/minetest-server/.minetest/worlds/world/&lt;/code&gt;, right?&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;WRONG&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
 
@@ -1344,10 +1415,4 @@ The latest version 0.2.6130.564 fixes the issue.&lt;/p&gt;
 </description><pubDate>Mon, 12 Sep 2016 04:00:00 Z</pubDate><a10:updated>2016-09-12T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;I've released version 0.2 of &lt;a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator"&gt;XmlCommentMarkDownGenerator&lt;/a&gt;.  If you're running a C#-based project on GitHub, it could be useful to you - it takes your Xml comments and converts them into GitHub-flavoured markdown.  This gives you a nice document page right in your repo that you can link to.  I've set it up as a NuGet package, so in your C# project all you have to do is add the NuGet package to your project and it will add a post-build step to your project to automatically run the tool and generate the markdown file.  I was surprised that NuGet makes that a thing - apparently it's called custom .targets.  See &lt;a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets"&gt;https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets&lt;/a&gt; to see how that kind of "custom post-build-step as a nuget package" thing is implemented.&lt;/p&gt;
 
 &lt;p&gt;It was forked from &lt;a href="https://gist.github.com/lontivero/593fc51f1208555112e0"&gt;https://gist.github.com/lontivero/593fc51f1208555112e0&lt;/a&gt;, but I'd like to think I've polished it up a fair bit.  This was really just a side-project while I worked on BigVariant and Nustache, but it's the one with the most stars and downloads so I thought I should give it a little TLC.  Pull requests are always welcome. &lt;/p&gt;
-</a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2016/04/02/first-post/</guid><link>http://www.pxtl.ca/2016/04/02/first-post/</link><author>pxtl@hotmail.com</author><category>Blog</category><title>First Post</title><description>&lt;p&gt;Hello, World.&lt;/p&gt;
-
-&lt;p&gt;This site is intended to be a place to put news related to my hobby projects.&lt;/p&gt;
-</description><pubDate>Sat, 02 Apr 2016 04:00:00 Z</pubDate><a10:updated>2016-04-02T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;Hello, World.&lt;/p&gt;
-
-&lt;p&gt;This site is intended to be a place to put news related to my hobby projects.&lt;/p&gt;
 </a10:content></item></channel></rss>
