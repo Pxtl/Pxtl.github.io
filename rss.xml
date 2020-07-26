@@ -69,6 +69,86 @@ enough to find out.&lt;/p&gt;
 
 &lt;p&gt;So that was my weekend.  The plus side is I'm getting a new computer so I can
 hand-down my old one.&lt;/p&gt;
+</a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2020/06/13/saving-uranus/</guid><link>http://www.pxtl.ca/2020/06/13/saving-uranus/</link><author>pxtl@hotmail.com</author><category>Software</category><title>Saving Uranus</title><description>&lt;p&gt;So I'm finally getting myself a new computer.  Had it all figured out - new
+off-lease desktops were coming available for my kids, and I was going to buy
+myself a brand-new gaming machine.  No hard feelings because everybody's getting
+a new machine at once.&lt;/p&gt;
+
+&lt;p&gt;Just had to wait until August.&lt;/p&gt;
+
+&lt;p&gt;Which is why it's awesome that my kids' computer (named Uranus) died.  And died in an
+infuriating way - it was murdered by its own software.&lt;/p&gt;
+
+&lt;p&gt;See, suddenly my son was upset that he couldn't open the shutdown menu.  Or
+search the start menu.  On closer examination, the problem was pervasive -
+couldn't open sub-menus in start, couldn't use the address bar in IE, couldn't
+open uninstall dialogs in the add/remove program screen.  Any new-windows-UI
+screen that tried to create a floating widget failed.&lt;/p&gt;
+
+&lt;p&gt;So I went through the expected stack of approaches that every forum will rattle off:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;sfc /scannow&lt;/li&gt;
+&lt;li&gt;dism (both variants)&lt;/li&gt;
+&lt;li&gt;various built-in troubleshooters&lt;/li&gt;
+&lt;li&gt;installing all updates&lt;/li&gt;
+&lt;li&gt;uninstalling recent updates&lt;/li&gt;
+&lt;li&gt;a big crazy powershell scripts that reinstalls as much of the Universal
+Windows Platform (UWP) apps.&lt;/li&gt;
+&lt;li&gt;switching to other user profiles - each of my children have their own user
+account and they all have this bug &lt;/li&gt;
+&lt;li&gt;turning off all startup programs in task manager restart with msconfig with
+all non-microsoft services turned off &lt;/li&gt;
+&lt;li&gt;safe mode... which worked!  But you can't live in safe mode.&lt;/li&gt;
+&lt;li&gt;reinstall the OS (without removing software)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Aside, "answers.microsoft.com" should be renamed "questions" because there are a
+lot of people asking things there and not a lot of answers besides "sfc
+/scannow".&lt;/p&gt;
+
+&lt;p&gt;Ultimately, this came down to "okay, let's reinstall windows".  Which sucked
+because it meant sitting down with each of my kids and backing up their stuff.&lt;/p&gt;
+</description><pubDate>Sat, 13 Jun 2020 04:00:00 Z</pubDate><a10:updated>2020-06-13T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;So I'm finally getting myself a new computer.  Had it all figured out - new
+off-lease desktops were coming available for my kids, and I was going to buy
+myself a brand-new gaming machine.  No hard feelings because everybody's getting
+a new machine at once.&lt;/p&gt;
+
+&lt;p&gt;Just had to wait until August.&lt;/p&gt;
+
+&lt;p&gt;Which is why it's awesome that my kids' computer (named Uranus) died.  And died in an
+infuriating way - it was murdered by its own software.&lt;/p&gt;
+
+&lt;p&gt;See, suddenly my son was upset that he couldn't open the shutdown menu.  Or
+search the start menu.  On closer examination, the problem was pervasive -
+couldn't open sub-menus in start, couldn't use the address bar in IE, couldn't
+open uninstall dialogs in the add/remove program screen.  Any new-windows-UI
+screen that tried to create a floating widget failed.&lt;/p&gt;
+
+&lt;p&gt;So I went through the expected stack of approaches that every forum will rattle off:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;sfc /scannow&lt;/li&gt;
+&lt;li&gt;dism (both variants)&lt;/li&gt;
+&lt;li&gt;various built-in troubleshooters&lt;/li&gt;
+&lt;li&gt;installing all updates&lt;/li&gt;
+&lt;li&gt;uninstalling recent updates&lt;/li&gt;
+&lt;li&gt;a big crazy powershell scripts that reinstalls as much of the Universal
+Windows Platform (UWP) apps.&lt;/li&gt;
+&lt;li&gt;switching to other user profiles - each of my children have their own user
+account and they all have this bug &lt;/li&gt;
+&lt;li&gt;turning off all startup programs in task manager restart with msconfig with
+all non-microsoft services turned off &lt;/li&gt;
+&lt;li&gt;safe mode... which worked!  But you can't live in safe mode.&lt;/li&gt;
+&lt;li&gt;reinstall the OS (without removing software)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Aside, "answers.microsoft.com" should be renamed "questions" because there are a
+lot of people asking things there and not a lot of answers besides "sfc
+/scannow".&lt;/p&gt;
+
+&lt;p&gt;Ultimately, this came down to "okay, let's reinstall windows".  Which sucked
+because it meant sitting down with each of my kids and backing up their stuff.&lt;/p&gt;
 </a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/30/mineclone2-skins/</guid><link>http://www.pxtl.ca/2020/05/30/mineclone2-skins/</link><author>pxtl@hotmail.com</author><category>Software</category><title>Mineclone2 Skins (rpi minetest-server part 4)</title><description>&lt;p&gt;Continuing on our marathon process of setting up the perfect Mineclone2 server,
 this is going to be a brief side-guide - how set up skins in mineclone 2.  I
 tried several approaches to this problem - the popular  skin mods in minetest
@@ -443,12 +523,20 @@ etc.&lt;/p&gt;
 
 &lt;p&gt;There's a simple command to create a 2nd server-instance:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;systemctl start minetest-server@2-mineclone-survival.service
+&lt;pre&gt;&lt;code&gt;sudo systemctl start minetest-server@2-mineclone-survival.service
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You'll notice that I've used "2-mineclone-survival" again.  That name &lt;em&gt;must&lt;/em&gt;
 match the name of your conf file.  So if you named your 2nd conf file "fred"?
 &lt;code&gt;minetest-server@fred.service&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;edit (2020-07-26): I missed a step, apparently.  I noticed my server wasn't
+starting on restart!  So there's an extra step here - we have to &lt;em&gt;enable&lt;/em&gt; the
+service, which is analogous to "autostart" on Windows.  Enable means start on
+startup.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo systemctl enable minetest-server@2-mineclone-survival.service
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Anyhow, that &lt;em&gt;should&lt;/em&gt; be it.  2nd world is up and running.  Go see the server
 browser and you should find two worlds on your address, one on 30000 and one on
@@ -888,7 +976,7 @@ our Mumble server, you want me to type chat into the console like a caveman?
 Still, at the end of this article, we've got something useful!  You and your
 friends can play vanilla Minetest game on your pi4 server now.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="http://www.pxtl.ca/2020/05/23/2020-05-23-Minetest-mods/"&gt;Next time, more stuff.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.pxtl.ca/2020/05/23/Minetest-mods/"&gt;Next time, more stuff.&lt;/a&gt;&lt;/p&gt;
 </a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/05/minetest-birthday/</guid><link>http://www.pxtl.ca/2020/05/05/minetest-birthday/</link><author>pxtl@hotmail.com</author><category>Blog</category><title>Minetest Birthday (rpi minetest-server part 1)</title><description>&lt;p&gt;Okay, this is part one of a multi-part... well, I guess we can't use the term
 "postmortem" that's popular in software development, since it's kind of morbid
 for a birthday.  We'll call it an "after-action report".&lt;/p&gt;
@@ -1409,10 +1497,4 @@ The latest version 0.2.6130.564 fixes the issue.&lt;/p&gt;
 The latest version 0.2.6130.564 fixes the issue.&lt;/p&gt;
 
 &lt;p&gt;A lesson learned, but I wonder how many people I infuriated in the meantime?&lt;/p&gt;
-</a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2016/09/12/xmlcommentmarkdowngenerator/</guid><link>http://www.pxtl.ca/2016/09/12/xmlcommentmarkdowngenerator/</link><author>pxtl@hotmail.com</author><category>Programming</category><title>XmlCommentMarkDownGenerator</title><description>&lt;p&gt;I've released version 0.2 of &lt;a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator"&gt;XmlCommentMarkDownGenerator&lt;/a&gt;.  If you're running a C#-based project on GitHub, it could be useful to you - it takes your Xml comments and converts them into GitHub-flavoured markdown.  This gives you a nice document page right in your repo that you can link to.  I've set it up as a NuGet package, so in your C# project all you have to do is add the NuGet package to your project and it will add a post-build step to your project to automatically run the tool and generate the markdown file.  I was surprised that NuGet makes that a thing - apparently it's called custom .targets.  See &lt;a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets"&gt;https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets&lt;/a&gt; to see how that kind of "custom post-build-step as a nuget package" thing is implemented.&lt;/p&gt;
-
-&lt;p&gt;It was forked from &lt;a href="https://gist.github.com/lontivero/593fc51f1208555112e0"&gt;https://gist.github.com/lontivero/593fc51f1208555112e0&lt;/a&gt;, but I'd like to think I've polished it up a fair bit.  This was really just a side-project while I worked on BigVariant and Nustache, but it's the one with the most stars and downloads so I thought I should give it a little TLC.  Pull requests are always welcome. &lt;/p&gt;
-</description><pubDate>Mon, 12 Sep 2016 04:00:00 Z</pubDate><a10:updated>2016-09-12T04:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;I've released version 0.2 of &lt;a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator"&gt;XmlCommentMarkDownGenerator&lt;/a&gt;.  If you're running a C#-based project on GitHub, it could be useful to you - it takes your Xml comments and converts them into GitHub-flavoured markdown.  This gives you a nice document page right in your repo that you can link to.  I've set it up as a NuGet package, so in your C# project all you have to do is add the NuGet package to your project and it will add a post-build step to your project to automatically run the tool and generate the markdown file.  I was surprised that NuGet makes that a thing - apparently it's called custom .targets.  See &lt;a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets"&gt;https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets&lt;/a&gt; to see how that kind of "custom post-build-step as a nuget package" thing is implemented.&lt;/p&gt;
-
-&lt;p&gt;It was forked from &lt;a href="https://gist.github.com/lontivero/593fc51f1208555112e0"&gt;https://gist.github.com/lontivero/593fc51f1208555112e0&lt;/a&gt;, but I'd like to think I've polished it up a fair bit.  This was really just a side-project while I worked on BigVariant and Nustache, but it's the one with the most stars and downloads so I thought I should give it a little TLC.  Pull requests are always welcome. &lt;/p&gt;
 </a10:content></item></channel></rss>

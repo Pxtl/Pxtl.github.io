@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="last-modified" content="2020-06-18T15:18:34.4998963-04:00" />
+    <meta http-equiv="last-modified" content="2020-07-26T18:04:26.0377637-04:00" />
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
@@ -338,12 +338,20 @@ etc.</p>
 
 <p>There's a simple command to create a 2nd server-instance:</p>
 
-<pre><code>systemctl start minetest-server@2-mineclone-survival.service
+<pre><code>sudo systemctl start minetest-server@2-mineclone-survival.service
 </code></pre>
 
 <p>You'll notice that I've used "2-mineclone-survival" again.  That name <em>must</em>
 match the name of your conf file.  So if you named your 2nd conf file "fred"?
 <code>minetest-server@fred.service</code>.</p>
+
+<p>edit (2020-07-26): I missed a step, apparently.  I noticed my server wasn't
+starting on restart!  So there's an extra step here - we have to <em>enable</em> the
+service, which is analogous to "autostart" on Windows.  Enable means start on
+startup.</p>
+
+<pre><code>sudo systemctl enable minetest-server@2-mineclone-survival.service
+</code></pre>
 
 <p>Anyhow, that <em>should</em> be it.  2nd world is up and running.  Go see the server
 browser and you should find two worlds on your address, one on 30000 and one on
