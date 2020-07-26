@@ -466,7 +466,7 @@ browser and you should find two worlds on your address, one on 30000 and one on
 
 &lt;h1&gt;Next Time&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href="http://www.pxtl.ca/2020/05/30/2020-05-30-Mineclone2-skins/"&gt;The skinny on skins.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.pxtl.ca/2020/05/30/mineclone2-skins/"&gt;The skinny on skins.&lt;/a&gt;&lt;/p&gt;
 </a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/</guid><link>http://www.pxtl.ca/2020/05/12/minetest-pi4-recipe/</link><author>pxtl@hotmail.com</author><category>Software</category><title>Minetest Pi4 Recipe (rpi minetest-server part 2)</title><description>&lt;p&gt;Continuing from my &lt;a href="http://www.pxtl.ca/2020/05/05/minetest-birthday/"&gt;previous article&lt;/a&gt; on my
 daughter's Minetest birthday party, here's how I built my Raspberry Pi 4
 minetest server that powered the party.  To be clear: this is only my second
@@ -896,7 +896,7 @@ our Mumble server, you want me to type chat into the console like a caveman?
 Still, at the end of this article, we've got something useful!  You and your
 friends can play vanilla Minetest game on your pi4 server now.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="http://www.pxtl.ca/2020/05/23/Minetest-mods/"&gt;Next time, more stuff.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.pxtl.ca/2020/05/23/minetest-mods/"&gt;Next time, more stuff.&lt;/a&gt;&lt;/p&gt;
 </a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2020/05/05/minetest-birthday/</guid><link>http://www.pxtl.ca/2020/05/05/minetest-birthday/</link><author>pxtl@hotmail.com</author><category>Blog</category><title>Minetest Birthday (rpi minetest-server part 1)</title><description>&lt;p&gt;Okay, this is part one of a multi-part... well, I guess we can't use the term
 "postmortem" that's popular in software development, since it's kind of morbid
 for a birthday.  We'll call it an "after-action report".&lt;/p&gt;
