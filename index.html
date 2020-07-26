@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="last-modified" content="2020-07-26T18:04:26.0377637-04:00" />
+    <meta http-equiv="last-modified" content="2020-07-26T18:06:40.4644704-04:00" />
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
@@ -53,55 +53,6 @@ infuriating way - it was murdered by its own software.</p>
 
 
       <p><a href="/2020/06/16/saving-uranus/">Read more...</a></p>
-    </li>
-    <li class="fancy-container lightblue">
-      <h1>
-        <a href="/2020/06/13/saving-uranus/">Saving Uranus</a> 
-        <span>posted on 13 Jun 2020</span>
-      </h1> 
-      
-      <p>So I'm finally getting myself a new computer.  Had it all figured out - new
-off-lease desktops were coming available for my kids, and I was going to buy
-myself a brand-new gaming machine.  No hard feelings because everybody's getting
-a new machine at once.</p>
-
-<p>Just had to wait until August.</p>
-
-<p>Which is why it's awesome that my kids' computer (named Uranus) died.  And died in an
-infuriating way - it was murdered by its own software.</p>
-
-<p>See, suddenly my son was upset that he couldn't open the shutdown menu.  Or
-search the start menu.  On closer examination, the problem was pervasive -
-couldn't open sub-menus in start, couldn't use the address bar in IE, couldn't
-open uninstall dialogs in the add/remove program screen.  Any new-windows-UI
-screen that tried to create a floating widget failed.</p>
-
-<p>So I went through the expected stack of approaches that every forum will rattle off:</p>
-
-<ul>
-<li>sfc /scannow</li>
-<li>dism (both variants)</li>
-<li>various built-in troubleshooters</li>
-<li>installing all updates</li>
-<li>uninstalling recent updates</li>
-<li>a big crazy powershell scripts that reinstalls as much of the Universal
-Windows Platform (UWP) apps.</li>
-<li>switching to other user profiles - each of my children have their own user
-account and they all have this bug </li>
-<li>turning off all startup programs in task manager restart with msconfig with
-all non-microsoft services turned off </li>
-<li>safe mode... which worked!  But you can't live in safe mode.</li>
-<li>reinstall the OS (without removing software)</li>
-</ul>
-
-<p>Aside, "answers.microsoft.com" should be renamed "questions" because there are a
-lot of people asking things there and not a lot of answers besides "sfc
-/scannow".</p>
-
-<p>Ultimately, this came down to "okay, let's reinstall windows".  Which sucked
-because it meant sitting down with each of my kids and backing up their stuff.</p>
-
-      <p><a href="/2020/06/13/saving-uranus/">Read more...</a></p>
     </li>
     <li class="fancy-container lightblue">
       <h1>
@@ -239,6 +190,18 @@ The latest version 0.2.6130.564 fixes the issue.</p>
 <p>A lesson learned, but I wonder how many people I infuriated in the meantime?</p>
 
       <p><a href="/2016/10/13/xmlcommentmarkdowngeneratorupdated/">Read more...</a></p>
+    </li>
+    <li class="fancy-container lightblue">
+      <h1>
+        <a href="/2016/09/12/xmlcommentmarkdowngenerator/">XmlCommentMarkDownGenerator</a> 
+        <span>posted on 12 Sep 2016</span>
+      </h1> 
+      
+      <p>I've released version 0.2 of <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator">XmlCommentMarkDownGenerator</a>.  If you're running a C#-based project on GitHub, it could be useful to you - it takes your Xml comments and converts them into GitHub-flavoured markdown.  This gives you a nice document page right in your repo that you can link to.  I've set it up as a NuGet package, so in your C# project all you have to do is add the NuGet package to your project and it will add a post-build step to your project to automatically run the tool and generate the markdown file.  I was surprised that NuGet makes that a thing - apparently it's called custom .targets.  See <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets">https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets</a> to see how that kind of "custom post-build-step as a nuget package" thing is implemented.</p>
+
+<p>It was forked from <a href="https://gist.github.com/lontivero/593fc51f1208555112e0">https://gist.github.com/lontivero/593fc51f1208555112e0</a>, but I'd like to think I've polished it up a fair bit.  This was really just a side-project while I worked on BigVariant and Nustache, but it's the one with the most stars and downloads so I thought I should give it a little TLC.  Pull requests are always welcome. </p>
+
+      <p><a href="/2016/09/12/xmlcommentmarkdowngenerator/">Read more...</a></p>
     </li>
   </ul> 
 
