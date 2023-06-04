@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="last-modified" content="2021-06-15T01:08:19.7174372-04:00" />
+    <meta http-equiv="last-modified" content="2023-06-03T23:46:39.9983687-04:00" />
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
@@ -35,6 +35,65 @@
                 <div id="content" role="main">
                   
   <ul class="posts">
+    <li class="fancy-container lightblue">
+      <h1>
+        <a href="/2017/03/11/xoutput/">XOutput v0.2.0</a> 
+        <span>posted on 11 Mar 2017</span>
+      </h1> 
+      
+      <p><a href="https://github.com/Pxtl/XOutput/releases/tag/v0.2.0">I've released my first version of my fork of XOutput.</a><br />
+It's a simple wrapper that allows you to rebind a DInput gamepad as an XInput gamepad.<br />
+Since most games are standardized on XInput (XBox360 controllers), 
+this allows you to make an existing gamepad masquerade as an XBox360 controller. </p>
+
+      <p><a href="/2017/03/11/xoutput/">Read more...</a></p>
+    </li>
+    <li class="fancy-container lightblue">
+      <h1>
+        <a href="/2017/02/22/yorkblvdcentrebikelane/">York Boulevard Centre-aligned Bike Track</a> 
+        <span>posted on 22 Feb 2017</span>
+      </h1> 
+      
+      <p>The city has told us that the York and Dundurn bike lanes may need to be removed as York and Dundurn must carry westbound automotive traffic that will no longer fit on LRT-equipped King Street.</p>
+
+<p>Since everyone else has thrown a design out there for saving the York bike track, I thought I'd do the same.</p>
+
+<p>There are a handful of cities that have implemented centre-aligned bike lanes.  There are some advantages to this flow: Drivers expect to see oncoming traffic on the left.  In one-way traffic like Cannon, this means putting the cycle track on the left side (south for Cannon).  In a two-way street, this means using the centre - it's on the left for both directions of traffic.  This allows us to unify the two bike lanes into a  single protected bidirectional cycle track without having oncoming traffic on the right.</p>
+
+<p>Also, a feature very particular to York and Cannon; Cannon merges with York Boulevard at Queen to form a single road.  The Cannon lanes, if continued, would end in the centre of this road.  So let's see what that looks like: The Cannon lanes continue right to Queen, and only have to deal with left-turning traffic turning across the bike lane.  </p>
+
+<p><img src="/images/yorkcentrebikelanes_queennoboxes.jpg" alt="picture of straight-through bike-lane at York/Queen/Cannon" /></p>
+
+
+      <p><a href="/2017/02/22/yorkblvdcentrebikelane/">Read more...</a></p>
+    </li>
+    <li class="fancy-container lightblue">
+      <h1>
+        <a href="/2016/10/13/xmlcommentmarkdowngeneratorupdated/">XmlCommentMarkDownGenerator Updated</a> 
+        <span>posted on 13 Oct 2016</span>
+      </h1> 
+      
+      <p>I'm an idiot.  Always commit everything.  Always.  And only push your build artifacts, not straight from the project.</p>
+
+<p>I omitted the crucial line of the .nuspec that makes the .targets thing work, and so the cool build-generates-your-markdown wasn't actually available for users since version 0.1.5977.1837.<br />
+The latest version 0.2.6130.564 fixes the issue.</p>
+
+<p>A lesson learned, but I wonder how many people I infuriated in the meantime?</p>
+
+      <p><a href="/2016/10/13/xmlcommentmarkdowngeneratorupdated/">Read more...</a></p>
+    </li>
+    <li class="fancy-container lightblue">
+      <h1>
+        <a href="/2016/09/12/xmlcommentmarkdowngenerator/">XmlCommentMarkDownGenerator</a> 
+        <span>posted on 12 Sep 2016</span>
+      </h1> 
+      
+      <p>I've released version 0.2 of <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator">XmlCommentMarkDownGenerator</a>.  If you're running a C#-based project on GitHub, it could be useful to you - it takes your Xml comments and converts them into GitHub-flavoured markdown.  This gives you a nice document page right in your repo that you can link to.  I've set it up as a NuGet package, so in your C# project all you have to do is add the NuGet package to your project and it will add a post-build step to your project to automatically run the tool and generate the markdown file.  I was surprised that NuGet makes that a thing - apparently it's called custom .targets.  See <a href="https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets">https://github.com/Pxtl/XmlCommentMarkDownGenerator/blob/master/PxtlCa.XmlCommentMarkDownGenerator.targets</a> to see how that kind of "custom post-build-step as a nuget package" thing is implemented.</p>
+
+<p>It was forked from <a href="https://gist.github.com/lontivero/593fc51f1208555112e0">https://gist.github.com/lontivero/593fc51f1208555112e0</a>, but I'd like to think I've polished it up a fair bit.  This was really just a side-project while I worked on BigVariant and Nustache, but it's the one with the most stars and downloads so I thought I should give it a little TLC.  Pull requests are always welcome. </p>
+
+      <p><a href="/2016/09/12/xmlcommentmarkdowngenerator/">Read more...</a></p>
+    </li>
     <li class="fancy-container lightblue">
       <h1>
         <a href="/2016/04/02/first-post/">First Post</a> 
@@ -71,6 +130,7 @@
                 <aside id="text-5" class="widget widget_text">
                     <h1 class="widget-title">Follow</h1>
                     <div class="textwidget logos">
+                        <a href="https://mastodon.social/@Pxtl" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://mastodon.social']);"><img src="/stylesheets/images/mastodon.png"></a>
                         <a href="https://twitter.com/pxtl" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);"><img src="/stylesheets/images/twitter.png"></a>
                         <a href="http://stackoverflow.com/users/588195/pxtl" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://stackoverflow.com']);"><img src="/stylesheets/images/stackoverflow.png"></a>
                         <a href="https://ca.linkedin.com/in/martin-zarate-a132181b" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.linkedin.com']);"><img src="/stylesheets/images/linkedin.png"></a>
@@ -80,6 +140,10 @@
                 <aside id="archives-4" class="widget widget_archive">
                     <h1 class="widget-title">Archive</h1>
                     <ul class="posts">
+                          <li><a href="/archive#20236">June, 2023</a></li>
+                          <li><a href="/archive#202211">November, 2022</a></li>
+                          <li><a href="/archive#20225">May, 2022</a></li>
+                          <li><a href="/archive#20219">September, 2021</a></li>
                           <li><a href="/archive#20216">June, 2021</a></li>
                           <li><a href="/archive#20215">May, 2021</a></li>
                           <li><a href="/archive#20211">January, 2021</a></li>
