@@ -8,7 +8,7 @@
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
-    <link rel="canonical" href="http://www.pxtl.ca/2020/04/08/ip-webcam/" />
+    <link rel="canonical" href="http://www.pxtl.ca/2023/08/31/sick-pupper/" />
 </head>
 <body class="home blog">
     <div id="page" class="hfeed site">
@@ -36,11 +36,11 @@
                   
 
 <div id="post">
-    <h1>Using your phone as a Webcam on Windows and Android</h1>
+    <h1>Sick Pupper</h1>
 
     <div class="post-note">
-      posted on 08 Apr 2020
-       | <a href="/category/software">Software</a>
+      posted on 31 Aug 2023
+       | <a href="/category/life">Life</a>
       
       <div class="addthis_toolbox addthis_default_style" style="float:right;">
         <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
@@ -53,124 +53,36 @@
     
     
         
-    <p>What with covid-19, a lot of people are remoting and not a lot of people have
-webcams. But everybody's got a smartphone. So here's a guide on how to use your
-smartphone as a webcam with Android an Windows over wifi.</p>
+    <p>So my dog made a mess in his crate overnight.  Not a big deal, he eats anything
+he can get his mouth on, upset tummies are expected.  I've parented 3 human
+babies, messes happen, I know the drill.</p>
 
-<p>This is pretty adminny. If you're not comfy with that you might need to look at
-other approaches.</p>
+<p>For Waffles, there's no good place in the house to wash him, so normally I take
+him out to the driveway and hold him by the collar and clean him off with the
+hose.  He doesn't love the cold hose-water, but I've seen him frolick in deep
+puddles in January.</p>
 
-<p>One important wrinkle is performance: It runs down the battery on my phone, and
-it slams the CPU on my desktop with interrupts.</p>
-
-<p><strong>Note that none of the software I'm recommending in this guide is open-source.
-I cannot guarantee that the software discussed below has no malicious secret
-intent.</strong></p>
+<p>And this time I had something new to help!  I fenced in my backyard.  But on the
+other hand, the back yard is all grass.  And mud.  And last time I was barefoot,
+this time I was wearing flipflops.</p>
 
 <!--excerpt-->
 
-<p>Before I get into the details: if you don't like my guide there is also <a href="http://ip-webcam.appspot.com/static/doc.html">the
-official guide</a> from the developer
-of the tools I'm describing.</p>
+<p>I made a strategic mistake.  </p>
 
-<h2>Setting up your phone as a server</h2>
+<p>Do not underestimate the traction of a panicky Golden in his element.  He ran
+<em>hard</em> and I skated along my now-muddy lawn in my flipflops, dragged by my
+fingers hooked under his collar.  He stopped just in time to bash me against the
+shed.</p>
 
-<p>First, you need to get your Android phone onto a static IP. So go to Settings ->
-About -> Status to find your Wi-fi MAC address, and in your router's DHCP/LAN
-settings, you need to bind that address to a fixed IP. Also take note of <em>which</em>
-wifi network your phone lives on, if you have more than one in your home or
-workplace.</p>
+<p>I have newfound respect for rodeo guys that hogtie livestock.</p>
 
-<p>Next, you need to install <a href="https://play.google.com/store/apps/details?id=com.pas.webcam&amp;hl=en_CA">IP
-Webcam</a>
-on your android phone. This turns your phone into a video server - which is why
-it needs a static IP. Run IP Webcam.</p>
+<p>I'm black and blue but the most bruised part of me is my ego for getting
+beaten-up by a two-foot-tall 70 lb eunuch.</p>
 
-<h3>Recommended settings:</h3>
+<p>my poor sick pupper.</p>
 
-<ul>
-<li>IP WEBCAM SETTINGS -> Video Preferences
-<ul>
-<li>Set the "main" camera to the front-facing camera. I know the rear-camera is
-better but this is just easier to set up.</li>
-<li>Set the "Video Resolution" to 640x480 or lower. I found performance problems
-at higher resolution.</li>
-</ul></li>
-<li>CONNECTION SETTINGS -> Local Broadcasting
-<ul>
-<li>Set a Login and Password.</li>
-<li>I'm assuming your network is secure so we're not going to fuss with SSL, I
-couldn't make SSL work.</li>
-<li>Just to be safe, don't get naked in front of your phone while it's running
-the server</li>
-</ul></li>
-</ul>
-
-<h3>Notes on "run in background":</h3>
-
-<p>IP WebCam has the option to run in background, but I found the notification icon
-that indicates this is happening easy-to-miss and so it would be very easy to
-accidentally leave it broadcasting your life. It does save power because you can
-shut down the video view and do other things while it's streaming, but I
-recommend not using it. If power is a problem, get a power-cable for your
-computer desk.</p>
-
-<h3>Starting it up</h3>
-
-<p>Now that your settings are confirmed, click "start server". It will show the
-live video from your phoen that it is broadcasting, along with the address if
-the webserver your phone is running - eg http://192.168.1.X:8080. Note that this
-is <em>not</em> the address of the raw stream, but of a website you can use to
-configure your device. Feel free to hit that address with your browser to try
-it.</p>
-
-<p>The actual video feed lives at http://192.168.1.X:8080/video. Note the /video
-directory. It's over HTTP, so again you can hit it with your browser. You'll be
-prompted for username and password.</p>
-
-<p>Leave the server running while we set up the client.</p>
-
-<h2>Setting up your Windows PC as a client</h2>
-
-<p>First, confirm that your Windows PC is on the same WiFi network as your phone.</p>
-
-<p>Now we install the client software. We're using <a href="https://ip-webcam.appspot.com/">IP Camera
-Adapter</a> which will allow you to connect your
-Windows PC to the HTTP videostream and use it as a webcam.</p>
-
-<p>Install the software. When completed, open the app "Configure IP Camera Adapter"
-that is now present in your start menu.</p>
-
-<p>Then:</p>
-
-<ol>
-<li><p>Type in the camera feed URL - remember this is the one that ends in "/video".
-So in total it should be something like http://192.168.1.X:8080/video . </p></li>
-<li><p>Key in your username and password.</p></li>
-<li><p>Click "Autodetect" - this will test our connection to your phone and read in
-its resolution. It should match whatever you set back in the server setup
-step.</p></li>
-<li><p>OK.</p></li>
-</ol>
-
-<p>Now use your video-chat program of choice's "video test" tool to confirm it
-works.</p>
-
-<p>Did it work? Yay!</p>
-
-<p>No? You're on your own, bud.</p>
-
-<h2>Workflow</h2>
-
-<p>I find it best to keep my video stream <em>off</em> and just keep the button to turn my
-phone into a camera on my phone's home-screen. You will see a wierd backwards
-text in your video-feed if your computer cannot reach the phone. So when a
-videochat starts, I open the app, scroll to the bottom and click "start", and
-then put my phone in place to work as a camera.</p>
-
-<p>Remember that the camera mode does run down the battery, so it may be handy to
-have a charge-cable near whatever cradle-like setup you've rigged for your phone
-at your desk.</p>
+<p><img src="/images/2023-08-31-poor-sick-pupper.jpg" alt="my poor sick pupper" /></p>
 
 
     <div id="disqus_thread"></div>
@@ -180,14 +92,14 @@ at your desk.</p>
             reload: true,
             config: function () {
                 //this.page.identifier = '';
-                this.page.url = 'http://www.pxtl.ca/2020/04/08/ip-webcam/';
+                this.page.url = 'http://www.pxtl.ca/2023/08/31/sick-pupper/';
                 //this.page.title = '';
             }
         });
     };
 
     var disqus_shortname = 'pxtl';
-    var disqus_url = 'http://www.pxtl.ca/2020/04/08/ip-webcam/';
+    var disqus_url = 'http://www.pxtl.ca/2023/08/31/sick-pupper/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
