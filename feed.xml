@@ -1,4 +1,488 @@
-<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2023-11-16T21:57:36-05:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2023/09/19/fzero99/</id><title type="text">F-Zero 99</title><summary type="html">&lt;p&gt;i got a little carried away with this nostalgia game.  I loved the old F-Zero and this remake lets you play the classic against 98 other players at once.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2023-11-17T09:47:00-05:00</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2023/10/24/dryer-repair/</id><title type="text">Kenmore Dryer Repair</title><summary type="html">&lt;p&gt;Once again, everything is made of garbage.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/failed-coil.jpg" alt="failed heating coil in dryer" /&gt;&lt;/p&gt;
+
+</summary><published>2023-10-24T04:00:00Z</published><updated>2023-10-24T04:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2023/10/24/dryer-repair/" /><content type="html">&lt;p&gt;Once again, everything is made of garbage.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/failed-coil.jpg" alt="failed heating coil in dryer" /&gt;&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;h2&gt;Day 1&lt;/h2&gt;
+
+&lt;p&gt;Our dryer failed.  I feel like I have a moral responsibility to attempt to
+repair anything before making it waste. So I’m trying my hand at the dryer.&lt;/p&gt;
+
+&lt;p&gt;Disassembly was harder than it needed to be.  I kept thinking it would be like a
+'90s computer where you do the screws and then it opens, but it turns out the
+dryer is the opposite - while everything internal is mounted with screws, the
+case is opened with pry-bars and brute force.  So I undid all the screws at the
+back, realized I'd unmounted some kind of plate, and then carefully lined it
+back up reaching through and screwed it back together.  &lt;/p&gt;
+
+&lt;p&gt;I watched a bunch of videos about how to pull the thing apart and check it -
+found a working voltmeter and tested all 3 thermal switches that I found.  The
+only real problem was testing the coil - the plate where the coil was mounted
+had a nice open hole where the coil's port should have been, but instead the
+coil's port was far out of reach.  I assume it's a safety thing - there's 3000+
+watts coursing through that port, I assume they didn't want it easily touched
+when you can pry the lid off with a blade screwdriver.&lt;/p&gt;
+
+&lt;p&gt;So then I gave in and pulled it apart properly.  It's especially difficult since
+the last HVAC guys who did our house moved the furnace closer to the dryer and
+so it's miserably cramped, it was very hard to get the drum out.&lt;/p&gt;
+
+&lt;p&gt;Sadly I didn't realize that the whole tub joint pops upwards so I detached the
+tub from the join and then found the join comes off pretty easy anyways.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/failed-coil-context.jpg" alt="failed coil in context of disassembled dryer" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ironically, the "some kind of plate" that I'd painstakingly removed and
+re-added?  That was the thing the coil was mounted on, so I had to remove it again.&lt;/p&gt;
+
+&lt;p&gt;Anyhow, the broken coil was plainly visible, so I ordered in new parts.  I also
+&lt;a href="https://lemmy.ca/post/7887807"&gt;asked on Lemmy&lt;/a&gt; if there were any thoughts about
+what to do while I was in there and got the advice to replace the belt and
+re-lube the ball-axle while the drum was out.&lt;/p&gt;
+
+&lt;h2&gt;Day 2&lt;/h2&gt;
+
+&lt;p&gt;Well, the dryer has been disassembled and vacuumed, the dead coil removed, the
+new coil swapped in, ready to reassemble as soon as the new belt arrives. I was
+surprised how much of the brown schmutz in the heater was just ash from the coils
+- it dusted off quite shiny after I replaced the coil.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/clean-coil.jpg" alt="clean and repaired coil plate" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m a little worried about the visibly duller part of the heater assembly,
+hopefully that won’t absorb too much heat - I tried to cluster the coils a bit
+looser there to compensate.&lt;/p&gt;
+
+&lt;p&gt;It’s even visible on the reverse side.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/burn-through.jpg" alt="burn-through mark" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Either way, I’m reassembling tomorrow when the new belt arrives.&lt;/p&gt;
+
+&lt;h2&gt;Day 3&lt;/h2&gt;
+
+&lt;p&gt;Well, the belt arrived and I went to Rona and picked up some (too expensive)
+axle grease and aluminum tape.  The tape was to repair the exhaust hose and to
+replace the disintegrated rubber strap that was sealing the internal exhaust
+tube on.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/taped-internal-exhaust.jpg" alt="taped internal exhaust detail" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course, also the wiring diagram tore when I pulled it out, so I photocopied
+that and figured I should keep it and... well, when all you have is a hammer,
+everything looks like a nail.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/taped-wiring-copy.jpg" alt="taped wiring diagram copy" /&gt;&lt;/p&gt;
+
+&lt;p&gt;And then we got into reassembling it.  Brought in a helper and we re-lubed the
+axle, put everything back in place, and screwed it all back together.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/reassembly-helper.jpg" alt="reassembly with helper" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Only one screw went missing!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/reassembled.jpg" alt="reassembled dryer" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Had my kid sit with it for a full cycle armed with the fire extinguisher (just
+in case) while I went and picked up my other kid (late) from climbing gym.  It
+all worked!&lt;/p&gt;
+</content></entry><entry><id>http://www.pxtl.ca/2023/10/03/a-tale-of-two-pharmacies/</id><title type="text">A Tale of Two Pharmacies</title><summary type="html">&lt;p&gt;What follows is the story of why I no longer go to my old pharmacy.  This is
+recounted from memory, and some of the details may be inaccurate, but the gist
+is there.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;drops in at local pharmacy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"I'm running out of my meds, can you refill them?"&lt;/p&gt;
+
+&lt;p&gt;"Sorry, you have to come closer to refill-day, so come back Saturday."&lt;/p&gt;
+
+&lt;p&gt;"Okay, I'll come back then."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;"Okay,  it's Saturday, here to refill my meds."&lt;/p&gt;
+
+&lt;p&gt;"... yeah, you're out of refills.  We'll have to talk to your doctor."&lt;/p&gt;
+
+&lt;p&gt;"... but it's the weekend?"&lt;/p&gt;
+
+&lt;p&gt;"Oh, we'll sort it out on Monday."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+</summary><published>2023-10-03T04:00:00Z</published><updated>2023-10-03T04:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2023/10/03/a-tale-of-two-pharmacies/" /><content type="html">&lt;p&gt;What follows is the story of why I no longer go to my old pharmacy.  This is
+recounted from memory, and some of the details may be inaccurate, but the gist
+is there.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;drops in at local pharmacy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"I'm running out of my meds, can you refill them?"&lt;/p&gt;
+
+&lt;p&gt;"Sorry, you have to come closer to refill-day, so come back Saturday."&lt;/p&gt;
+
+&lt;p&gt;"Okay, I'll come back then."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;"Okay,  it's Saturday, here to refill my meds."&lt;/p&gt;
+
+&lt;p&gt;"... yeah, you're out of refills.  We'll have to talk to your doctor."&lt;/p&gt;
+
+&lt;p&gt;"... but it's the weekend?"&lt;/p&gt;
+
+&lt;p&gt;"Oh, we'll sort it out on Monday."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;p&gt;"Okay, it's Monday, can you get in touch with my doc?"&lt;/p&gt;
+
+&lt;p&gt;"Sure!  We'll fax that.  Come back tomorrow and we'll have it sorted out."&lt;/p&gt;
+
+&lt;p&gt;"No, I'm on my last pill, it has to be refilled today."&lt;/p&gt;
+
+&lt;p&gt;"You know you're supposed to give us 48 hours notice, right?"&lt;/p&gt;
+
+&lt;p&gt;ಠ_ಠ&lt;/p&gt;
+
+&lt;p&gt;"Yes, I know.  I tried."&lt;/p&gt;
+
+&lt;p&gt;"Okay, we'll fax them now.  Come back this evening."&lt;/p&gt;
+
+&lt;p&gt;"Okay."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;calls towards the end of the work day&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi, are my meds in yet?"&lt;/p&gt;
+
+&lt;p&gt;"What?  We don't have any meds for you on file."&lt;/p&gt;
+
+&lt;p&gt;"No, my doctor faxed something?" &lt;/p&gt;
+
+&lt;p&gt;"No they didn't."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;calls doctor&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"We definitely faxed them.  We'll fax them again."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;phones pharmacy back&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi, are my meds in yet?"&lt;/p&gt;
+
+&lt;p&gt;"What?  We don't have any meds for you on file."&lt;/p&gt;
+
+&lt;p&gt;"Can you check if you got faxed anything about my meds?"&lt;/p&gt;
+
+&lt;p&gt;"Oh, yes, we see that now, we got a fax.  Can you come in Wednesday to pick them
+up?"&lt;/p&gt;
+
+&lt;p&gt;"No, I'm on my last pill."&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;sigh on phone&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;"You know you're supposed to give us 48 hours notice, right?"&lt;/p&gt;
+
+&lt;p&gt;"I tried."&lt;/p&gt;
+
+&lt;p&gt;"Okay, we'll get that ready for you, please hold."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;"Sorry, we're all out of those.  They've been all out for a while.  It's on
+back-order, everybody's out."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;stifles why-am-I-just-hearing-about-this-now-screaming-rage&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Uh, what do I do?  I'm on my last pill."&lt;/p&gt;
+
+&lt;p&gt;"Okay, we've got a one week supply to give you.  Can you come tomorrow?"&lt;/p&gt;
+
+&lt;p&gt;"I can come now."&lt;/p&gt;
+
+&lt;p&gt;"But we're closing in 15 minutes."&lt;/p&gt;
+
+&lt;p&gt;"I'm out walking the dog. I'm literally at your door."&lt;/p&gt;
+
+&lt;p&gt;".... Okay."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;gets my one week supply&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Thanks.  What do I do for next week?  Will there be more then?"&lt;/p&gt;
+
+&lt;p&gt;"Oh no, it's &lt;em&gt;really&lt;/em&gt; out-of-stock.  But the half-dose pills aren't.  We've got
+those, so you can just double-them.  Call your doc and we'll get that sorted."&lt;/p&gt;
+
+&lt;p&gt;"Great."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;frustrated and needing to get back to my life, I give it a few days.  Bad
+mistake.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;calling dr office&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi, they're out of my meds everywhere, can I get prescribed the halfsies
+instead?"&lt;/p&gt;
+
+&lt;p&gt;"Uh, your doctor has been prescribing those to a lot of people and nobody's
+complained yet."&lt;/p&gt;
+
+&lt;p&gt;"Well the pharmacy disagrees."&lt;/p&gt;
+
+&lt;p&gt;"The pharmacy is allowed to give you the halfsies sans scrip if they're out of
+the regular dose."&lt;/p&gt;
+
+&lt;p&gt;"I did not know that. Do they know that?"&lt;/p&gt;
+
+&lt;p&gt;"Whatever. They obviously don't want to without a scrip.  Doc will be in
+tomorrow, we'll sort it out."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Calls pharmacy next day afternoon.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"So d'you have my meds?"&lt;/p&gt;
+
+&lt;p&gt;"What?  We don't have any meds for you on file."&lt;/p&gt;
+
+&lt;p&gt;"No, I mean my doctor said they'd fax today."&lt;/p&gt;
+
+&lt;p&gt;"Yeah, they didn't. For what?"&lt;/p&gt;
+
+&lt;p&gt;"The halfsies.  They also said you can do the substitution yourself when you're
+out-of-stock on something."&lt;/p&gt;
+
+&lt;p&gt;"Yeah, we can't do that, they're wrong."&lt;/p&gt;
+
+&lt;p&gt;"Fine. Okay, I'll call my doctor again about sending the fax."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;calls doctor&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Did you send them that fax?"&lt;/p&gt;
+
+&lt;p&gt;"We sent them the fax again.  We'll send it again again."&lt;/p&gt;
+
+&lt;p&gt;"Great, thanks."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;at this point life intervenes, and I still have one pill for tomorrow morning -
+so wait until next day to call&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi, do you have my halfsies?"&lt;/p&gt;
+
+&lt;p&gt;"We can have them for you day after tomorrow."&lt;/p&gt;
+
+&lt;p&gt;"Day after tomorrow!? ... Sorry for raising my voice but I'm on my last pill,
+what happened?"&lt;/p&gt;
+
+&lt;p&gt;"Well, they're not in stock."&lt;/p&gt;
+
+&lt;p&gt;"What."&lt;/p&gt;
+
+&lt;p&gt;"But you can get them from other pharmacies."&lt;/p&gt;
+
+&lt;p&gt;"I was told they were in stock here."&lt;/p&gt;
+
+&lt;p&gt;"They're not."&lt;/p&gt;
+
+&lt;p&gt;"Fine.  I'll call around."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;thinks angrily about the last time this happened and scrip was lost in limbo
+between two pharmacies and had to get re-prescribed&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Calls Other Pharmacy. On hold for 15 minutes.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi, do you have these meds?"&lt;/p&gt;
+
+&lt;p&gt;"What? No, nobody has them."&lt;/p&gt;
+
+&lt;p&gt;"I mean the halfsies."&lt;/p&gt;
+
+&lt;p&gt;"Oh!  Let me check."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;on hold even longer&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Yep, we've got them. We'll call your pharmacy and get the scrip transferred."&lt;/p&gt;
+
+&lt;p&gt;"Great!"&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;gives this an hour to work out, calls my pharmacy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi!  Are my drugs transferred to Other Pharmacy?"&lt;/p&gt;
+
+&lt;p&gt;"We're just putting the scrip on hold and doing the paperwork, we'll get it sent
+to them in five, then call them."&lt;/p&gt;
+
+&lt;p&gt;"Great! I'll give them 20."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;15 minutes later, call Other Pharmacy anticipating being stuck on hold for a
+long time.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;phone picks up quickly!  Yay!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi!  Have they transferred my scrip?"&lt;/p&gt;
+
+&lt;p&gt;"Let me check."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;"Nope, they haven't.  I'll give them a call right away.  Can you call back in
+half an hour?"&lt;/p&gt;
+
+&lt;p&gt;"Okay."&lt;/p&gt;
+
+&lt;p&gt;(；￣д￣)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;calls Other Pharmacy half hour later&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;On hold.  Every few minutes get redirected back to main menu.  Go back on hold&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;run out of minutes on phone (I'm cheap, okay?), buy more minutes.  Call again.
+Go back on holdm&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Give up, drive out to Other Pharmacy, arrive and find pharmacist juggling phone
+in one hand and serving a mob of customers&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Uh..."&lt;/p&gt;
+
+&lt;p&gt;"Yeah, they still haven't faxed me yet, I'll call them now."&lt;/p&gt;
+
+&lt;p&gt;"Okay."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;more waiting&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Any luck?"&lt;/p&gt;
+
+&lt;p&gt;"They said they'd fax again."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;more waiting&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;even more waiting&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Uh, are my meds-"&lt;/p&gt;
+
+&lt;p&gt;"I'll call them again."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;even more waiting&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aimlessly wander the tiny drugstore playing on my phone&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;"Martin?"&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;perk up&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Yes?"&lt;/p&gt;
+
+&lt;p&gt;"They were faxing your prescription to the wrong number. They didn't figure it
+out until they got a confused call from Alberta. Gimme a minute to do the
+paperwork and we'll have you on your way."&lt;/p&gt;
+
+&lt;p&gt;And that's how I got my meds.&lt;/p&gt;
+</content></entry><entry><id>http://www.pxtl.ca/2023/09/24/overwatch2-4v4/</id><title type="text">How I would've designed Overwatch 2</title><summary type="html">&lt;p&gt;Okay I’ve been playing the Overwatch 2 anniversary events and considering how
+many of them are small-group team-vs-team things (Catch the Patchmari,
+Starwatch). I slept on these the first time through and playing them now I’m
+surprised at how much I’m enjoying them, particularly StarWatch despite some of
+its dumber ideas (like the AI-controlled Doomfist). This has cemented my
+previous opinion:&lt;/p&gt;
+
+&lt;p&gt;OW2 should’ve been 4v4 (2 DPS, 1 tank, 1 healer) with some kind of
+fast-respawning mechanic for the healer, and a standard double-team mode (8v8)
+either in quickplay or the arcade or something&lt;/p&gt;
+
+&lt;p&gt;Then the number of heroes and the popularity of the roles reflects the number in
+play - there are twice as many DPS heroes to choose from, twice as many DPS
+players, and twice as many on the team.&lt;/p&gt;
+
+</summary><published>2023-09-24T04:00:00Z</published><updated>2023-09-24T04:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2023/09/24/overwatch2-4v4/" /><content type="html">&lt;p&gt;Okay I’ve been playing the Overwatch 2 anniversary events and considering how
+many of them are small-group team-vs-team things (Catch the Patchmari,
+Starwatch). I slept on these the first time through and playing them now I’m
+surprised at how much I’m enjoying them, particularly StarWatch despite some of
+its dumber ideas (like the AI-controlled Doomfist). This has cemented my
+previous opinion:&lt;/p&gt;
+
+&lt;p&gt;OW2 should’ve been 4v4 (2 DPS, 1 tank, 1 healer) with some kind of
+fast-respawning mechanic for the healer, and a standard double-team mode (8v8)
+either in quickplay or the arcade or something&lt;/p&gt;
+
+&lt;p&gt;Then the number of heroes and the popularity of the roles reflects the number in
+play - there are twice as many DPS heroes to choose from, twice as many DPS
+players, and twice as many on the team.&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;p&gt;Obviously they would’ve needed to rework some of the healers to be able to
+solo-carry the healing, and probably add more Soldier/Sombra-style off-healing
+abilities for DPS characters (eg: give Reaper a way to share his vampirism), but
+still: While the 5v5 gameplay is generally unpopular, a lot of competitive
+players celebrate how every play feels much more impactful at those smaller
+counts. In 4v4 or 3v3 games like StarWatch or Elimination, it’s even moreso -
+solo-healing is intense, but at the same time in StarWatch when the healer goes
+down it’s not as huge of a loss as losing both healers in regular games because
+of the respawn-in-place mechanic.&lt;/p&gt;
+
+&lt;p&gt;Anybody who played Team Fortress 2 knows the huge distinction between intense,
+competitive small-team 6v6 matches and the low-stress farting-around feel of the
+huge 12v12 lolgames in pubs that were vastly more popular, because the diffuse
+responsibility meant you weren’t letting down your whole team if you were
+breaking in a new character or a new strategy. Transferring that to OW2, it
+would only make sense to break away from the forced “every game must have the
+same playercount” thing and embrace offering 8v8 modes for more casual play, and
+4v4 modes for more competitive.&lt;/p&gt;
+
+&lt;p&gt;To my mind, this was the missed opportunity of the composition rejiggering of
+OW2.&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;Fundamentally, I think OW copied some things from TF2 without understanding how
+they interact with lower player-counts. They copied TF2’s long rollouts and
+respawn timers, but didn’t realize that this makes death way too costly in a
+small-team game. In 5v5 at a good level, a single kill can basically end the
+team-fight. If they want to drop player-count, they need to find a way to fix
+that. Imho that’s why so many of their “Arcade” modes play with alternate
+respawning mechanics, like freeze-tag.&lt;/p&gt;
+
+&lt;p&gt;Also they wanted big flashy ults without thinking how that interacts with the
+rest of the game. There’s a reason that most competitive twitch-FPS games don’t
+have nukes on the serious maps.&lt;/p&gt;
+
+&lt;p&gt;If it were up to me?  Nerf the ults in general. Either slower build or just
+lower-power. Although if you go slower-build, you need to come up with a sane
+way to have the charge carry between rounds, which would be tricky to get right.&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;Also they should make No Limits and Mystery Heroes 6v6 for old time’s sake.&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;Finally, on the subject of the story-mode: they keep trying to make PvE happen,
+when fundamentally Overwatch is designed as a PvP game.  Imho, the correct
+approach is to embrace that - accept the ludonarrative disconnect and make PvP
+missions that tell the story.  Regularly release a short film and a companion
+PvP mission.&lt;/p&gt;
+
+&lt;p&gt;Did the wrong team win for the story?  Who cares.  Does nobody want to play a
+character who's critical to the story?  Have them appear for a quick scripted
+scene at the beginning and end.&lt;/p&gt;
+</content></entry><entry><id>http://www.pxtl.ca/2023/09/19/fzero99/</id><title type="text">F-Zero 99</title><summary type="html">&lt;p&gt;i got a little carried away with this nostalgia game.  I loved the old F-Zero and this remake lets you play the classic against 98 other players at once.&lt;/p&gt;
 
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/LPtVwbNEmvE?si=zVh2fj70O3vx2cBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;
 
@@ -616,1073 +1100,4 @@ the Fediverse network Mastodon's servers run on.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;YFB&lt;/strong&gt;: Which airport is that again?  Oh, right, Iqaluit.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Singh &amp;amp; Paul&lt;/strong&gt;: Short last names means no fun abbrevs.&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2021/06/15/lrt-letter/</id><title type="text">LRT Letter</title><summary type="html">&lt;p&gt;Hamilton City Council is voting on the LRT tomorrow (Wednesday, June 16th).
-What follows is a lengthy letter I sent to them.&lt;/p&gt;
-
-</summary><published>2021-06-15T04:00:00Z</published><updated>2021-06-15T04:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2021/06/15/lrt-letter/" /><content type="html">&lt;p&gt;Hamilton City Council is voting on the LRT tomorrow (Wednesday, June 16th).
-What follows is a lengthy letter I sent to them.&lt;/p&gt;
-
-&lt;!--excerpt--&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Councillors, Mr Mayor,&lt;/p&gt;
-
-&lt;p&gt;I'm writing to respectfully ask you to support the Hamilton LRT project. This is
-a once-in-a-lifetime opportunity for our city - I know this because I've spent
-my whole life here in Hamilton, so it's at the very least once in &lt;em&gt;my&lt;/em&gt; lifetime.&lt;/p&gt;
-
-&lt;p&gt;I graduated from Westdale back in 2000, and watched my best and brightest
-classmates move on to greater cities for greater things - teaching at Cornell,
-working at Google in Seattle, running their own tech company in London... or
-move to Brantford and beyond for the kind of housing that we used to be able to
-afford in Hamilton.&lt;/p&gt;
-
-&lt;p&gt;And I look at my kids and see them growing up in a city that is losing the
-ambition that used to be its slogan.  Are my children going to be faced with
-leaving Hamilton for greener pastures too?  We bent over backwards for Bob Young
-to keep the Ti-cats in Hamilton, is it too much to ask that my kids get the same
-consideration?&lt;/p&gt;
-
-&lt;p&gt;The LRT is a transformative change for Hamilton - a chance to redirect the slow
-conversion into yet another GTA suburb back to becoming a destination of its
-own.  You've all traveled to see great cities of the world just like I have, and
-you've all seen how great cities aren't ones where the poor have cars, but ones
-where the rich take transit.  Right now, the HSR is predominantly occupied by
-either idealists like me or, more frequently, people without an alternative (eg,
-students).  The LRT will change that, and I'm sure you've all seen that yourself
-in every rail-based transit you've been on, just as I have.&lt;/p&gt;
-
-&lt;p&gt;And from an environmentalist perspective, it's irresponsible &lt;em&gt;not&lt;/em&gt; to work with
-a giant electric transit vehicle that will take many gas-burning cars off the
-road.  In the endless relitigation of climate change arguments we hear so many
-things about the futility of fighting climate change: "even with electric cars,
-the batteries made from cobalt mined by slaves!"  Well the LRT runs on a
-catenary, not batteries.  "But the tires and roadway are made of petroleum
-products!"  Well the LRT runs on rails that can be sustainably maintained.  "But
-an E-bus can do most of the same things, and can be re-routed".  Exactly, which
-means that the densification and investment will be more suspicious of the
-stability of the route.  Would Bay Street in Toronto be the same if Union
-Station could be relocated at the drop of a hat?&lt;/p&gt;
-
-&lt;p&gt;We have to fight climate change, and beyond being just an electric vehicle, the
-LRT attracts intensification, and the dirty secret of environmentalism is that
-the simplest way to be greener is to densify.  Green living doesn't look like
-Frank Lloyd Wright's Usonian fantasy, it looks like Manhattan.  Looking South,
-in spite of California's constant arguing about green infrastructure and
-electric cars and green energy, the lowest-carbon-per-capita state in their 50
-states remains New York, simply because they have a gigantic city that has the
-kind of housing that can be efficiently heated, serviced, and traveled to and
-from.  If you can't get people out of their cars, then they drive.  That means
-they need parking, which means we need seas of surface parking-lots, which means
-everything is spaced further apart, which means the city isn't walkable, which
-means transit can't be used, which means &lt;em&gt;everybody&lt;/em&gt; has to drive, and not
-everybody can afford that, and so create choking traffic as everybody is pushed
-further and further out, until our only choices are to sprawl out into the
-greenbelt with more choking traffic or watch the endless upward march of absurd
-million-dollar prices for detached split-level bungalows, because nobody wants
-to live without a 2-car garage in a car-commuter city.  Is that your vision for
-this city?  Because I honestly don't see an alternative without real,
-transformative transit intensification.&lt;/p&gt;
-
-&lt;p&gt;It's all one piece.  It's all one big structure, and the LRT is the keystone of
-it.  Take that piece out and the future of this city falls apart.  With 400,000
-new Canadians coming to Canada every year and housing prices climbing out of
-reach, staying as we are isn't an option.  We need to pick a future.&lt;/p&gt;
-
-&lt;p&gt;And as a rider, there are so many intangibles that the LRT brings to the table
-over comparative bus transit.  Have you ever been on a bus when it has to stop
-to allow a disabled person to embark or disembark?  I mean, you can't blame
-them, but it's not a fun delay.  An LRT solves this by providing level boarding,
-eliminating the complicated boarding process for disabled Hamiltonians and
-giving them the dignity of entering like everyone else.  Have you ever stepped
-onto a bus and been pitched into the ground (or into a stranger) by a sudden
-acceleration or deceleration?  LRTs smoothly accelerate and have a dedicated ROW
-free from unexpected traffic.  I mean, how can we ask Hamiltonians to stop
-driving so much when we offer them vehicles that feel and sound like they're
-about to shake themselves to pieces?  I invite you to sit at the back of an
-artic with poorly-secured maintenance hatches, you will not be able to hear your
-own headphones, much less a conversation.&lt;/p&gt;
-
-&lt;p&gt;Yes, these sound like luxuries.  So do sidewalks, to some people.  If you want
-somebody who can afford a downtown parking spot and a fancy car to ride transit,
-a little luxury might be necessary. I've heard poverty-activists decry the LRT
-as a middle-class toy... and I say that's actually pretty fair.  Because getting
-middle-class people into transit is actually part of the point of this venture.
-Without middle-class people on transit, transit will always be seen as a poverty
-service, and you councilfolk will never be able to get buy-in from your
-residents for real improvements since they'll see transit as an "other people
-problem".&lt;/p&gt;
-
-&lt;p&gt;And as for those who want BRT and better service to other parts of the city - I
-do too!  But we don't have plans for that ready, or $3.4 billion dollars on the
-table on offer for any of that.  You want to draft up a plan for an A-line and a
-T-line, I'll support it!  You want to raise my taxes for better transit, do that
-(but also do some zoning changes so that you can get more taxpayers into these
-new corridors because otherwise that's not a long-term strategy)!  But either
-way, none of those plans are ready right now.  The LRT is.  And the province and
-federal government are here to support it.  The federal government in general
-and Hamilton's own Ms McKenna in particular have stuck their necks out for us,
-and you want to strangle that neck?&lt;/p&gt;
-
-&lt;p&gt;This is our chance to build a greater, greener Hamilton.  The world is starting
-to embrace this kind of green infrastructure, and we can't afford to be left
-behind.  And if the world doesn't embrace green infrastructure like this...
-well, I'd like to be able to explain to my grandkids one day that we &lt;em&gt;tried&lt;/em&gt; to
-stop climate change here in Hamilton.&lt;/p&gt;
-
-&lt;p&gt;I'm sorry I wrote such a long letter, I didn't have the time for a short one.  I
-assume none of you have read this verbose mess in its entirety, particularly
-since I'm sure it's one of many, but I thank you for whatever time you've given
-me.&lt;/p&gt;
-
-&lt;p&gt;Regards,&lt;/p&gt;
-
-&lt;p&gt;Martin Zarate&lt;/p&gt;
-
-&lt;p&gt;Ward 1 resident&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2021/06/01/covid-cocktails-7/</id><title type="text">Covid Cocktails 7</title><summary type="html">&lt;p&gt;I bought some Canadian brandy.  &lt;/p&gt;
-
-&lt;p&gt;Covid cocktails 7.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/Covid-cocktails-7-collage-1024.jpg" alt="Covid cocktails 7 collage" /&gt;&lt;/p&gt;
-
-</summary><published>2021-06-01T04:00:00Z</published><updated>2021-06-01T04:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2021/06/01/covid-cocktails-7/" /><content type="html">&lt;p&gt;I bought some Canadian brandy.  &lt;/p&gt;
-
-&lt;p&gt;Covid cocktails 7.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/Covid-cocktails-7-collage-1024.jpg" alt="Covid cocktails 7 collage" /&gt;&lt;/p&gt;
-
-&lt;!--excerpt--&gt;
-
-&lt;h1&gt;14 Days of Cocktails&lt;/h1&gt;
-
-&lt;h2&gt;Day 1&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;The Sidecar&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Rim a glass with sugar, and in a shaker add&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.75 oz lemon juice&lt;/li&gt;
-&lt;li&gt;1.5 oz brandy (Niagara Bench Small Cask VSOP)&lt;/li&gt;
-&lt;li&gt;1 oz triple sec&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Shake with ice, double-strain to glass, garnish with orange peel (I used a dried
-orange instead).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/sidecar.jpg" alt="Sidecar" /&gt;&lt;/p&gt;
-
-&lt;p&gt;I loved this drink, and my wife did too. It's balanced and tangy and complex,
-like a much more interesting version of the Lemon Drop.  The brandy has some
-interesting flavors - I know nothing about brandy or cognac but reviews said
-this was good for mixing and I agree. The cocktail has no added sweetener - the
-sugar is coming from the brandy and the Cointreau, so the sugared rim is a nice
-touch.&lt;/p&gt;
-
-&lt;h2&gt;Day 2&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Brandy Sour&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2 oz brandy&lt;/li&gt;
-&lt;li&gt;1 oz lemon&lt;/li&gt;
-&lt;li&gt;0.5 oz simple syrup&lt;/li&gt;
-&lt;li&gt;3 dashes angostura&lt;/li&gt;
-&lt;li&gt;1 egg white&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Dry shake, then shake with ice, double-strain to glass with ice.&lt;/p&gt;
-
-&lt;p&gt;Garnish with cherry and lemon slice.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/brandy-sour.jpg" alt="Brandy Sour" /&gt;&lt;/p&gt;
-
-&lt;p&gt;I really liked this.  The subtle nutty, fruity flavors of the brandy combine
-well with the lemon, and the cherry nose from the garnish adds a lot here. This
-is the first time I've done a whiskey sour with a different base and not felt
-that I'd prefer it with whiskey. With all that Angostura and the cherry nose
-it's a bit of a "Christmas fruitcake sour" but I think it really works.&lt;/p&gt;
-
-&lt;h2&gt;Day 3&lt;/h2&gt;
-
-&lt;p&gt;More horse racing!  This past weekend was the Preakness Stakes, a race in
-Maryland.  Like the Kentucky Derby, it has a cocktail - the Black Eyed Susan.
-Unlike the Kentucky Derby, they're not super consistent about what exactly is
-&lt;em&gt;in&lt;/em&gt; a Black Eyed Susan.&lt;/p&gt;
-
-&lt;p&gt;It's generally a split-based sour with orange and rum and lots of ice, but
-otherwise it shifts wildly from year to year.  So I'm using the Washington
-Post's "12 Bottle Bar Black Eyed Susan" recipe, because that's the one I had the
-ingredients for:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.washingtonpost.com/news/early-lead/wp/2016/05/18/the-only-black-eyed-susan-recipe-youll-need-for-the-preaknes/"&gt;https://www.washingtonpost.com/news/early-lead/wp/2016/05/18/the-only-black-eyed-susan-recipe-youll-need-for-the-preaknes/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;The 12 Bottle Bar Black-Eyed Susan&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;In mixing glass:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2 oz pineapple juice&lt;/li&gt;
-&lt;li&gt;1 oz rye&lt;/li&gt;
-&lt;li&gt;1 oz white rum&lt;/li&gt;
-&lt;li&gt;1 oz orange juice&lt;/li&gt;
-&lt;li&gt;1/2 oz fresh lemon juice&lt;/li&gt;
-&lt;li&gt;1/2 oz simple syrup&lt;/li&gt;
-&lt;li&gt;2 barspoons Cointreau&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Stir, pour over glass of crushed ice&lt;/p&gt;
-
-&lt;p&gt;float on top:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.5 dark rum &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Garnish with whatever - I used some mint and a brandied cherry.  Drink with a
-straw.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/12-bottle-bar-black-eyed-susan.jpg" alt="The 12 Bottle Bar Black-Eyed Susan" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Pleasant drink.  Starts with icy pineapple and citrus and rye flavors and firms
-up with the darker rum flavors as you get further into the drink.  A nice
-crowd-pleaser for a hot day.&lt;/p&gt;
-
-&lt;h2&gt;Day 4&lt;/h2&gt;
-
-&lt;p&gt;Invented in the '70s at the Kuala Lumpur Hilton by a bartender named Jeffrey Ong, I made a &lt;strong&gt;Jungle Bird&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1.5 oz Jamaican rum&lt;/li&gt;
-&lt;li&gt;0.75 oz Campari&lt;/li&gt;
-&lt;li&gt;1.5 oz pineapple juice&lt;/li&gt;
-&lt;li&gt;0.5 oz lime&lt;/li&gt;
-&lt;li&gt;0.5 oz demerara syrup&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Shake with ice, strain to glass with ice, garnish with pineapple.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/jungle-bird.jpg" alt="Jungle Bird" /&gt;&lt;/p&gt;
-
-&lt;p&gt;... this is &lt;em&gt;excellent&lt;/em&gt;.  &lt;/p&gt;
-
-&lt;p&gt;Every sip starts with pineapple and then into dark brown sugar flavors and
-finishes with grapefruit bitterness and strange subtle bitter spices.  I was
-savouring every sip it's just so many layers going on, but still sweet and
-approachable and fruity.&lt;/p&gt;
-
-&lt;p&gt;For reference, Demerara syrup is the usual 2:1 syrup recipe but using demerara
-sugar instead of white sugar.&lt;/p&gt;
-
-&lt;p&gt;Recipe and historical context from here:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.liquor.com/recipes/jungle-bird/"&gt;https://www.liquor.com/recipes/jungle-bird/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2&gt;Day 5&lt;/h2&gt;
-
-&lt;p&gt;Covid Cocktails 7, day 5: a cool split-base cocktail called the &lt;strong&gt;Ampersand&lt;/strong&gt;.
-Canonically this is supposed to be an Old Tom gin (i.e. sweet gin) and not a
-London Dry, but Collective Arts is pretty sweet and I'll throw in a bar spoon of
-simple to make up for it.&lt;/p&gt;
-
-&lt;p&gt;Chill all the things.  Then...&lt;/p&gt;
-
-&lt;p&gt;In a mixing glass with ice, add:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1 oz old Tom gin (or 1 oz London dry gin + 1 barspoons simple syrup)&lt;/li&gt;
-&lt;li&gt;1 oz sweet vermouth&lt;/li&gt;
-&lt;li&gt;1 oz brandy&lt;/li&gt;
-&lt;li&gt;2 dashes orange bitters&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Stir with ice, strain to a glass.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/ampersand.jpg" alt="Ampersand" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is a nice drink.  Very sweet - maybe slightly too sweet - but it's carrying
-with it a lot of complex flavors and it doesn't come off as boozy despite its
-strong mix. Opens with sweet berry and apricot flavors and finishes out with
-juniper and a hint of bitterness.&lt;/p&gt;
-
-&lt;p&gt;Looking around, some versions of this cocktail include a float of triple sec and
-an orange twist.  I wish I'd tried that; it would be nice to add a little citrus
-tang to this drink.&lt;/p&gt;
-
-&lt;h2&gt;Day 6&lt;/h2&gt;
-
-&lt;p&gt;Covid Cocktails 7, day 6: A gin sour with raspberry called the &lt;strong&gt;Clover Club&lt;/strong&gt;.
-Well, the recipe varies.  Some call for vermouth. some don't.  Some call for
-raspberry syrup or liqueur, some use grenadine, some use muddled raspberries. So
-this is &lt;em&gt;my&lt;/em&gt; Clover Club:&lt;/p&gt;
-
-&lt;p&gt;In a shaker muddle&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.5 oz Niagara cherry-raspberry grenadine&lt;/li&gt;
-&lt;li&gt;4 raspberries&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Then add&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.33 oz lemon&lt;/li&gt;
-&lt;li&gt;1.5 oz gin&lt;/li&gt;
-&lt;li&gt;0.5 oz sweet vermouth&lt;/li&gt;
-&lt;li&gt;1 egg white&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Dry shake, then shake with ice.&lt;/p&gt;
-
-&lt;p&gt;Double strain to a chilled cocktail glass (the raspberry bits block the strainer
-so this takes some shaking).  Garnish with 3 raspberries.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/clover-club.jpg" alt="Clover Club" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Very nice.  Strong raspberry nose, surprisingly floral taste.  Not overly sweet,
-but not dry either.&lt;/p&gt;
-
-&lt;p&gt;Gave it to my wife and she called it "super yum".&lt;/p&gt;
-
-&lt;h2&gt;Day 7&lt;/h2&gt;
-
-&lt;p&gt;Back to the Campari for an &lt;strong&gt;Enzoni&lt;/strong&gt;, which is a lighter
-take on the Negroni, presumably invented by a guy named Enzo.&lt;/p&gt;
-
-&lt;p&gt;In a shaker, muddle:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;4 grapes&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;add&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1 oz Campari&lt;/li&gt;
-&lt;li&gt;1 oz gin&lt;/li&gt;
-&lt;li&gt;0.66 oz lemon&lt;/li&gt;
-&lt;li&gt;0.5 oz simple syrup&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Shake w ice, strain to glass w ice.&lt;/p&gt;
-
-&lt;p&gt;Garnish with 3 grapes&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/enzoni.jpg" alt="Enzoni" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This really lets the Campari take the centre stage - the sweetness and light
-fruitiness only accents it. You can taste beyond the orange-rind and grapefruit
-flavors into the various herbal bittering agents of the Campari.&lt;/p&gt;
-
-&lt;p&gt;...&lt;/p&gt;
-
-&lt;p&gt;All of them are awful.&lt;/p&gt;
-
-&lt;p&gt;And yet, as I get halfway down the glass and the ice melts and softens it a bit,
-I start to enjoy this. It's bright and fruity and the fresh muddled grape juice
-is subtle but works so well with the bitter Campari and sour lemon. It's Serious
-Business Lemonade.&lt;/p&gt;
-
-&lt;p&gt;I'm assuming there's some process where the sugars sink to the bottom and the
-bittering agents float to the top that I'm unaware of that explains this
-phenomenon that keeps happening to me.&lt;/p&gt;
-
-&lt;h2&gt;Day 8&lt;/h2&gt;
-
-&lt;p&gt;A beer cocktail called the &lt;strong&gt;Beggar's Banquet&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;In an ice-filled Collins glass, add:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2 oz bourbon&lt;/li&gt;
-&lt;li&gt;0.5 oz lemon&lt;/li&gt;
-&lt;li&gt;0.75 maple syrup&lt;/li&gt;
-&lt;li&gt;5 oz beer&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Stir briefly, add orange garnish (I used a dried slice).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/beggars-banquet.jpg" alt="Beggar's Banquet" /&gt;&lt;/p&gt;
-
-&lt;p&gt;if you've ever had Innis &amp;amp; Gunn's bourbon-barrel scotch ale, it's a lot like
-that.  The lager flavors of the beer are subdued and a smoky-sweet bourbon
-flavor fills in the fizzy drink.  There's a subtle citrus too, mostly nose.&lt;/p&gt;
-
-&lt;p&gt;A lot to like here but it's just not my cup of tea.&lt;/p&gt;
-
-&lt;h2&gt;Day 9&lt;/h2&gt;
-
-&lt;p&gt;The &lt;strong&gt;Brandy Julep&lt;/strong&gt;, which is exactly what it sounds like.&lt;/p&gt;
-
-&lt;p&gt;Technically it's supposed to be a cognac Julep but I like to buy local where I can.&lt;/p&gt;
-
-&lt;p&gt;Fill a metal glass with crushed ice (and ice spheres because I ran out of cubes
-and couldn't bear to crush the spheres).&lt;/p&gt;
-
-&lt;p&gt;In a shaker add:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;12 leaves mint&lt;/li&gt;
-&lt;li&gt;2.5 oz brandy&lt;/li&gt;
-&lt;li&gt;0.66oz sugar syrup&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Muddle.&lt;/p&gt;
-
-&lt;p&gt;Shake with ice, then doubled strain to ice-filled metal cup.&lt;/p&gt;
-
-&lt;p&gt;Garnish with mint.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/brandy-julep.jpg" alt="Brandy Julep" /&gt;&lt;/p&gt;
-
-&lt;p&gt;I actually liked this better than the bourbon one.  The figgy and apricot
-flavors from the brandy go very nicely with the mint.&lt;/p&gt;
-
-&lt;p&gt;Nice, refreshing, sweet and subtle.&lt;/p&gt;
-
-&lt;h2&gt;Day 10&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;The Winsconsin Brandy Old Fashioned (sweet).&lt;/strong&gt; There are two versions of this
-cocktail, the sweet version (using sprite) and the sour one (using sour mix).  I
-didn't want to have to ratio down a sour mix so I went for the sweet.&lt;/p&gt;
-
-&lt;p&gt;In a glass, muddle&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2 brandied cherries&lt;/li&gt;
-&lt;li&gt;2 orange wedge&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;add&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2 oz brandy&lt;/li&gt;
-&lt;li&gt;2 barspoons sugar syrup&lt;/li&gt;
-&lt;li&gt;3 dashes angostura&lt;/li&gt;
-&lt;li&gt;ice&lt;/li&gt;
-&lt;li&gt;a splash of water&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Stir, top with Sprite, garnish with cherry and orange.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/wisconsin-old-fashioned.jpg" alt="Wisconsin Old Fashioned" /&gt;&lt;/p&gt;
-
-&lt;p&gt;it is wayyy too sweet.  Syrupy even.  Also boozy.&lt;/p&gt;
-
-&lt;p&gt;Better after the ice melted a bit to give it some dilution.&lt;/p&gt;
-
-&lt;p&gt;Sweet fruit flavors from the brandy and the cherries dominate, with a hint of
-citrus from the orange and Sprite.&lt;/p&gt;
-
-&lt;p&gt;This is one I took multiple stabs at, because it sounded so interesting.  The
-first time through I did a single cherry and wedge (and strained them out) and
-used club soda.  I found it watery.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/wisconsin-old-fashioned-first-attempt.jpg" alt="Wisconsin Old Fashioned (first attempt)" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Since I swung and missed at it twice and even as I approached something good...
-it's just not that interesting, I don't think I'll give it a third shot unless I
-find myself in Winsconsin.&lt;/p&gt;
-
-&lt;h2&gt;Day 11&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;Between the Sheets&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.75 oz brandy&lt;/li&gt;
-&lt;li&gt;0.75 oz triple sec&lt;/li&gt;
-&lt;li&gt;0.75 oz light rum&lt;/li&gt;
-&lt;li&gt;0.25 oz lemon juice&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;shake, strain to a glass, garnish with a lemon twist&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/between-the-sheets.jpg" alt="Between the Sheets" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Dry and boozy, with a strong citrus nose from the lemon and orange.  The brandy
-doesn't really come through much, seems like a weaker take on the Sidecar.&lt;/p&gt;
-
-&lt;h2&gt;Day 12&lt;/h2&gt;
-
-&lt;p&gt;I grab some more fresh mint from my garden to make a mojito variation called the
-&lt;strong&gt;Queen's Park Swizzle&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;In a tall glass:&lt;/p&gt;
-
-&lt;p&gt;Muddle 8 mint leaves, &lt;/p&gt;
-
-&lt;p&gt;Wipe glass inside with muddled mint, then&lt;/p&gt;
-
-&lt;p&gt;Add:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.5 oz demerara syrup&lt;/li&gt;
-&lt;li&gt;0.75 oz lime&lt;/li&gt;
-&lt;li&gt;2 oz rum&lt;/li&gt;
-&lt;li&gt;2 dashes angostura&lt;/li&gt;
-&lt;li&gt;Crushed ice&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Stir&lt;/p&gt;
-
-&lt;p&gt;Garnish with a sprig of mint&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/queens-park-swizzle.jpg" alt="Queen's Park Swizzle" /&gt;&lt;/p&gt;
-
-&lt;p&gt;It's a mojito. The differences from a regular mojito are slight changes in
-quantity and the addition of angostura and using demerara syrup instead of
-simple.  &lt;/p&gt;
-
-&lt;p&gt;Doesn't change the flavor much.&lt;/p&gt;
-
-&lt;p&gt;Which, I mean, I like mojitos. But it's a mojito.&lt;/p&gt;
-
-&lt;p&gt;Apparently this is sometimes made with darker or demerara rums, that sound like
-it might be a more interesting departure from the mojito... But the only other
-rum I have is some funky Appleton, which I think wouldn't go well.&lt;/p&gt;
-
-&lt;h2&gt;Day 13&lt;/h2&gt;
-
-&lt;p&gt;Time for some &lt;strong&gt;Apple Business&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;In a shaker:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2 oz dry gin&lt;/li&gt;
-&lt;li&gt;1 oz apple juice&lt;/li&gt;
-&lt;li&gt;0.5 oz lime juice&lt;/li&gt;
-&lt;li&gt;0.5 oz honey syrup&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Shake with ice,&lt;/p&gt;
-
-&lt;p&gt;Double strain to a rocks glass with ice.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/apple-business.jpg" alt="Apple Business" /&gt;&lt;/p&gt;
-
-&lt;p&gt;It tastes like the ingredients: Honey, apple, and gin.  Excellent.  A bit sweet
-but generally balanced.&lt;/p&gt;
-
-&lt;p&gt;Definitely will make this again.&lt;/p&gt;
-
-&lt;h2&gt;Day 14&lt;/h2&gt;
-
-&lt;p&gt;For my finale, I made some better coconut cream to make a proper piña colada.&lt;/p&gt;
-
-&lt;p&gt;First off &lt;strong&gt;better cream of coconut&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;p&gt;in a pot, heat&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;200ml coconut milk&lt;/li&gt;
-&lt;li&gt;3/4 cup sugar&lt;/li&gt;
-&lt;li&gt;1 tbsp boxed creamed coconut&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;to just below boil, remove, mix with immersion blender, allow cool.&lt;/p&gt;
-
-&lt;p&gt;Now, the &lt;strong&gt;piña colada&lt;/strong&gt;.  Recipe for 2:&lt;/p&gt;
-
-&lt;p&gt;In a blender&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;3 oz white rum&lt;/li&gt;
-&lt;li&gt;3 oz cream of coconut&lt;/li&gt;
-&lt;li&gt;3 oz pineapple juice&lt;/li&gt;
-&lt;li&gt;0.25 cup frozen pineapple&lt;/li&gt;
-&lt;li&gt;2 cups ice&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Blend, then pour to 2 glasses, top each glass with&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1 oz dark rum&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/pina-colada.jpg" alt="piña colada" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This like my 5th try at this drink and it's the first time I think I nailed it.
-The coconut flavor is properly strong - stronger than past attempts. The
-coconut/pineapple goes great with the rum. But it's boozy.  If I made it again
-I'd make it longer - more pineapple &amp;amp; coconut.&lt;/p&gt;
-
-&lt;p&gt;Pic of one of my many many previous attempts that were too thick or the coconut
-was lost or grainy from using the wrong coconut product or whatever stupid idea
-I had to deal with my lack of Coco Lopez before.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-06-01-Covid-cocktails-7/pina-colada-previous-attempt.jpg" alt="piña colada previous attempt" /&gt;&lt;/p&gt;
-
-&lt;h3&gt;Recipe sources&lt;/h3&gt;
-
-&lt;p&gt;Recipe for cream of coconut from here:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.artofdrink.com/ingredient/cream-of-coconut-recipe"&gt;https://www.artofdrink.com/ingredient/cream-of-coconut-recipe&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Recipe for Pina Colada from here:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://www.simplyrecipes.com/recipes/blender_pina_colada/"&gt;https://www.simplyrecipes.com/recipes/blender&lt;em&gt;pina&lt;/em&gt;colada/&lt;/a&gt;&lt;/p&gt;
-
-&lt;h1&gt;Final Thoughts&lt;/h1&gt;
-
-&lt;p&gt;I like brandy.  &lt;/p&gt;
-
-&lt;p&gt;Or at least, I like the Niagara Small Cask brandy.  Good stuff
-for mixing.&lt;/p&gt;
-
-&lt;p&gt;It's wonderful stuff, in that it seems like you can replace whiskey in some
-drinks and it brings a compatible but completely different and exciting and new
-flavor to the cocktail.  Of all the sours I've had, the brandy one and the
-bourbon one are tied for my favourite sours, and even though they use nearly
-identical ingredients other than the base spirit, they taste completely
-different.&lt;/p&gt;
-
-&lt;p&gt;Stand-out favorites were the &lt;strong&gt;sidecar&lt;/strong&gt;, the &lt;strong&gt;jungle bird&lt;/strong&gt;, and the &lt;strong&gt;apple
-business&lt;/strong&gt;.  Special nods to the &lt;strong&gt;piña colada&lt;/strong&gt; for paying off after so many
-attempts, and the &lt;strong&gt;brandy sour&lt;/strong&gt; and &lt;strong&gt;brandy julep&lt;/strong&gt; for being fun ways to
-changeout those traditional whiskey cocktails.&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2021/05/15/covid-cocktails-6/</id><title type="text">Covid Cocktails 6</title><summary type="html">&lt;p&gt;Well, it's been a 4 month hiatus from cocktails, seems like a good time to start
-mixing new drinks again.  I've picked up a stack of new ingredients, so this is
-fairly exciting.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/Covid-cocktails-6-collage-1024.jpg" alt="Covid cocktails 6 collage" /&gt;&lt;/p&gt;
-
-</summary><published>2021-05-15T04:00:00Z</published><updated>2021-05-15T04:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2021/05/15/covid-cocktails-6/" /><content type="html">&lt;p&gt;Well, it's been a 4 month hiatus from cocktails, seems like a good time to start
-mixing new drinks again.  I've picked up a stack of new ingredients, so this is
-fairly exciting.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/Covid-cocktails-6-collage-1024.jpg" alt="Covid cocktails 6 collage" /&gt;&lt;/p&gt;
-
-&lt;!--excerpt--&gt;
-
-&lt;h1&gt;14 Days of Cocktails&lt;/h1&gt;
-
-&lt;h2&gt;Day 1&lt;/h2&gt;
-
-&lt;p&gt;I want you to imagine drinking a sweet and bitter syrup made of orange rinds and
-sugar.  Then, about 3.5 seconds later, somebody punches you in the face.&lt;/p&gt;
-
-&lt;p&gt;That's right, Covid Cocktails 6, day 1:  I bought some Campari and made myself a
-&lt;strong&gt;Negroni&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;I bought better red vermouth too.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1 oz Campari&lt;/li&gt;
-&lt;li&gt;1 oz red vermouth (Dolin)&lt;/li&gt;
-&lt;li&gt;1 oz dry gin (Collective Arts)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;mix with ice, pour to glass with ice, serve with an orange twist.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/negroni.jpg" alt="Negroni" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is a shockingly complex drink, and hard to approach.  Unlike the off
-raisin-y Dillon's red vermouth I used before, the Dolin is indescribably weird.
-The bitter aftertaste of the Campari is overwhelming even in only 1/3 of the
-drink.&lt;/p&gt;
-
-&lt;p&gt;Conversely, I completely see its appeal as an aperitif.  To break up sips of
-this twisted concoction, I made myself a tray of oranges and cheese and crackers
-and everything tastes &lt;em&gt;amazing&lt;/em&gt; when you're eating it between sips of the evil
-fluid.&lt;/p&gt;
-
-&lt;p&gt;I've a 750ml bottle of the Campari, and the Dolin is now open in my fridge, so
-I'm going to acquire this acquired taste if it kills me.&lt;/p&gt;
-
-&lt;h2&gt;Day 2&lt;/h2&gt;
-
-&lt;p&gt;Covid Cocktails 6, Day 2: I like bourbon. It's sweet and caramelly and easy for
-mixing. But the bourbon-making southern states like Kentucky have been
-implementing a raft of anti-trans laws. So I bought Crown Royal Blender's Select
-instead.&lt;/p&gt;
-
-&lt;p&gt;C.R. Blender's Select isn't a bourbon - legally it can't be.  But it's a
-90-proof Canadian whiskey with both that Canadian rye flavor and a strong
-bourbon-style caramel-corn flavor. Basically it straddles the border. Pricey,
-though.&lt;/p&gt;
-
-&lt;p&gt;In typical CR style, it's too darned sweet.&lt;/p&gt;
-
-&lt;p&gt;So, I made a &lt;strong&gt;whiskey sour&lt;/strong&gt; to try the not-bourbon.  And to change it up from
-previous whiskey sours, I made it &lt;strong&gt;vegan&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2 oz CR Blender's Select&lt;/li&gt;
-&lt;li&gt;1 oz lemon&lt;/li&gt;
-&lt;li&gt;0.25 oz simple syrup (note that it's less than usual)&lt;/li&gt;
-&lt;li&gt;1 oz evil-smelling slime from the chickpea can&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Shake vigorously without ice. Then shake vigorously with ice, double-strain to
-glass.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/vegan-whiskey-sour.jpg" alt="Vegan Whiskey Sour" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Sooo good. Wife turned up her nose at the thought of aquafaba in a drink, but
-egg-whites don't sound better to her. For what it's worth, you can't taste the
-chickpea. What you can taste is balanced tangy butterscotch rye-y creamy
-goodness.  Very easy to drink.&lt;/p&gt;
-
-&lt;h2&gt;Day 3&lt;/h2&gt;
-
-&lt;p&gt;Covid cocktails 6, day 3.  I bring out the cassis again for a &lt;strong&gt;Cassis Bramble&lt;/strong&gt;, which is basically a gin sour with berry liqueur.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2 oz Collective Arts rhubarb hibiscus gin&lt;/li&gt;
-&lt;li&gt;1 oz lemon&lt;/li&gt;
-&lt;li&gt;O.25 oz simple&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Shake, pour over crushed ice, &lt;/p&gt;
-
-&lt;p&gt;add&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;0.75 oz crème de cassis&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Garnish with a lemon wedge &amp;amp; a cherry (supposed to be a blackberry but just ran
-out).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/cassis-bramble.jpg" alt="Cassis Bramble" /&gt;&lt;/p&gt;
-
-&lt;p&gt;It was okay... I think the crème de cassis just isn't sweet enough to fill this
-role. Too dry for a berry drink, mostly tasted gin and lemon. Canonically
-bramble's supposed to call for crème de mure (blackberry liqueur) but you can't
-get that here - this is apparently a common substitution, but black currants
-sure aren't blackberries.&lt;/p&gt;
-
-&lt;h2&gt;Day 4&lt;/h2&gt;
-
-&lt;p&gt;Covid cocktails 6, day 4: Another attempt with the Campari, this time a little
-more gently, with an &lt;strong&gt;Americano&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Simple 3-ingredient cocktail, build in a glass over ice:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1.5 oz Campari&lt;/li&gt;
-&lt;li&gt;1.5 oz sweet vermouth&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Top with club soda, mix gently.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/americano.jpg" alt="Americano" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Okay, the Campari is growing on me.  I still don't love it, but in this milder
-context it was definitely drinkable.  The vermouth brings a sweetness makes it a
-little soda-y, and there's a hint of grapefruit/orange citrus coming from the
-Campari, but also lots of bitterness and earthiness.&lt;/p&gt;
-
-&lt;p&gt;I can work with this.  I when I started getting lower into the glass I had to
-mix in more soda to dilute away the shocking bitterness, but I can work with it.&lt;/p&gt;
-
-&lt;p&gt;So yeah, this might be a good way to get used to Campari and the weird earthy
-vermouth gradually.&lt;/p&gt;
-
-&lt;h2&gt;Day 5&lt;/h2&gt;
-
-&lt;p&gt;Covid Cocktails 6, day 5: This is a mash-up of a few different recipes I
-googled. &lt;strong&gt;Blueberry Gin and Tonic&lt;/strong&gt;, using Dixon's Wicked Blueberry Gin.&lt;/p&gt;
-
-&lt;p&gt;In a shaker add&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;3 mint leaves&lt;/li&gt;
-&lt;li&gt;1 oz fresh blueberries&lt;/li&gt;
-&lt;li&gt;Juice from half a lime&lt;/li&gt;
-&lt;li&gt;2 oz blueberry gin&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Muddle the mint and blueberries&lt;/p&gt;
-
-&lt;p&gt;Slosh lightly (no need for a full shake) then double-strain to an ice-filled
-glass and top with tonic to taste.  &lt;/p&gt;
-
-&lt;p&gt;Stir a little, then garnish with a twist of lime, a few blueberries, and a sprig
-of mint (slap the mint to release it's nose).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/blueberry-gin-and-tonic.jpg" alt="Blueberry gin-and-tonic" /&gt;&lt;/p&gt;
-
-&lt;p&gt;It's bright and fruity and minty without being sweet, and the gin and tonic
-bring a bitter undertone.  My wife loved it, and says she wants me to make it
-again on a hot summer day.&lt;/p&gt;
-
-&lt;h2&gt;Day 6&lt;/h2&gt;
-
-&lt;p&gt;It's May!  That means the Kentucky Derby!  Which is apparently a horse race
-thing? But also involves mint juleps!&lt;/p&gt;
-
-&lt;p&gt;Covid Cocktails 6, day 6: &lt;strong&gt;The Mint Julep&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;In a metal cup, add:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;A dozen leaves mint,&lt;/li&gt;
-&lt;li&gt;3oz (!) Bourbon (or CR Blender's Select Not-Bourbon)&lt;/li&gt;
-&lt;li&gt;0.5 oz simple syrup&lt;/li&gt;
-&lt;li&gt;2 dashes angostura bitters&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Muddle, let steep for a few minutes.&lt;/p&gt;
-
-&lt;p&gt;Then fill half full of crushed ice, swizzle, and fill the rest of the way with
-crushed ice. Add a small dash of Jamaican rum, slap a bouquet of mint to release
-its nose and use it for garnish, and add a straw.  Let it sit for a few more
-minutes to build up frost.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/mint-julep.jpg" alt="Mint Julep" /&gt;&lt;/p&gt;
-
-&lt;p&gt;okay, let it sit for &lt;em&gt;more&lt;/em&gt; than a few minutes.  First sip was straight
-sweetened bourbon with a touch of mint.  Let it melt and the bourbon softens and
-the mint expresses and it's icy and minty.  In the end, it just tastes like
-sweet mint, ice, and whiskey, but that's pretty good.&lt;/p&gt;
-
-&lt;h3&gt;Relevant How To Drink Video on Mint Juleps&lt;/h3&gt;
-
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/uTKC9Ht4Erg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;h2&gt;Day 7&lt;/h2&gt;
-
-&lt;p&gt;For Covid cocktails 6, day 7, here comes the story of the &lt;strong&gt;Hurricane&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Yeah, it's a nice passionfruit thing.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1 oz white rum&lt;/li&gt;
-&lt;li&gt;1 oz dark rum&lt;/li&gt;
-&lt;li&gt;1 oz orange juice&lt;/li&gt;
-&lt;li&gt;1 oz lime juice&lt;/li&gt;
-&lt;li&gt;2 oz passionfruit juice&lt;/li&gt;
-&lt;li&gt;2 barspoons grenadine&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Shake, with ice, pour over ice, garnish with lime &amp;amp; cherry&lt;/p&gt;
-
-&lt;p&gt;I had to make some substitutions - couldn't get proper passion fruit puree or
-syrup, much less the traditional tropical fruit mix that's supposed to be used,
-so I used passionfruit juice cocktail and doubled the amount.  But it still had
-a strong passionfruit flavor. Also, I'm using Dillon's Niagara grenadine (mixed
-local fruit, no pom).&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/hurricane.jpg" alt="Hurricane" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is an incredibly tasty and easy to drink cocktail.  I made some
-substitutions so I don't know how authentic it is, but it's definitely a drink
-that could get somebody in a lot of trouble on the streets of New Orleans.&lt;/p&gt;
-
-&lt;h2&gt;Day 8&lt;/h2&gt;
-
-&lt;p&gt;Covid cocktails 6, day 8: We return to Campari for the &lt;strong&gt;Garibaldi&lt;/strong&gt;, a simple low-alcohol 2-ingredient cocktail.&lt;/p&gt;
-
-&lt;p&gt;Prepare 4 oz of foamed orange juice.&lt;/p&gt;
-
-&lt;p&gt;1.5 oz Campari in a glass, add 2 oz of foamed OJ and some ice, mix, then pour
-the rest of the foamed OJ in.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/garibaldi.jpg" alt="Garibaldi" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is nice.  Mild, sweet and bitter... like sweet fluffy grapefruit with a
-strange earthy undertone.&lt;/p&gt;
-
-&lt;p&gt;I used a milk foamer to foam the OJ, but a blender or whisk or even a dry shake
-should do it.  Should've strained the pulp first - cleaning pulp of milk foamer
-sucked.&lt;/p&gt;
-
-&lt;p&gt;Apparently the ideal OJ for this is fresh-pressed blood orange, but I used
-regular concentrate cans and it was good this way too.&lt;/p&gt;
-
-&lt;h2&gt;Day 9&lt;/h2&gt;
-
-&lt;p&gt;Covid Cocktails 6, day 9: To mark Star Wars day... I did nothing topical 'cause
-it's also my kid's birthday and I'm busy enough, thanks.&lt;/p&gt;
-
-&lt;p&gt;I made another &lt;strong&gt;Manhattan&lt;/strong&gt;.  This time it was actually good.&lt;/p&gt;
-
-&lt;p&gt;In a mixing glass, combine with ice:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1 oz sweet vermouth&lt;/li&gt;
-&lt;li&gt;1.75 oz bourbon&lt;/li&gt;
-&lt;li&gt;2 dashes angostura bitters&lt;/li&gt;
-&lt;li&gt;1 dash orange bitters&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;mix, strain to a chilled glass,&lt;/p&gt;
-
-&lt;p&gt;garnish with a brandied cherry&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/manhattan-2.jpg" alt="Manhattan" /&gt;&lt;/p&gt;
-
-&lt;p&gt;I really liked it... the cherry nose and mix of complex flavours from the
-bitters and the vermouth combine wonderfully and the sweetness keeps any of the
-bittering parts from being overpowering.  It was just plain nice.  The detailed
-flavors are... kind of indescribable.&lt;/p&gt;
-
-&lt;h3&gt;Relevant How To Drink Video on Manhattans&lt;/h3&gt;
-
-&lt;p&gt;This is the "Manhattan Matrix" episode of HTD where he breaks down various
-vermouths and whiskeys... but he tries so many combinations thereof he gets
-himself alcohol poisoning.  So it's simultaneously educational, entertaining,
-and an important cautionary tale.&lt;/p&gt;
-
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/_QsCrcLG6Mo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;h2&gt;Day 10&lt;/h2&gt;
-
-&lt;p&gt;Covid cocktails 6, day 10.  I've got no tequila, so no Cinco de Mayo theme.
-Instead, I made a &lt;strong&gt;Painkiller&lt;/strong&gt;, which is like a more cocktail-y piña colada.&lt;/p&gt;
-
-&lt;p&gt;In a shaker:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;4 oz pineapple juice&lt;/li&gt;
-&lt;li&gt;1 oz cream of coconut&lt;/li&gt;
-&lt;li&gt;1 oz white rum&lt;/li&gt;
-&lt;li&gt;1 oz dark rum&lt;/li&gt;
-&lt;li&gt;1 oz OJ&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Shake with ice, open pour to glass.&lt;/p&gt;
-
-&lt;p&gt;... when open-pouring I still had to grab my big ice and keep it out or it
-would've overfilled the glass.  This is a bigger drink.&lt;/p&gt;
-
-&lt;p&gt;Top with some fresh grated nutmeg.&lt;/p&gt;
-
-&lt;p&gt;For the "cream of coconut" I can't find anybody who carries Coco Lopez sweetened
-cream of coconut, so I made my own by heating half a can of coconut cream and
-adding 3/4 cup of sugar.  Avoid boiling, just heat until clarified then jar it.
-Apparently real stuff has stronger coconut taste.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/painkiller.jpg" alt="Painkiller" /&gt;&lt;/p&gt;
-
-&lt;p&gt;This is shockingly easy to drink.  Sweet and fruity and the nutmeg adds a nice
-nose.  The coconut, pineapple, and orange blend really well.  The alcohol is
-basically invisible, with only a bare hint of the funk coming from the dark rum.&lt;/p&gt;
-
-&lt;p&gt;This is nice, because I spent the last few days trying and failing to get a
-proper piña colada right using a mix of pineapple juice and frozen pineapples,
-and the texture just wasn't coming out right.  I kinda needed the win.&lt;/p&gt;
-
-&lt;h2&gt;Day 11&lt;/h2&gt;
-
-&lt;p&gt;Covid Cocktails 6 day 11: A &lt;strong&gt;Hanky Panky&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;In a mixing glass, combine with ice:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1.5 oz sweet vermouth&lt;/li&gt;
-&lt;li&gt;1.5 oz London dry gin&lt;/li&gt;
-&lt;li&gt;2 bar spoons Fernet Branca&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Stir, strain to a chilled glass.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/hanky-panky.jpg" alt="Hanky Panky" /&gt;&lt;/p&gt;
-
-&lt;p&gt;It's cough syrup.  Really nice cough syrup with a nice fruity tinge from the
-vermouth.  The herbal flavors from the gin and vermouth and Fernet make it
-pretty medicinal... but it definitely has its charms.&lt;/p&gt;
-
-&lt;p&gt;But still cough syrup.&lt;/p&gt;
-
-&lt;h2&gt;Day 12&lt;/h2&gt;
-
-&lt;p&gt;Covid cocktails 6, day 12: let's do more cough syrup!  A &lt;strong&gt;boulevardier&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;In a mixing glass, with ice:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;1.5 oz bourbon&lt;/li&gt;
-&lt;li&gt;1 oz Campari&lt;/li&gt;
-&lt;li&gt;1 oz red vermouth&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Stir, strain to a glass with ice.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/boulevardier.jpg" alt="Boulevardier" /&gt;&lt;/p&gt;
-
-&lt;p&gt;I think I'm now acclimatized to Campari.  At first the bitter aftertaste was
-ruining a nice orangey Manhattan, but as I got further into the glass I really
-got to like it. I gave my wife a sip.  She puckered so hard I thought her face
-might implode.&lt;/p&gt;
-
-&lt;h2&gt;Day 13&lt;/h2&gt;
-
-&lt;p&gt;Covid Cocktails 6, day 13: I made some cinnamon simple syrup, and used that to
-make a &lt;strong&gt;Cinnamon Old-Fashioned&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;To make cinnamon simple syrup: simmer 4 sticks of cinnamon in 1 cup of water,
-covered, for 10 minutes, then add 1.5 cups of sugar. Cool in fridge covered for
-6 hours, then strain and jar. &lt;/p&gt;
-
-&lt;p&gt;The cinnamon old fashioned is just &lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2 oz of rye &lt;/li&gt;
-&lt;li&gt;0.5 oz of cinnamon &lt;/li&gt;
-&lt;li&gt;a couple of dashes of angostura&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Build in a glass, stir with a sphere of ice, garnish with another cinnamon
-stick.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/cinnamon-old-fashioned.jpg" alt="Cinnamon Old-Fashioned" /&gt;&lt;/p&gt;
-
-&lt;p&gt;Nice, easy drink.  The spices of the angostura and the natural baking-spice
-flavor of the rye blend quite well with the cinnamon.  It has a charming,
-Christmas-y flavor.  If you like cinnamon this is an easy drink to make.  This'd
-make a good hot toddy too.&lt;/p&gt;
-
-&lt;h2&gt;Day 14&lt;/h2&gt;
-
-&lt;p&gt;Covid cocktails 6, day 14.  For my finale this might be a bit on the nose but: a
-Quarantine Order.&lt;/p&gt;
-
-&lt;p&gt;In a shaker, combine&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;3 oz Jamaican rum&lt;/li&gt;
-&lt;li&gt;1 oz lime juice&lt;/li&gt;
-&lt;li&gt;1 oz grapefruit juice&lt;/li&gt;
-&lt;li&gt;1.5 oz passionfruit juice&lt;/li&gt;
-&lt;li&gt;0.5 oz cinnamon syrup&lt;/li&gt;
-&lt;li&gt;5 dashes angostura&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Shake for 30s, free pour to glass,&lt;/p&gt;
-
-&lt;p&gt;Garnish with mint, cherry, and lime.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2021-05-15-Covid-cocktails-6/quarantine-order.jpg" alt="quarantine-order" /&gt;&lt;/p&gt;
-
-&lt;p&gt;I couldn't taste the cinnamon at all, even after adding more.  Then tried with a
-straw and quickly realized that all the cinnamon syrup went straight to the
-bottom.&lt;/p&gt;
-
-&lt;p&gt;Nice fruity cinnamon drink but I think I used too much ice.&lt;/p&gt;
-
-&lt;h1&gt;Final Thoughts&lt;/h1&gt;
-
-&lt;p&gt;This particular round was an education on the subject of ingredients and
-quality.  I watched through the "How To Drink" video on manhattans and picked a
-vermouth that he recommended (before going to the hospital to get his stomach
-pumped from alcohol poisoning - stay safe out there, kids).  Sadly the &lt;em&gt;best&lt;/em&gt;
-sweet Italian vermouths aren't available at the LCBO - Punt e Mes and Antica
-Formula are pretty consistently top of the list... but the Dolin sweet vermouth
-made all the difference from my previous attempts with it.&lt;/p&gt;
-
-&lt;p&gt;Likewise, switching from traditional Canadian whiskeys to a bourbon (well,
-bourbon-like Canadian whiskey) really helped the drinks that demanded a sweeter,
-less rye-heavy base spirit.&lt;/p&gt;
-
-&lt;p&gt;And Campari is definitely... interesting to work with.  If you like the shocking
-bitterness of grapefruit I'd say you should give it a try.&lt;/p&gt;
-
-&lt;p&gt;Favorites this time through were the &lt;strong&gt;vegan whiskey sour&lt;/strong&gt;, the &lt;strong&gt;blueberry
-G&amp;amp;T&lt;/strong&gt; (my wife's favorite) and the &lt;strong&gt;painkiller&lt;/strong&gt;.  Honorable mention go to the
-&lt;strong&gt;Garibaldi&lt;/strong&gt;, the &lt;strong&gt;Americano&lt;/strong&gt;, and the &lt;strong&gt;boulevardier&lt;/strong&gt; for warming me up to
-the Campari.&lt;/p&gt;
 </content></entry></feed>
