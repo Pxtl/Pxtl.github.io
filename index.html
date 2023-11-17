@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="last-modified" content="2023-11-17T21:36:05.0092995+00:00" />
+    <meta http-equiv="last-modified" content="2023-11-17T21:42:24.2287121+00:00" />
     <meta name="keywords" content="" />
     <title>pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
@@ -41,19 +41,12 @@
         <span>posted on 17 Nov 2023</span>
       </h1> 
       
-      <p>Well, it took longer than I would've liked but I got Github CI working with this blog! Finally learned how to use Github workflows.</p>
+      <p>Well, it took longer than I would've liked but I got Github CI working with this
+blog! Finally learned how to use Github workflows.</p>
 
-<p><a href="https://github.com/Pxtl/Sandra.Snow/tree/master/.github/workflows">Workflow files are here</a></p>
+<p><a href="https://github.com/Pxtl/Sandra.Snow/tree/master/.github/workflows">Workflow files are
+here</a></p>
 
-<p>You can now see my posts automatically go from my source-control here in Sandra.snow into the Pxtl.Github.io repo.  Particularly interesting is that because the Sandra.Snow project I'm using for the blog is .NET Framework 4, the runner is actually running <em>windows</em>.  I didn't know that was possible for GitHub.</p>
-
-<p><a href="https://github.com/Pxtl/Sandra.Snow/actions/runs/6909229230/job/18800147451#logs">For example, here's a log a publish action</a></p>
-
-<p>The only thing that annoys me is that I had to set it up using PATs, which have a 90 day expiry.  So every 90 days I'll have to refresh the token that allows the Sandra.Snow repo to write to the Pxtl repo?  That seems labourious.</p>
-
-<p>Probably I should reverse it around - have the Action running in my Pxtl repo so it's <em>pulling</em> from the Sandra.Snow repo.  But for now, this works.</p>
-
-<p>This post is my first attempt to run it for a new post.  Fingers crossed!</p>
 
       <p><a href="/2023/11/17/github-ci/">Read more...</a></p>
     </li>

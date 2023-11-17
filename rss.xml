@@ -1,29 +1,36 @@
-<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Pxtl.ca</title><link>http://www.pxtl.ca/rss.xml</link><description>Pxtl.ca</description><item><guid isPermaLink="true">http://www.pxtl.ca/2023/11/17/github-ci/</guid><link>http://www.pxtl.ca/2023/11/17/github-ci/</link><author>pxtl@hotmail.com</author><category>Programming</category><title>Github CI</title><description>&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this blog! Finally learned how to use Github workflows.&lt;/p&gt;
+<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Pxtl.ca</title><link>http://www.pxtl.ca/rss.xml</link><description>Pxtl.ca</description><item><guid isPermaLink="true">http://www.pxtl.ca/2023/11/17/github-ci/</guid><link>http://www.pxtl.ca/2023/11/17/github-ci/</link><author>pxtl@hotmail.com</author><category>Programming</category><title>Github CI</title><description>&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this
+blog! Finally learned how to use Github workflows.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/tree/master/.github/workflows"&gt;Workflow files are here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/tree/master/.github/workflows"&gt;Workflow files are
+here&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;You can now see my posts automatically go from my source-control here in Sandra.snow into the Pxtl.Github.io repo.  Particularly interesting is that because the Sandra.Snow project I'm using for the blog is .NET Framework 4, the runner is actually running &lt;em&gt;windows&lt;/em&gt;.  I didn't know that was possible for GitHub.&lt;/p&gt;
+</description><pubDate>Fri, 17 Nov 2023 00:00:00 Z</pubDate><a10:updated>2023-11-17T00:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this
+blog! Finally learned how to use Github workflows.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/actions/runs/6909229230/job/18800147451#logs"&gt;For example, here's a log a publish action&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/tree/master/.github/workflows"&gt;Workflow files are
+here&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;The only thing that annoys me is that I had to set it up using PATs, which have a 90 day expiry.  So every 90 days I'll have to refresh the token that allows the Sandra.Snow repo to write to the Pxtl repo?  That seems labourious.&lt;/p&gt;
+&lt;!--excerpt--&gt;
 
-&lt;p&gt;Probably I should reverse it around - have the Action running in my Pxtl repo so it's &lt;em&gt;pulling&lt;/em&gt; from the Sandra.Snow repo.  But for now, this works.&lt;/p&gt;
+&lt;p&gt;You can now see my posts automatically go from my source-control here in
+Sandra.snow into the Pxtl.Github.io repo.  Particularly interesting is that
+because the Sandra.Snow project I'm using for the blog is .NET Framework 4, the
+runner is actually running &lt;em&gt;windows&lt;/em&gt;.  I didn't know that was possible for
+GitHub.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/actions/runs/6909229230/job/18800147451#logs"&gt;For example, here's a log of a publish
+action&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The only thing that annoys me is that I had to set it up using PATs, which have
+a 90 day expiry.  So every 90 days I'll have to refresh the token that allows
+the Sandra.Snow repo to write to the Pxtl repo?  That seems labourious.&lt;/p&gt;
+
+&lt;p&gt;Probably I should reverse it around - have the Action running in my Pxtl repo so
+it's &lt;em&gt;pulling&lt;/em&gt; from the Sandra.Snow repo.  But for now, this works.&lt;/p&gt;
 
 &lt;p&gt;This post is my first attempt to run it for a new post.  Fingers crossed!&lt;/p&gt;
-</description><pubDate>Fri, 17 Nov 2023 00:00:00 Z</pubDate><a10:updated>2023-11-17T00:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this blog! Finally learned how to use Github workflows.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/tree/master/.github/workflows"&gt;Workflow files are here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;You can now see my posts automatically go from my source-control here in Sandra.snow into the Pxtl.Github.io repo.  Particularly interesting is that because the Sandra.Snow project I'm using for the blog is .NET Framework 4, the runner is actually running &lt;em&gt;windows&lt;/em&gt;.  I didn't know that was possible for GitHub.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/actions/runs/6909229230/job/18800147451#logs"&gt;For example, here's a log a publish action&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;The only thing that annoys me is that I had to set it up using PATs, which have a 90 day expiry.  So every 90 days I'll have to refresh the token that allows the Sandra.Snow repo to write to the Pxtl repo?  That seems labourious.&lt;/p&gt;
-
-&lt;p&gt;Probably I should reverse it around - have the Action running in my Pxtl repo so it's &lt;em&gt;pulling&lt;/em&gt; from the Sandra.Snow repo.  But for now, this works.&lt;/p&gt;
-
-&lt;p&gt;This post is my first attempt to run it for a new post.  Fingers crossed!&lt;/p&gt;
+&lt;p&gt;Edit: it works!&lt;/p&gt;
 </a10:content></item><item><guid isPermaLink="true">http://www.pxtl.ca/2023/10/24/dryer-repair/</guid><link>http://www.pxtl.ca/2023/10/24/dryer-repair/</link><author>pxtl@hotmail.com</author><category>Blog</category><title>Kenmore Dryer Repair</title><description>&lt;p&gt;Once again, everything is made of garbage.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/failed-coil.jpg" alt="failed heating coil in dryer" /&gt;&lt;/p&gt;
