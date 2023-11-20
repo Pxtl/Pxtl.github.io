@@ -1,10 +1,10 @@
-<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://www.pxtl.ca/</id><updated>2023-11-20T15:46:07Z</updated><author><name>Martin Zarate</name><uri>http://www.pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://www.pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://www.pxtl.ca/feed.xml" /><entry><id>http://www.pxtl.ca/2023/11/17/github-ci/</id><title type="text">Github CI</title><summary type="html">&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this
+<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://pxtl.ca/</id><updated>2023-11-20T15:56:32Z</updated><author><name>Martin Zarate</name><uri>http://pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://pxtl.ca/feed.xml" /><entry><id>http://pxtl.ca/2023/11/17/github-ci/</id><title type="text">Github CI</title><summary type="html">&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this
 blog! Finally learned how to use Github workflows.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/tree/master/.github/workflows"&gt;Workflow files are
 here&lt;/a&gt;&lt;/p&gt;
 
-</summary><published>2023-11-17T00:00:00Z</published><updated>2023-11-17T00:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2023/11/17/github-ci/" /><content type="html">&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this
+</summary><published>2023-11-17T00:00:00Z</published><updated>2023-11-17T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/11/17/github-ci/" /><content type="html">&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this
 blog! Finally learned how to use Github workflows.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/tree/master/.github/workflows"&gt;Workflow files are
@@ -33,13 +33,13 @@ it's &lt;em&gt;pulling&lt;/em&gt; from the Sandra.Snow repo.  But for now, this 
 &lt;p&gt;Edit: it works!&lt;/p&gt;
 
 &lt;p&gt;Edit2: and now it doesn't flood the log with complaints about line-endings.&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2023/10/24/dryer-repair/</id><title type="text">Kenmore Dryer Repair</title><summary type="html">&lt;p&gt;Once again, everything is made of garbage.&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/10/24/dryer-repair/</id><title type="text">Kenmore Dryer Repair</title><summary type="html">&lt;p&gt;Once again, everything is made of garbage.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/failed-coil.jpg" alt="failed heating coil in dryer" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/failed-coil.jpg" alt="failed heating coil in dryer" /&gt;&lt;/p&gt;
 
-</summary><published>2023-10-24T00:00:00Z</published><updated>2023-10-24T00:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2023/10/24/dryer-repair/" /><content type="html">&lt;p&gt;Once again, everything is made of garbage.&lt;/p&gt;
+</summary><published>2023-10-24T00:00:00Z</published><updated>2023-10-24T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/10/24/dryer-repair/" /><content type="html">&lt;p&gt;Once again, everything is made of garbage.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/failed-coil.jpg" alt="failed heating coil in dryer" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/failed-coil.jpg" alt="failed heating coil in dryer" /&gt;&lt;/p&gt;
 
 &lt;!--excerpt--&gt;
 
@@ -70,7 +70,7 @@ so it's miserably cramped, it was very hard to get the drum out.&lt;/p&gt;
 &lt;p&gt;Sadly I didn't realize that the whole tub joint pops upwards so I detached the
 tub from the join and then found the join comes off pretty easy anyways.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/failed-coil-context.jpg" alt="failed coil in context of disassembled dryer" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/failed-coil-context.jpg" alt="failed coil in context of disassembled dryer" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Ironically, the "some kind of plate" that I'd painstakingly removed and
 re-added?  That was the thing the coil was mounted on, so I had to remove it again.&lt;/p&gt;
@@ -87,7 +87,7 @@ new coil swapped in, ready to reassemble as soon as the new belt arrives. I was
 surprised how much of the brown schmutz in the heater was just ash from the coils
 - it dusted off quite shiny after I replaced the coil.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/clean-coil.jpg" alt="clean and repaired coil plate" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/clean-coil.jpg" alt="clean and repaired coil plate" /&gt;&lt;/p&gt;
 
 &lt;p&gt;I’m a little worried about the visibly duller part of the heater assembly,
 hopefully that won’t absorb too much heat - I tried to cluster the coils a bit
@@ -95,7 +95,7 @@ looser there to compensate.&lt;/p&gt;
 
 &lt;p&gt;It’s even visible on the reverse side.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/burn-through.jpg" alt="burn-through mark" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/burn-through.jpg" alt="burn-through mark" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Either way, I’m reassembling tomorrow when the new belt arrives.&lt;/p&gt;
 
@@ -106,27 +106,27 @@ axle grease and aluminum tape.  The tape was to repair the exhaust hose and to
 replace the disintegrated rubber strap that was sealing the internal exhaust
 tube on.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/taped-internal-exhaust.jpg" alt="taped internal exhaust detail" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/taped-internal-exhaust.jpg" alt="taped internal exhaust detail" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Of course, also the wiring diagram tore when I pulled it out, so I photocopied
 that and figured I should keep it and... well, when all you have is a hammer,
 everything looks like a nail.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/taped-wiring-copy.jpg" alt="taped wiring diagram copy" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/taped-wiring-copy.jpg" alt="taped wiring diagram copy" /&gt;&lt;/p&gt;
 
 &lt;p&gt;And then we got into reassembling it.  Brought in a helper and we re-lubed the
 axle, put everything back in place, and screwed it all back together.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/reassembly-helper.jpg" alt="reassembly with helper" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/reassembly-helper.jpg" alt="reassembly with helper" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Only one screw went missing!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-10-24-dryer-repair/reassembled.jpg" alt="reassembled dryer" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/reassembled.jpg" alt="reassembled dryer" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Had my kid sit with it for a full cycle armed with the fire extinguisher (just
 in case) while I went and picked up my other kid (late) from climbing gym.  It
 all worked!&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2023/10/03/a-tale-of-two-pharmacies/</id><title type="text">A Tale of Two Pharmacies</title><summary type="html">&lt;p&gt;What follows is the story of why I no longer go to my old pharmacy.  This is
+</content></entry><entry><id>http://pxtl.ca/2023/10/03/a-tale-of-two-pharmacies/</id><title type="text">A Tale of Two Pharmacies</title><summary type="html">&lt;p&gt;What follows is the story of why I no longer go to my old pharmacy.  This is
 recounted from memory, and some of the details may be inaccurate, but the gist
 is there.&lt;/p&gt;
 
@@ -152,7 +152,7 @@ is there.&lt;/p&gt;
 
 &lt;p&gt;...&lt;/p&gt;
 
-</summary><published>2023-10-03T00:00:00Z</published><updated>2023-10-03T00:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2023/10/03/a-tale-of-two-pharmacies/" /><content type="html">&lt;p&gt;What follows is the story of why I no longer go to my old pharmacy.  This is
+</summary><published>2023-10-03T00:00:00Z</published><updated>2023-10-03T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/10/03/a-tale-of-two-pharmacies/" /><content type="html">&lt;p&gt;What follows is the story of why I no longer go to my old pharmacy.  This is
 recounted from memory, and some of the details may be inaccurate, but the gist
 is there.&lt;/p&gt;
 
@@ -430,7 +430,7 @@ out until they got a confused call from Alberta. Gimme a minute to do the
 paperwork and we'll have you on your way."&lt;/p&gt;
 
 &lt;p&gt;And that's how I got my meds.&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2023/09/24/overwatch2-4v4/</id><title type="text">How I would've designed Overwatch 2</title><summary type="html">&lt;p&gt;Okay I’ve been playing the Overwatch 2 anniversary events and considering how
+</content></entry><entry><id>http://pxtl.ca/2023/09/24/overwatch2-4v4/</id><title type="text">How I would've designed Overwatch 2</title><summary type="html">&lt;p&gt;Okay I’ve been playing the Overwatch 2 anniversary events and considering how
 many of them are small-group team-vs-team things (Catch the Patchmari,
 Starwatch). I slept on these the first time through and playing them now I’m
 surprised at how much I’m enjoying them, particularly StarWatch despite some of
@@ -445,7 +445,7 @@ either in quickplay or the arcade or something&lt;/p&gt;
 play - there are twice as many DPS heroes to choose from, twice as many DPS
 players, and twice as many on the team.&lt;/p&gt;
 
-</summary><published>2023-09-24T00:00:00Z</published><updated>2023-09-24T00:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2023/09/24/overwatch2-4v4/" /><content type="html">&lt;p&gt;Okay I’ve been playing the Overwatch 2 anniversary events and considering how
+</summary><published>2023-09-24T00:00:00Z</published><updated>2023-09-24T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/09/24/overwatch2-4v4/" /><content type="html">&lt;p&gt;Okay I’ve been playing the Overwatch 2 anniversary events and considering how
 many of them are small-group team-vs-team things (Catch the Patchmari,
 Starwatch). I slept on these the first time through and playing them now I’m
 surprised at how much I’m enjoying them, particularly StarWatch despite some of
@@ -517,11 +517,11 @@ PvP mission.&lt;/p&gt;
 &lt;p&gt;Did the wrong team win for the story?  Who cares.  Does nobody want to play a
 character who's critical to the story?  Have them appear for a quick scripted
 scene at the beginning and end.&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2023/09/19/fzero99/</id><title type="text">F-Zero 99</title><summary type="html">&lt;p&gt;i got a little carried away with this nostalgia game.  I loved the old F-Zero and this remake lets you play the classic against 98 other players at once.&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/09/19/fzero99/</id><title type="text">F-Zero 99</title><summary type="html">&lt;p&gt;i got a little carried away with this nostalgia game.  I loved the old F-Zero and this remake lets you play the classic against 98 other players at once.&lt;/p&gt;
 
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/LPtVwbNEmvE?si=zVh2fj70O3vx2cBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;
 
-</summary><published>2023-09-19T00:00:00Z</published><updated>2023-09-19T00:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2023/09/19/fzero99/" /><content type="html">&lt;p&gt;i got a little carried away with this nostalgia game.  I loved the old F-Zero and this remake lets you play the classic against 98 other players at once.&lt;/p&gt;
+</summary><published>2023-09-19T00:00:00Z</published><updated>2023-09-19T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/09/19/fzero99/" /><content type="html">&lt;p&gt;i got a little carried away with this nostalgia game.  I loved the old F-Zero and this remake lets you play the classic against 98 other players at once.&lt;/p&gt;
 
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/LPtVwbNEmvE?si=zVh2fj70O3vx2cBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;
 
@@ -573,22 +573,22 @@ a try. You can’t beat the price: Free is my favourite flavour. It’s easy to 
 up, the tutorial is pretty quick, and it’s fun. And it’s a Nintendo “99”
 nostalgia game, which means it’s certainly going to be time-limited. Play it
 while you can.&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2023/09/12/more-rigid/</id><title type="text">More rigid</title><summary type="html">&lt;p&gt;If you watch "Well There's Your Problem" podcast (about engineering disasters),
+</content></entry><entry><id>http://pxtl.ca/2023/09/12/more-rigid/</id><title type="text">More rigid</title><summary type="html">&lt;p&gt;If you watch "Well There's Your Problem" podcast (about engineering disasters),
 Alice has an iconoclastic opinion on things like expansion plates and swivel
 joints and the general flexibility of good engineering: "No, make it more
 rigid!" I have taken that to heart with some recent home improvement projects.&lt;/p&gt;
 
-</summary><published>2023-09-12T00:00:00Z</published><updated>2023-09-12T00:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2023/09/12/more-rigid/" /><content type="html">&lt;p&gt;If you watch "Well There's Your Problem" podcast (about engineering disasters),
+</summary><published>2023-09-12T00:00:00Z</published><updated>2023-09-12T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/09/12/more-rigid/" /><content type="html">&lt;p&gt;If you watch "Well There's Your Problem" podcast (about engineering disasters),
 Alice has an iconoclastic opinion on things like expansion plates and swivel
 joints and the general flexibility of good engineering: "No, make it more
 rigid!" I have taken that to heart with some recent home improvement projects.&lt;/p&gt;
 
 &lt;!--excerpt--&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-09-12-more-rigid/fencepost.jpg" alt="fencepost" /&gt;
-&lt;img src="http://www.pxtl.ca/images/2023-09-12-more-rigid/swing-chair-binding.jpg" alt="swing-chair-binding" /&gt;
-&lt;img src="http://www.pxtl.ca/images/2023-09-12-more-rigid/swing-chair.jpg" alt="swing-chair" /&gt;&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2023/08/31/sick-pupper/</id><title type="text">Sick Pupper</title><summary type="html">&lt;p&gt;So my dog made a mess in his crate overnight.  Not a big deal, he eats anything
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-09-12-more-rigid/fencepost.jpg" alt="fencepost" /&gt;
+&lt;img src="http://pxtl.ca/images/2023-09-12-more-rigid/swing-chair-binding.jpg" alt="swing-chair-binding" /&gt;
+&lt;img src="http://pxtl.ca/images/2023-09-12-more-rigid/swing-chair.jpg" alt="swing-chair" /&gt;&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/08/31/sick-pupper/</id><title type="text">Sick Pupper</title><summary type="html">&lt;p&gt;So my dog made a mess in his crate overnight.  Not a big deal, he eats anything
 he can get his mouth on, upset tummies are expected.  I've parented 3 human
 babies, messes happen, I know the drill.&lt;/p&gt;
 
@@ -601,7 +601,7 @@ puddles in January.&lt;/p&gt;
 other hand, the back yard is all grass.  And mud.  And last time I was barefoot,
 this time I was wearing flipflops.&lt;/p&gt;
 
-</summary><published>2023-08-31T00:00:00Z</published><updated>2023-08-31T00:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2023/08/31/sick-pupper/" /><content type="html">&lt;p&gt;So my dog made a mess in his crate overnight.  Not a big deal, he eats anything
+</summary><published>2023-08-31T00:00:00Z</published><updated>2023-08-31T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/08/31/sick-pupper/" /><content type="html">&lt;p&gt;So my dog made a mess in his crate overnight.  Not a big deal, he eats anything
 he can get his mouth on, upset tummies are expected.  I've parented 3 human
 babies, messes happen, I know the drill.&lt;/p&gt;
 
@@ -630,18 +630,18 @@ beaten-up by a two-foot-tall 70 lb eunuch.&lt;/p&gt;
 
 &lt;p&gt;my poor sick pupper.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-08-31-poor-sick-pupper.jpg" alt="my poor sick pupper" /&gt;&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2023/06/03/covid-cocktails-8/</id><title type="text">Covid Cocktails 8</title><summary type="html">&lt;p&gt;This is a heavily delayed in blogging, back in August 2021 I did my 8th round of cocktails, and hit my big goal: 100 different cocktails in a year.  I had to fly out soon, so this was a hyper-compressed rush of cocktails.&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-08-31-poor-sick-pupper.jpg" alt="my poor sick pupper" /&gt;&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/06/03/covid-cocktails-8/</id><title type="text">Covid Cocktails 8</title><summary type="html">&lt;p&gt;This is a heavily delayed in blogging, back in August 2021 I did my 8th round of cocktails, and hit my big goal: 100 different cocktails in a year.  I had to fly out soon, so this was a hyper-compressed rush of cocktails.&lt;/p&gt;
 
 &lt;p&gt;Covid cocktails 8.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/Covid-cocktails-8-collage-1024.jpg" alt="Covid cocktails 8 collage" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/Covid-cocktails-8-collage-1024.jpg" alt="Covid cocktails 8 collage" /&gt;&lt;/p&gt;
 
-</summary><published>2023-06-03T00:00:00Z</published><updated>2023-06-03T00:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2023/06/03/covid-cocktails-8/" /><content type="html">&lt;p&gt;This is a heavily delayed in blogging, back in August 2021 I did my 8th round of cocktails, and hit my big goal: 100 different cocktails in a year.  I had to fly out soon, so this was a hyper-compressed rush of cocktails.&lt;/p&gt;
+</summary><published>2023-06-03T00:00:00Z</published><updated>2023-06-03T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/06/03/covid-cocktails-8/" /><content type="html">&lt;p&gt;This is a heavily delayed in blogging, back in August 2021 I did my 8th round of cocktails, and hit my big goal: 100 different cocktails in a year.  I had to fly out soon, so this was a hyper-compressed rush of cocktails.&lt;/p&gt;
 
 &lt;p&gt;Covid cocktails 8.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/Covid-cocktails-8-collage-1024.jpg" alt="Covid cocktails 8 collage" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/Covid-cocktails-8-collage-1024.jpg" alt="Covid cocktails 8 collage" /&gt;&lt;/p&gt;
 
 &lt;!--excerpt--&gt;
 
@@ -661,7 +661,7 @@ beaten-up by a two-foot-tall 70 lb eunuch.&lt;/p&gt;
 
 &lt;p&gt;Mix with ice, pour to a rocks glass with big ice.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/comte-de-Sureau.jpg" alt="Comte de Sureau" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/comte-de-Sureau.jpg" alt="Comte de Sureau" /&gt;&lt;/p&gt;
 
 &lt;p&gt;I liked it. The St Germain brings some sweetness and a nice floral note... but the the Collective Arts gin has such a floral flavor already I feel like it got lost a bit. I like Campari, but its effect here is subtle. In the end it mostly tasted like a sweetened and lengthened floral gin with a bitter undertone.&lt;/p&gt;
 
@@ -696,7 +696,7 @@ beaten-up by a two-foot-tall 70 lb eunuch.&lt;/p&gt;
 
 &lt;p&gt;Garnish with berries.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/courtside.jpg" alt="Courtside" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/courtside.jpg" alt="Courtside" /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is so incredibly easy to drink. It's a tangy berry soda. I've got to work things out with the shaker or my huge Collins glasses though - I had it with a straw so I had the strongest sip first, but after it was too dilute.&lt;/p&gt;
 
@@ -718,7 +718,7 @@ beaten-up by a two-foot-tall 70 lb eunuch.&lt;/p&gt;
 
 &lt;p&gt;Shake with ice, pour to a highball with ice, garnish w orange twist.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/follow-that-black-rabbit.jpg" alt="Follow That Black Rabbit" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/follow-that-black-rabbit.jpg" alt="Follow That Black Rabbit" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Oh wow this is a complex drink.  The Fernet and orange and maple attack your mouth in three different places at once.  At the same time, it's sweet enough to be kinda approachable.&lt;/p&gt;
 
@@ -754,7 +754,7 @@ beaten-up by a two-foot-tall 70 lb eunuch.&lt;/p&gt;
 &lt;p&gt;Shake, double-strain to chilled cocktail glass.
 Garnish with orange twist.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/breakfast-martini.jpg" alt="Breakfast Martini" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/breakfast-martini.jpg" alt="Breakfast Martini" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Orange. Boozey orange.&lt;/p&gt;
 
@@ -775,7 +775,7 @@ Garnish with orange twist.&lt;/p&gt;
 
 &lt;p&gt;But my cassis has a pretty weak flavor so I bumped it up to 0.66 oz.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/kir.jpg" alt="kir" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/kir.jpg" alt="kir" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Okay, it turned a dry-ish white wine into something a bit more dessert-y.  The cassis adds a little sugar, body and fruitiness.&lt;/p&gt;
 
@@ -808,7 +808,7 @@ Garnish with orange twist.&lt;/p&gt;
 
 &lt;p&gt;Double strain to glass, garnish w mint.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/gin-whisper.jpg" alt="gin whisper" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/gin-whisper.jpg" alt="gin whisper" /&gt;&lt;/p&gt;
 
 &lt;p&gt;I liked this.  Creamy, sweet, and intricate.  A bit of a bitter undercurrent from its booziness and the botanicals, but it starts with the mint and elderflower.&lt;/p&gt;
 
@@ -839,7 +839,7 @@ Garnish with orange twist.&lt;/p&gt;
 &lt;li&gt;1 block of ice&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/rum-old-fashioned.jpg" alt="rum old fashioned" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/rum-old-fashioned.jpg" alt="rum old fashioned" /&gt;&lt;/p&gt;
 
 &lt;p&gt;It's good.  Lime forward with a rum funk and the angostura spice undercurrent.  Refreshing despite its booziness.  It straddles the line between a daiquiri and an old fashioned.  A good drink for when you want something stiff but also it's summer.&lt;/p&gt;
 
@@ -866,7 +866,7 @@ Garnish with orange twist.&lt;/p&gt;
 
 &lt;p&gt;Mix, strain to glass.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/East-India-no-3.jpg" alt="East India no 3" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/East-India-no-3.jpg" alt="East India no 3" /&gt;&lt;/p&gt;
 
 &lt;p&gt;... tastes like Pineapple and brandy.  Which, all things considered, isn't bad.  Kind of sweet and boozy.  It's nice, but a bit one-note.&lt;/p&gt;
 
@@ -886,7 +886,7 @@ Garnish with orange twist.&lt;/p&gt;
 
 &lt;p&gt;Garnish w lime&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/elderflower-spritz.jpg" alt="elderflower spritz" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/elderflower-spritz.jpg" alt="elderflower spritz" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Okay, this is a super simple cocktail but I really liked it.  St Germain has a sort of sweet but acidic and floral stonefruity flavor to it - like a gourmet take on sour candy.  That's flavors you get naturally in some white wines but turned up to 11.  So mixing it with the pinot grigio/chardonnay mix works really well.&lt;/p&gt;
 
@@ -915,7 +915,7 @@ Garnish with orange twist.&lt;/p&gt;
 
 &lt;p&gt;Top with foamed hot milk, fresh nutmeg, and cocoa powder.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/Mexicano-con-leche.jpg" alt="Mexicano con leche" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/Mexicano-con-leche.jpg" alt="Mexicano con leche" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Nice.  A bit mild because of the substitutions.  First sip is especially nice with the cocoa and nutmeg nose, then you get into it with the coffee with a nice hint of brandy and orange.  I wish I still had a reposado, a more flavorful tequila would've been better.&lt;/p&gt;
 
@@ -941,7 +941,7 @@ Garnish with orange twist.&lt;/p&gt;
 
 &lt;p&gt;Garnish with cherry and orange.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/black-eyed-Susan.jpg" alt="Black Eyed Susan" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/black-eyed-Susan.jpg" alt="Black Eyed Susan" /&gt;&lt;/p&gt;
 
 &lt;p&gt;... it's sweet.  And peachy.  And sweet.  And boozy.  The boozy flavor works with it but yeah it's really sweet. Probably wouldn't hurt to cut back the syrup - I was trying to approximate 2 oz sour mix with the sugar and lemon and lime.&lt;/p&gt;
 
@@ -971,7 +971,7 @@ Garnish with orange twist.&lt;/p&gt;
 
 &lt;p&gt;Then double-strain to a Collins glass full of ice.  Garnish with lemon.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/Kentucky-buck.jpg" alt="Kentucky Buck" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/Kentucky-buck.jpg" alt="Kentucky Buck" /&gt;&lt;/p&gt;
 
 &lt;p&gt;It didn't need the simple syrup, the ginger beer brings enough sweetness.  I think the simple came from the Reddit substitution, though.&lt;/p&gt;
 
@@ -1002,7 +1002,7 @@ Garnish with orange twist.&lt;/p&gt;
 
 &lt;p&gt;Garnish w mint and cherry.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/RumChata-double-chocolate-aperitif.jpg" alt="RumChata Double Chocolate Apertif" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/RumChata-double-chocolate-aperitif.jpg" alt="RumChata Double Chocolate Apertif" /&gt;&lt;/p&gt;
 
 &lt;p&gt;Wowww too sweet.  It's basically a liquified slice of coffee cake.  Which, if that's what you're into have at it.  I added ice to chill it and lengthen it a bit.&lt;/p&gt;
 
@@ -1027,7 +1027,7 @@ Garnish with orange twist.&lt;/p&gt;
 
 &lt;p&gt;Garnish with mint.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src="http://www.pxtl.ca/images/2023-06-03-Covid-cocktails-8/mr-bali-hai.jpg" alt="Mr Bali Hai" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/mr-bali-hai.jpg" alt="Mr Bali Hai" /&gt;&lt;/p&gt;
 
 &lt;p&gt;This is a good one.  Interesting drink with a surprising mix of fruit and coffee flavors.  It's such a strange fusion that my wife started thinking "caramel?" from the color.  Approachable, surprising, and fun.  &lt;/p&gt;
 
@@ -1040,7 +1040,7 @@ Garnish with orange twist.&lt;/p&gt;
 &lt;p&gt;I feel silly writing this almost two years later, but life happens.  Since this project I got the unfortunate talking-to from my doctor about blood sugar - diabetes sucks.  So cocktails are now a once-a-week treat for me, and often involve diet sodas.  Maybe someday I'll put together an article of my favorite "diet" cocktails.  Yes, I know alcohol gets metabolized into sugar, so yeah still gotta go easy on it.&lt;/p&gt;
 
 &lt;p&gt;Of the cocktails I made in this sprint, the one that sticks in my memory is the &lt;strong&gt;Follow That Black Rabbit&lt;/strong&gt;.  That drink was a journey.  But reading my old notes and the &lt;strong&gt;Elderflower Spritz&lt;/strong&gt; is definitely coming back to me as a good one.&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2022/11/24/birdsite/</id><title type="text">Birdsite</title><summary type="html">&lt;p&gt;On the birdsite: Musk's policy changes were about "Free Speech"... but it's
+</content></entry><entry><id>http://pxtl.ca/2022/11/24/birdsite/</id><title type="text">Birdsite</title><summary type="html">&lt;p&gt;On the birdsite: Musk's policy changes were about "Free Speech"... but it's
 become extremely clear that the particular speech he was focused on liberating
 was transphobia.  Most of the accounts he unbanned were banned for anti-trans
 hate-speech, and he's since gotten very chummy with notorious anti-trans
@@ -1051,7 +1051,7 @@ speech", its important to ask "about what?".&lt;/p&gt;
 
 &lt;hr /&gt;
 
-</summary><published>2022-11-24T00:00:00Z</published><updated>2022-11-24T00:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2022/11/24/birdsite/" /><content type="html">&lt;p&gt;On the birdsite: Musk's policy changes were about "Free Speech"... but it's
+</summary><published>2022-11-24T00:00:00Z</published><updated>2022-11-24T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2022/11/24/birdsite/" /><content type="html">&lt;p&gt;On the birdsite: Musk's policy changes were about "Free Speech"... but it's
 become extremely clear that the particular speech he was focused on liberating
 was transphobia.  Most of the accounts he unbanned were banned for anti-trans
 hate-speech, and he's since gotten very chummy with notorious anti-trans
@@ -1096,9 +1096,9 @@ the Fediverse network Mastodon's servers run on.&lt;/p&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;I'm at &lt;a href="https://mastodon.social/@Pxtl"&gt;@Pxtl@Mastodon.Social&lt;/a&gt;&lt;/p&gt;
-</content></entry><entry><id>http://www.pxtl.ca/2022/05/18/alcohol-in-parks/</id><title type="text">Alcohol in parks letter</title><summary type="html">&lt;p&gt;Text of an email I sent to council today, after they discovered we don't have an "alcohol in parks bylaw" and Ward 8 councilor JP Danko motioned looking into responsible ways to allow it.&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2022/05/18/alcohol-in-parks/</id><title type="text">Alcohol in parks letter</title><summary type="html">&lt;p&gt;Text of an email I sent to council today, after they discovered we don't have an "alcohol in parks bylaw" and Ward 8 councilor JP Danko motioned looking into responsible ways to allow it.&lt;/p&gt;
 
-</summary><published>2022-05-18T00:00:00Z</published><updated>2022-05-18T00:00:00Z</updated><link rel="alternate" href="http://www.pxtl.ca/2022/05/18/alcohol-in-parks/" /><content type="html">&lt;p&gt;Text of an email I sent to council today, after they discovered we don't have an "alcohol in parks bylaw" and Ward 8 councilor JP Danko motioned looking into responsible ways to allow it.&lt;/p&gt;
+</summary><published>2022-05-18T00:00:00Z</published><updated>2022-05-18T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2022/05/18/alcohol-in-parks/" /><content type="html">&lt;p&gt;Text of an email I sent to council today, after they discovered we don't have an "alcohol in parks bylaw" and Ward 8 councilor JP Danko motioned looking into responsible ways to allow it.&lt;/p&gt;
 
 &lt;!--excerpt--&gt;
 
