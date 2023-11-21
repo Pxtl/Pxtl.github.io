@@ -1,0 +1,602 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="last-modified" content="2023-11-21T08:20:08.9824055+00:00" />
+    <meta name="keywords" content="" />
+    <title>Minetest Pi4 Recipe (rpi minetest-server part 2) • Pxtl.ca</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link rel="canonical" href="http://pxtl.ca/2020/05/12/minetest-pi4-recipe/" />
+</head>
+<body class="home blog">
+    <div id="page" class="hfeed site">
+        <header id="masthead" class="site-header fancy-container lightgreen" role="banner">
+            <hgroup>
+                <h1 class="site-title"><a href="/" title="pxtl.ca" rel="home">Pxtl.ca</a></h1>
+                <p class="site-description">Martin Zarate's site, about C# software development and Hamilton, Ontario.</p>
+            </hgroup>
+            <nav role="navigation" class="site-navigation main-navigation">
+                <h1 class="assistive-text">Menu</h1>
+                <div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/category">Categories</a></li>
+                        <li><a href="/archive">Archive</a></li>
+                        <li><a href="/rss.xml">RSS</a> / <a href="/feed.xml">Atom</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="main">
+            <div id="primary" class="site-content">
+                <div id="content" role="main">
+                  
+
+<div id="post">
+    <h1>Minetest Pi4 Recipe (rpi minetest-server part 2)</h1>
+
+    <div class="post-note">
+      posted on 12 May 2020
+       | <a href="/category/software">Software</a>
+      
+      <div class="addthis_toolbox addthis_default_style" style="float:right;">
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+        <a class="addthis_button_tweet"></a>
+        <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+        <a class="addthis_button_linkedin_counter"></a>
+        <a class="addthis_counter addthis_pill_style"></a>
+      </div>
+    </div>
+    
+    
+        
+    <p>Continuing from my <a href="/2020/05/05/minetest-birthday/">previous article</a> on my
+daughter's Minetest birthday party, here's how I built my Raspberry Pi 4
+minetest server that powered the party.  To be clear: this is only my second
+time this century setting up a linux-based server from scratch, so I'm pretty
+novice at this.  I'm handy with a terminal console but only on Windows.  The
+intended reader of this article is... well, somebody like me.  Somebody new to
+Linux but very comfy with Windows.</p>
+
+<!--excerpt-->
+
+<h1>Hardware</h1>
+
+<h2>Pi Hardware</h2>
+
+<ul>
+<li><a href="https://www.buyapi.ca/product/raspberry-pi-4-model-b-2gb/">2GB Raspberry Pi4 with official USB
+power-supply</a></li>
+<li>32GB microSD card (some name-brand one; never buy no-name SDs on Amazon,
+they'll only break your heart)
+<ul>
+<li>good brands: Kingston, Samsung, Patriot, etc.</li>
+</ul></li>
+<li><a href="https://www.amazon.ca/Miuzei-Raspberry-Cooling-Aluminum-Model/dp/B07WJ8KHS6">Miuzei air-cooled case kit (includes heat-sinks and
+fan)</a>
+<ul>
+<li>like all off-brand stuff on Amazon, individual listings are ephemeral, so
+you may have to search for a different listing. I paid $15CAD.</li>
+</ul></li>
+<li>Ethernet cable</li>
+</ul>
+
+<p>The Miuzei case comes with good easy-to-follow instructions for assembly.  There
+are two possible configurations of the fan, a low-power mode and a high-power
+mode.  We used the low-power mode, even on an overclocked emulation box.  It's
+more than enough for our minetest server.</p>
+
+<h2>Supporting Hardware</h2>
+
+<p>This stuff you'll need for the setup process.</p>
+
+<ul>
+<li>A computer capable of running PuTTY and Minetest
+<ul>
+<li>I've also done some of this this from Linux and Android (don't recommend
+that), but I'm going to be using Windows tools.</li>
+</ul></li>
+<li>Spare keyboard</li>
+<li>Spare mouse</li>
+<li>Spare monitor/TV with HDMI hookup
+<ul>
+<li>Note the Pi4 uses micro-HDMI, which is <em>not</em> common. I bought <a href="https://www.amazon.ca/Cable-Matters-Plated-Female-Adapter/dp/B00JDRHQ58">these
+adapters</a>
+for my Pi devices.</li>
+</ul></li>
+<li>Wifi or ethernet accessible to the location with all the above equipment.</li>
+<li>A router you're comfy setting port-forwarding and static-IPs on.  You might
+need to Google how to do that on your router.</li>
+</ul>
+
+<h1>OS Setup</h1>
+
+<p>You can download-and-burn the image onto a MicroSD using <a href="https://www.raspberrypi.org/downloads/">Raspberry Pi
+Imager</a>, but I prefer to download the
+image manually and burn it to the MicroSD using <a href="https://www.balena.io/etcher/">Balena
+Etcher</a>.</p>
+
+<p>Once you have the image burned and inserted into the Pi, you'll need to get it
+set up for remoting - but the first time it's going to need a mouse, keyboard,
+and HDMI-connected monitor until we can setup remoting.  I plugged the setup
+into a TV and mouse/keyboard. For operating system: The system is running
+Raspbian Buster (Raspbian is the Linux variant, Buster is the version number).</p>
+
+<p>Raspbian will walk through a pretty easy wizard after startup to connect to wifi
+and set a password.</p>
+
+<h2>Remoting</h2>
+
+<p>The first step to setting up remoting is getting a static IP bound to your
+raspi.  </p>
+
+<p>Open a terminal and run the command.</p>
+
+<pre><code>ifconfig
+</code></pre>
+
+<p>will list your IP addresses and MAC addresses.  The you want <code>eth0</code> for wired,
+and <code>wlan0</code> for wireless.  The ipv4 address we're focusing on will be labeled
+<code>inet</code>, and the mac address will be labeled <code>ether</code> - the ipv4 address will be
+generally be of the form <code>192.168.something.something</code>.  The next steps are
+router-specific: write down the <code>ether</code> MAC info from <code>ifconfig</code> and use it to
+set up static IP for your router - still local, we're still in
+<code>192.168.something.something</code>, but we need a static one that won't change every
+time we reboot.  I generally set my router to start dynamic IP addresses at
+<code>192.168.1.100</code> and use numbers <code>192.168.1.10</code> to <code>192.168.1.99</code> for any
+computer I want to give a static address. This will make port forwarding easier
+in the future. The only wrinkle is that the wifi and ethernet interfaces will
+each have their own MAC address and IP, and you'll have to decide which you want
+to static bind.</p>
+
+<p>The important steps afterwards are to enable SSH and the VNC Server.  </p>
+
+<p>Again, in the terminal type</p>
+
+<pre><code>sudo raspi-config
+</code></pre>
+
+<p>This will launch a simple UI for editing settings.  Use in "interface options"
+enable SSH and VNC.  VNC will let you remote in for a GUI and SSH will let you
+remote a terminal/text-console and file-transfers in.</p>
+
+<h2>Remoting Clients</h2>
+
+<p>You need to install some remote admin software on your PC if you don't have it
+already:</p>
+
+<ul>
+<li>RealVNC (gui remoting)</li>
+<li>PuTTY (terminal remoting)</li>
+<li>WinSCP (file transfer)</li>
+</ul>
+
+<p>All are available from <a href="https://ninite.com/">ninite.com</a>.  Personally I prefer
+mRemoteNG to PuTTY, but it's got a less memorable name and a more elaborate UI.</p>
+
+<p>Confirm that you can connect PuTTY and RealVNC to your new Pi server.  You'll
+need to use the IP address you set up on your router and the username (pi,
+generally) and password you set up earlier in the Raspbian setup wizard.</p>
+
+<h2>Moving into headless mode</h2>
+
+<p>At this point, your pi is now ready to be remote-only.  Unhook it from the
+mouse, keyboard, and monitor and put it in its final resting place, and wire it
+up with just ethernet and power.  You may have to tweak your Router settings to
+switch over from Wifi to wired for static IP if you're going from a wireless
+connection to wired (I actually forgot this step, so all my traffic to my pi4
+was going over wifi even though it was plugged in).</p>
+
+<h1>Using the Terminal to hook into the Debian Buster Backports software repository</h1>
+
+<p>Before we can install the minetest server, we have a problem: Raspbian and
+Debian Buster tend to have somewhat stale software.  We need a fresher version
+of Minetest, so we're going to link up to the buster-backports system for that.</p>
+
+<h2>Welcome to the terminal</h2>
+
+<p>We're going to be doing all this in the terminal.  On your desktop, open up
+PuTTY, connect to your Pi4 device using the static-IP, the pi username, and the
+password.  The linux terminal isn't as scary as you think -- after all, by
+default it's so locked down you can't actually do any damage without <code>sudo</code>,
+which is basically Linux' way of saying "this line does something scary".  </p>
+
+<p>We'll be using <code>sudo</code> a lot.</p>
+
+<p><a href="https://en.wikibooks.org/wiki/Guide_to_Unix/Commands/File_System_Utilities">The basic list of commands we'll be working with are listed
+here</a>.
+In particular, <code>cd</code>, <code>ls</code>, <code>cp</code>, <code>mv</code>, <code>rm</code>, <code>chmod</code> and <code>chown</code>.  Be fearless
+and stupid.  We're mostly just installing software and tweaking some files.
+Worst case scenario, don't be afraid to wipe the thing and start over.</p>
+
+<h2>Hooking into Buster-Backports</h2>
+
+<p>As mentioned earlier, raspbian Buster is <em>almost</em> Debian.  Debian being a large,
+popular Linux software distro, has an extensive library of programs available
+for it.  And Raspbian can run Debian software... but by default, it's not hooked
+up to access Debian's latest software apt software repository.  For this
+Raspbian Buster device, the repository we need to connect to is called "Buster
+Backports", which is to say back-ports of cutting-edge software to the "stable"
+Buster version of Raspbian/Debian.</p>
+
+<p>So, first, we need to let Raspbian know it's safe to talk to the Backports repo.</p>
+
+<p>In our terminal, we run the following:</p>
+
+<pre><code>sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E0B11894F66AEC98
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7638D0442B90D010
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8B48AD6246925553
+</code></pre>
+
+<p>I'm going to be honest, I don't know what it actually does in detail, and
+generally copying pasting sudo commands into your machine is a bad idea,
+especially stuff involving security keys.  But in this case, its's obviously
+wiring into a something provided by Ubuntu, who being one of the big daddies of
+Linux right now I tend to trust.</p>
+
+<p>If you're new to linux and PuTTY: <code>right-click</code> or <code>shift</code>+<code>insert</code> means paste.
+That'll be handy for copying commands from here to paste in there.</p>
+
+<p>Next, we add the <code>buster-backports</code> repository to the registry of apt
+installation sources.  This mammoth command adds the configuration to connect to
+"buster-backports" into our sources list for installing software.</p>
+
+<pre><code>echo 'deb http://httpredir.debian.org/debian buster-backports main contrib non-free' | sudo tee -a /etc/apt/sources.list.d/debian-backports.list
+</code></pre>
+
+<p>This script I can explain.  Skip this if you're experienced in the ways of
+Linux.  <code>echo 'deb http://yadda</code> just means "output the quoted text" the <code>|</code>
+means "take the output of the command on the left of the <code>|</code> and shove it into
+the command on the right.  <code>tee -a somefilepath</code> means "open somefilepath and
+append the stuff shoved into this command at the end of that file and also echo
+it to the screen so we can see it".  So we're taking the quoted line and
+stuffing it at the end of the file <code>debian-backports.list</code>, which will
+effectively add the buster backports repository to our sources list so we can
+now install software from there.</p>
+
+<p>Now, we have to let the "apt" installation system know that there's the new
+source available to it, so we'll do</p>
+
+<pre><code>sudo apt-get update
+</code></pre>
+
+<p>and finally we're ready to start installing software.</p>
+
+<h1>Installing and Configuring minetest-server</h1>
+
+<p>I worked heavily from <a href="https://wiki.minetest.net/Setting_up_a_server/Debian">this guide on the minetest
+wiki</a> but found it didn't
+have much context for a novice like me so I'm going to slow it down and give you
+a deep dive on the linuxisms involved.</p>
+
+<h2>Minetest-server, systemd, and an intro to file permissions</h2>
+
+<p>We're not going to do raw minetest, but rather "minetest-server" which installs
+minetest <em>and</em> sets it up into the service system in Raspbian so it runs
+securely with its own user (the user <code>Debian-minetest</code> of group <code>games</code>).  The
+only warning is that this server-daemon approach means that a lot of the support
+documents about minetest are going to be confusing for you because <em>we never
+actually run minetest</em>, which is something the docs talk about a lot.  Instead,
+we tell <code>systemd</code>, Raspbian's service manager, to do that for us.  It does on
+startup and handles the details. Helpful, but opaque.</p>
+
+<h3>Quick intro to file-permissions and Linux users</h3>
+
+<p>One wrinkle about this is that our <code>pi</code> user isn't actually involved in running
+the software.  Minetest-server actually uses its own linux user - so there's a
+separate account responsible for running the server, and any time it needs to
+look at a file we have to grant permission or ownership to that user to muck
+with that file.</p>
+
+<p>So we're going to be needing to get acquainted with some linux commands.  We
+won't be using them much until we really get into the weeds with our minetest
+server, but for now you should meet them.</p>
+
+<p><code>chown</code> is "change file owner/group".  We need to use this to assign ownership
+of a file or folder to our service-user, who is named <code>Debian-minetest</code> of group
+<code>games</code>.  So to assign a file to <code>Debian-minetest</code>, we do</p>
+
+<pre><code>sudo chown Debian-minetest:games &lt;filename&gt;
+</code></pre>
+
+<p>Optionally with a <code>--recursive</code> flag if you want to do it to every file in a
+directory-tree.</p>
+
+<p>Similarly, to grant permissions for that user, we're going to use <code>chmod</code>, which
+is "change mode" but is really about modifying file permissions.</p>
+
+<p>You'll notice we usually call commands with <code>-</code> parameters, but in the case of
+<code>chmod</code>, we use <code>+</code> parameters - this is something I have not gotten used to
+since it is <em>not</em> a thing in windows/powershell scripting.</p>
+
+<pre><code>sudo chmod +rwx &lt;filename&gt;
+</code></pre>
+
+<p>This grants the owner <strong>r</strong>ead, <strong>w</strong>rite, and e<strong>x</strong>ecute permissions to a
+file.</p>
+
+<p>Again, you can use a directory (or a wildcard like *) instead of a filename, and
+you can have it do the action to everything in the directory tree by using
+<code>--recursive</code></p>
+
+<p>Finally, <code>ls</code> is how to list the contents of a directory, but we want <code>ls -l</code> to
+list them and show the owner and permissions so we can be sure we did the above
+right.</p>
+
+<p>I know I'm getting pretty deep into the weeds, but file permissions were 99% of
+my struggle since they're barely a thing on Windows, so I figured it was worth
+breaking it down here before we go any deeper - hopefully if anything goes
+sideways, you now have enough to unmangle a file permission or two.</p>
+
+<h2>Install and config</h2>
+
+<p>So, install minetest-server from the buster-backports source we just finished
+hooking into.</p>
+
+<pre><code>sudo apt-get -t buster-backports install minetest-server
+</code></pre>
+
+<p>Then create and setup our config file.  That's where a lot of the meat will be
+happening - we've got the game installed, but our server is private and
+unsecured and all that.  We want something we can <em>control</em>.  My daughter and
+her friends are playing in there.</p>
+
+<pre><code>#unzip the starting config - I'm pretty sure this step is unnecessary 
+#and might ruin privileges on minetest.conf .
+#Only do this if /etc/minetest/minetest.conf wasn't created automatically
+sudo zcat /usr/share/doc/minetest/minetest.conf.example.gz &gt; /etc/minetest/minetest.conf
+
+#open the config up in the editor to get to work
+sudo nano /etc/minetest/minetest.conf
+</code></pre>
+
+<p>The file <code>/etc/minetest/minetest.conf</code> contains a pretty-well-annotated config
+of everything about our minetest server.  The only big gotcha is that you <em>must</em>
+set a <code>bind_address</code> to make your server accessible to anybody.  The default is
+0.0.0.0, which is supposed to mean "accept all incoming connections" but somehow
+either minetest or systemd get cranky and instead accept <em>no</em> connections.  So
+take that static IP you set on your server way back at the beginning of this
+recipe, and put it in <code>bind_address</code>.</p>
+
+<p>Second, you want a password, at least until you're ready to unleash this thing
+on the public world.  Set <code>default_password</code>.  </p>
+
+<p>You can set a nice name, grant players some default privileges, and publicize it
+in the server browser so players can search you out in the listing.</p>
+
+<p>To start?  Probably focus on <code>bind_address</code>, a <code>server_name</code>, the name of your
+admin user (<code>name</code>) and a <code>default_password</code>.  Maybe decide if you want your
+first world to be creative mode or not</p>
+
+<p>If you've never used <em>Nano</em> before, it's actually pretty easy in a linuxy way -
+normal cursor controls (don't try to mouse-scroll though), but doesn't use
+windows-standard hotkeys.  Everywhere in linux, ctrl-C means "break whatever's
+going on", so copy-paste is highlight and rclick instead.  Don't try to undo
+with ctrl-Z either, that means suspend the current program and switch to console
+(<code>fg %1</code> to come back, meaning put suspended app <strong>1</strong> back in the
+<strong>f</strong>ore<strong>g</strong>round).  <code>Ctrl</code> + the keys listed along the bottom are the hotkeys,
+like <code>ctrl</code>+<code>w</code> to search, <code>ctrl</code>+<code>o</code> to save, <code>ctrl</code>+<code>x</code> to quit.</p>
+
+<p>Finally, our first chmod command:</p>
+
+<pre><code>#enable writing of the log file for all users so we can see what’s going on
+sudo chmod a+rw /var/log/minetest/minetest.log
+</code></pre>
+
+<p>We need Minetest to be allowed to write to the minetest log file.  The "a" in
+that chmod means "all users", we're going to keep this simple.  I know you have
+to do this step because I <em>didn't</em> do it and it errored out when I tried to
+start up the server... I don't know, if the file doesn't exist yet just start
+the server and then chmod it afterwards. Or like <code>echo '' |
+/var/log/minetest/minetest.log</code> to create it blank.  Whatever.</p>
+
+<h2>Start it up</h2>
+
+<p>Now that our Minetest server is installed and configured, it's time to cross our
+fingers and start it up.</p>
+
+<p>First, meet <code>systemctl</code>.  That's systemd's tool for you to manage services that
+it runs for you.</p>
+
+<pre><code>sudo systemctl start minetest-server
+</code></pre>
+
+<p>This means we let it rip.  For future reference, there's also <code>systemctl stop</code>
+and <code>systemctl restart</code> that do what they sound like.</p>
+
+<p>Install the minetest desktop program onto another machine, or even an Android
+phone (or hell, vnc into the raspi and install the desktop version of minetest -
+it's barely usable but enough to check connections) and try to connect to your
+server by the local <code>192.168.something.something</code> static address.  This will
+confirm you've got the minetest server running.  Don't forget your
+<code>default_password</code>.</p>
+
+<p>If it doesn't work?  Check <code>/var/log/minetest/minetest.log</code>.  You can read the
+whole file with the command <code>cat /var/log/minetest/minetest.log</code>, or just the
+very end of the file with <code>tail /var/log/minetest/minetest.log</code>.  You really
+want to see the line</p>
+
+<p><code>Server for gameid="minetest" listening on 192.168.something.something:30000.</code></p>
+
+<p>If you don't see it yet, keep checking with <code>tail
+/var/log/minetest/minetest.log</code> for about a minute. If there's an error in
+there, take it seriously and try to figure it out.</p>
+
+<p>If it does work and you connect?  Celebrate!  And while you're in there, log in
+with your admin user (the one you set as <code>name</code> in the minetest.conf) and use
+the gui to change their password, since you'll be giving that one away to your
+friends.</p>
+
+<h2>Getting your server into the public internet.</h2>
+
+<p>We're going to do a bit more tweaking of the minetest.conf, so let's stop the
+server for a minute with </p>
+
+<pre><code>sudo systemctl stop minetest-server
+</code></pre>
+
+<p>... you're getting the hang of this right?  Remember, use ctrl-R to find old
+commands in the history so you're not typing that mouthful over and over again.
+Also tab-completion.  Als the up and down keys to find previous commands.</p>
+
+<p>This part's a bit awkward because I have a domain name pointing at my house, and
+you might not have that.  If you do have one, then set that on <code>server-address</code>
+in your minetest.conf to point it there.  Otherwise, leave the <code>server-address</code>
+line commented out with a <code>#</code>... I've read it <em>should</em> work but I haven't tried
+it myself.</p>
+
+<p>While you're in minetest.conf, you can also set <code>server_announce = true</code> because
+your server is passworded with a secure password so you won't get random
+griefers smashing it up.  You set a <code>default_password</code>, right?</p>
+
+<p>Anyways, the next step here is setting up port-forwarding on your router.  By
+default, the minetest server runs on port 30000.  That's thirty-thousand, not
+three-thousand (had to explain it to my daughter a few times).  In your router,
+get all incoming UDP traffic coming to 30000 forwarded to that
+192.168.something.something static IP.  Now you're on the public internet.</p>
+
+<p>Now, let's start it back up.</p>
+
+<pre><code>sudo systemctl start minetest-server
+</code></pre>
+
+<p>The system will take a minute to start up - you can tail the log to check on its
+progress.  Give it a minute or two and then search of your <code>server-name</code> in the
+minetest desktop GUI server-browser.  Hopefully it's online and you can connect!</p>
+
+<h1>Yay, it Works!</h1>
+
+<p>Except that it's just vanilla minetest game.  It's not Mineclone2. Also, where's
+our Mumble server, you want me to type chat into the console like a caveman?
+Still, at the end of this article, we've got something useful!  You and your
+friends can play vanilla Minetest game on your pi4 server now.</p>
+
+<p><a href="/2020/05/23/minetest-mods/">Next time, more stuff.</a></p>
+
+
+    <div id="disqus_thread"></div>
+<script>
+    var reset_disqus = function(){
+        DISQUS.reset({
+            reload: true,
+            config: function () {
+                //this.page.identifier = '';
+                this.page.url = 'http://pxtl.ca/2020/05/12/minetest-pi4-recipe/';
+                //this.page.title = '';
+            }
+        });
+    };
+
+    var disqus_shortname = 'pxtl';
+    var disqus_url = 'http://pxtl.ca/2020/05/12/minetest-pi4-recipe/';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    window.addEventListener('orientationchange', reset_disqus);
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    
+    <!-- Go to www.addthis.com/dashboard to customize your tools -->
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5700677916b13588"></script>
+
+
+</div>
+                </div>
+                <!-- #content -->
+            </div>
+            <!-- #primary .site-content -->
+
+            <div id="secondary" class="widget-area fancy-container lightred" role="complementary">
+                <aside id="text-5" class="widget widget_text">
+                    <h1 class="widget-title">Follow</h1>
+                    <div class="textwidget logos">
+                        <a href="https://mastodon.social/@Pxtl" rel="me" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://mastodon.social']);"><img src="/stylesheets/images/mastodon.png"></a>
+                        <a href="https://twitter.com/pxtl" rel="me" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);"><img src="/stylesheets/images/twitter.png"></a>
+                        <a href="http://stackoverflow.com/users/588195/pxtl" rel="me" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://stackoverflow.com']);"><img src="/stylesheets/images/stackoverflow.png"></a>
+                        <a href="https://ca.linkedin.com/in/martin-zarate-a132181b" rel="me" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.linkedin.com']);"><img src="/stylesheets/images/linkedin.png"></a>
+                        <a href="https://github.com/pxtl" rel="me" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://github.com']);"><img src="/stylesheets/images/github.png"></a>
+                    </div>
+                </aside>
+                <aside id="archives-4" class="widget widget_archive">
+                    <h1 class="widget-title">Archive</h1>
+                    <ul class="posts">
+                          <li><a href="/archive#202311">November, 2023</a></li>
+                          <li><a href="/archive#202310">October, 2023</a></li>
+                          <li><a href="/archive#20239">September, 2023</a></li>
+                          <li><a href="/archive#20238">August, 2023</a></li>
+                          <li><a href="/archive#20236">June, 2023</a></li>
+                          <li><a href="/archive#202211">November, 2022</a></li>
+                          <li><a href="/archive#20225">May, 2022</a></li>
+                          <li><a href="/archive#20219">September, 2021</a></li>
+                          <li><a href="/archive#20216">June, 2021</a></li>
+                          <li><a href="/archive#20215">May, 2021</a></li>
+                          <li><a href="/archive#20211">January, 2021</a></li>
+                          <li><a href="/archive#202012">December, 2020</a></li>
+                          <li><a href="/archive#202011">November, 2020</a></li>
+                          <li><a href="/archive#202010">October, 2020</a></li>
+                          <li><a href="/archive#20209">September, 2020</a></li>
+                          <li><a href="/archive#20206">June, 2020</a></li>
+                          <li><a href="/archive#20205">May, 2020</a></li>
+                          <li><a href="/archive#20204">April, 2020</a></li>
+                          <li><a href="/archive#20173">March, 2017</a></li>
+                          <li><a href="/archive#20172">February, 2017</a></li>
+                          <li><a href="/archive#201610">October, 2016</a></li>
+                          <li><a href="/archive#20169">September, 2016</a></li>
+                          <li><a href="/archive#20164">April, 2016</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <!-- #secondary .widget-area -->
+
+
+        </div>
+        <!-- #main -->
+
+        <footer id="colophon" class="site-footer" role="contentinfo">
+            <div class="site-info">
+                Powered by <a href="https://github.com/Sandra/Sandra.Snow" rel="generator">Sandra.Snow</a>.	
+            </div>
+            <!-- .site-info -->
+        </footer>
+        <!-- #colophon .site-footer -->
+    </div>
+    <!-- #page .hfeed .site -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src='/javascripts/prettify.js' type='text/javascript'></script>
+    <script type="text/javascript">
+var _gaq = _gaq || [];
+
+_gaq.push(['_setAccount', 'UA-000000-00']);
+_gaq.push(['_trackPageview']);
+        
+(function () {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript';
+    ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+})();
+</script>
+    <script type='text/javascript'>
+      $(function () {
+        $("pre code").parent().each(function () {
+          if (!$(this).hasClass("prettyprint")) {
+            $(this).addClass("prettyprint");
+            a = true
+          }
+        });
+
+        prettyPrint();
+      });
+    </script>
+</body>
+</html>

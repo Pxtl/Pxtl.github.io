@@ -1,0 +1,1120 @@
+<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://pxtl.ca/</id><updated>2023-11-21T08:20:24Z</updated><author><name>Martin Zarate</name><uri>http://pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://pxtl.ca/feed.xml" /><entry><id>http://pxtl.ca/2023/11/17/github-ci/</id><title type="text">Github CI</title><summary type="html">&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this
+blog! Finally learned how to use Github workflows.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/tree/master/.github/workflows"&gt;Workflow files are
+here&lt;/a&gt;&lt;/p&gt;
+
+</summary><published>2023-11-17T00:00:00Z</published><updated>2023-11-17T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/11/17/github-ci/" /><content type="html">&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this
+blog! Finally learned how to use Github workflows.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/tree/master/.github/workflows"&gt;Workflow files are
+here&lt;/a&gt;&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;p&gt;You can now see my posts automatically go from my source-control here in
+Sandra.snow into the Pxtl.Github.io repo.  Particularly interesting is that
+because the Sandra.Snow project I'm using for the blog is .NET Framework 4, the
+runner is actually running &lt;em&gt;windows&lt;/em&gt;.  I didn't know that was possible for
+GitHub.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/actions/runs/6909229230/job/18800147451#logs"&gt;For example, here's a log of a publish
+action&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The only thing that annoys me is that I had to set it up using PATs, which have
+a 90 day expiry.  So every 90 days I'll have to refresh the token that allows
+the Sandra.Snow repo to write to the Pxtl repo?  That seems labourious.&lt;/p&gt;
+
+&lt;p&gt;Probably I should reverse it around - have the Action running in my Pxtl repo so
+it's &lt;em&gt;pulling&lt;/em&gt; from the Sandra.Snow repo.  But for now, this works.&lt;/p&gt;
+
+&lt;p&gt;This post is my first attempt to run it for a new post.  Fingers crossed!&lt;/p&gt;
+
+&lt;p&gt;Edit: it works!&lt;/p&gt;
+
+&lt;p&gt;Edit2: and now it doesn't flood the log with complaints about line-endings.&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/10/24/dryer-repair/</id><title type="text">Kenmore Dryer Repair</title><summary type="html">&lt;p&gt;Once again, everything is made of garbage.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/failed-coil.jpg" alt="failed heating coil in dryer" /&gt;&lt;/p&gt;
+
+</summary><published>2023-10-24T00:00:00Z</published><updated>2023-10-24T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/10/24/dryer-repair/" /><content type="html">&lt;p&gt;Once again, everything is made of garbage.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/failed-coil.jpg" alt="failed heating coil in dryer" /&gt;&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;h2&gt;Day 1&lt;/h2&gt;
+
+&lt;p&gt;Our dryer failed.  I feel like I have a moral responsibility to attempt to
+repair anything before making it waste. So I’m trying my hand at the dryer.&lt;/p&gt;
+
+&lt;p&gt;Disassembly was harder than it needed to be.  I kept thinking it would be like a
+'90s computer where you do the screws and then it opens, but it turns out the
+dryer is the opposite - while everything internal is mounted with screws, the
+case is opened with pry-bars and brute force.  So I undid all the screws at the
+back, realized I'd unmounted some kind of plate, and then carefully lined it
+back up reaching through and screwed it back together.  &lt;/p&gt;
+
+&lt;p&gt;I watched a bunch of videos about how to pull the thing apart and check it -
+found a working voltmeter and tested all 3 thermal switches that I found.  The
+only real problem was testing the coil - the plate where the coil was mounted
+had a nice open hole where the coil's port should have been, but instead the
+coil's port was far out of reach.  I assume it's a safety thing - there's 3000+
+watts coursing through that port, I assume they didn't want it easily touched
+when you can pry the lid off with a blade screwdriver.&lt;/p&gt;
+
+&lt;p&gt;So then I gave in and pulled it apart properly.  It's especially difficult since
+the last HVAC guys who did our house moved the furnace closer to the dryer and
+so it's miserably cramped, it was very hard to get the drum out.&lt;/p&gt;
+
+&lt;p&gt;Sadly I didn't realize that the whole tub joint pops upwards so I detached the
+tub from the join and then found the join comes off pretty easy anyways.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/failed-coil-context.jpg" alt="failed coil in context of disassembled dryer" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ironically, the "some kind of plate" that I'd painstakingly removed and
+re-added?  That was the thing the coil was mounted on, so I had to remove it again.&lt;/p&gt;
+
+&lt;p&gt;Anyhow, the broken coil was plainly visible, so I ordered in new parts.  I also
+&lt;a href="https://lemmy.ca/post/7887807"&gt;asked on Lemmy&lt;/a&gt; if there were any thoughts about
+what to do while I was in there and got the advice to replace the belt and
+re-lube the ball-axle while the drum was out.&lt;/p&gt;
+
+&lt;h2&gt;Day 2&lt;/h2&gt;
+
+&lt;p&gt;Well, the dryer has been disassembled and vacuumed, the dead coil removed, the
+new coil swapped in, ready to reassemble as soon as the new belt arrives. I was
+surprised how much of the brown schmutz in the heater was just ash from the coils
+- it dusted off quite shiny after I replaced the coil.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/clean-coil.jpg" alt="clean and repaired coil plate" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m a little worried about the visibly duller part of the heater assembly,
+hopefully that won’t absorb too much heat - I tried to cluster the coils a bit
+looser there to compensate.&lt;/p&gt;
+
+&lt;p&gt;It’s even visible on the reverse side.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/burn-through.jpg" alt="burn-through mark" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Either way, I’m reassembling tomorrow when the new belt arrives.&lt;/p&gt;
+
+&lt;h2&gt;Day 3&lt;/h2&gt;
+
+&lt;p&gt;Well, the belt arrived and I went to Rona and picked up some (too expensive)
+axle grease and aluminum tape.  The tape was to repair the exhaust hose and to
+replace the disintegrated rubber strap that was sealing the internal exhaust
+tube on.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/taped-internal-exhaust.jpg" alt="taped internal exhaust detail" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Of course, also the wiring diagram tore when I pulled it out, so I photocopied
+that and figured I should keep it and... well, when all you have is a hammer,
+everything looks like a nail.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/taped-wiring-copy.jpg" alt="taped wiring diagram copy" /&gt;&lt;/p&gt;
+
+&lt;p&gt;And then we got into reassembling it.  Brought in a helper and we re-lubed the
+axle, put everything back in place, and screwed it all back together.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/reassembly-helper.jpg" alt="reassembly with helper" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Only one screw went missing!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-10-24-dryer-repair/reassembled.jpg" alt="reassembled dryer" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Had my kid sit with it for a full cycle armed with the fire extinguisher (just
+in case) while I went and picked up my other kid (late) from climbing gym.  It
+all worked!&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/10/03/a-tale-of-two-pharmacies/</id><title type="text">A Tale of Two Pharmacies</title><summary type="html">&lt;p&gt;What follows is the story of why I no longer go to my old pharmacy.  This is
+recounted from memory, and some of the details may be inaccurate, but the gist
+is there.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;drops in at local pharmacy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"I'm running out of my meds, can you refill them?"&lt;/p&gt;
+
+&lt;p&gt;"Sorry, you have to come closer to refill-day, so come back Saturday."&lt;/p&gt;
+
+&lt;p&gt;"Okay, I'll come back then."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;"Okay,  it's Saturday, here to refill my meds."&lt;/p&gt;
+
+&lt;p&gt;"... yeah, you're out of refills.  We'll have to talk to your doctor."&lt;/p&gt;
+
+&lt;p&gt;"... but it's the weekend?"&lt;/p&gt;
+
+&lt;p&gt;"Oh, we'll sort it out on Monday."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+</summary><published>2023-10-03T00:00:00Z</published><updated>2023-10-03T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/10/03/a-tale-of-two-pharmacies/" /><content type="html">&lt;p&gt;What follows is the story of why I no longer go to my old pharmacy.  This is
+recounted from memory, and some of the details may be inaccurate, but the gist
+is there.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;em&gt;drops in at local pharmacy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"I'm running out of my meds, can you refill them?"&lt;/p&gt;
+
+&lt;p&gt;"Sorry, you have to come closer to refill-day, so come back Saturday."&lt;/p&gt;
+
+&lt;p&gt;"Okay, I'll come back then."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;"Okay,  it's Saturday, here to refill my meds."&lt;/p&gt;
+
+&lt;p&gt;"... yeah, you're out of refills.  We'll have to talk to your doctor."&lt;/p&gt;
+
+&lt;p&gt;"... but it's the weekend?"&lt;/p&gt;
+
+&lt;p&gt;"Oh, we'll sort it out on Monday."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;p&gt;"Okay, it's Monday, can you get in touch with my doc?"&lt;/p&gt;
+
+&lt;p&gt;"Sure!  We'll fax that.  Come back tomorrow and we'll have it sorted out."&lt;/p&gt;
+
+&lt;p&gt;"No, I'm on my last pill, it has to be refilled today."&lt;/p&gt;
+
+&lt;p&gt;"You know you're supposed to give us 48 hours notice, right?"&lt;/p&gt;
+
+&lt;p&gt;ಠ_ಠ&lt;/p&gt;
+
+&lt;p&gt;"Yes, I know.  I tried."&lt;/p&gt;
+
+&lt;p&gt;"Okay, we'll fax them now.  Come back this evening."&lt;/p&gt;
+
+&lt;p&gt;"Okay."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;calls towards the end of the work day&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi, are my meds in yet?"&lt;/p&gt;
+
+&lt;p&gt;"What?  We don't have any meds for you on file."&lt;/p&gt;
+
+&lt;p&gt;"No, my doctor faxed something?" &lt;/p&gt;
+
+&lt;p&gt;"No they didn't."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;calls doctor&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"We definitely faxed them.  We'll fax them again."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;phones pharmacy back&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi, are my meds in yet?"&lt;/p&gt;
+
+&lt;p&gt;"What?  We don't have any meds for you on file."&lt;/p&gt;
+
+&lt;p&gt;"Can you check if you got faxed anything about my meds?"&lt;/p&gt;
+
+&lt;p&gt;"Oh, yes, we see that now, we got a fax.  Can you come in Wednesday to pick them
+up?"&lt;/p&gt;
+
+&lt;p&gt;"No, I'm on my last pill."&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;sigh on phone&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;"You know you're supposed to give us 48 hours notice, right?"&lt;/p&gt;
+
+&lt;p&gt;"I tried."&lt;/p&gt;
+
+&lt;p&gt;"Okay, we'll get that ready for you, please hold."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;"Sorry, we're all out of those.  They've been all out for a while.  It's on
+back-order, everybody's out."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;stifles why-am-I-just-hearing-about-this-now-screaming-rage&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Uh, what do I do?  I'm on my last pill."&lt;/p&gt;
+
+&lt;p&gt;"Okay, we've got a one week supply to give you.  Can you come tomorrow?"&lt;/p&gt;
+
+&lt;p&gt;"I can come now."&lt;/p&gt;
+
+&lt;p&gt;"But we're closing in 15 minutes."&lt;/p&gt;
+
+&lt;p&gt;"I'm out walking the dog. I'm literally at your door."&lt;/p&gt;
+
+&lt;p&gt;".... Okay."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;gets my one week supply&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Thanks.  What do I do for next week?  Will there be more then?"&lt;/p&gt;
+
+&lt;p&gt;"Oh no, it's &lt;em&gt;really&lt;/em&gt; out-of-stock.  But the half-dose pills aren't.  We've got
+those, so you can just double-them.  Call your doc and we'll get that sorted."&lt;/p&gt;
+
+&lt;p&gt;"Great."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;frustrated and needing to get back to my life, I give it a few days.  Bad
+mistake.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;calling dr office&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi, they're out of my meds everywhere, can I get prescribed the halfsies
+instead?"&lt;/p&gt;
+
+&lt;p&gt;"Uh, your doctor has been prescribing those to a lot of people and nobody's
+complained yet."&lt;/p&gt;
+
+&lt;p&gt;"Well the pharmacy disagrees."&lt;/p&gt;
+
+&lt;p&gt;"The pharmacy is allowed to give you the halfsies sans scrip if they're out of
+the regular dose."&lt;/p&gt;
+
+&lt;p&gt;"I did not know that. Do they know that?"&lt;/p&gt;
+
+&lt;p&gt;"Whatever. They obviously don't want to without a scrip.  Doc will be in
+tomorrow, we'll sort it out."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Calls pharmacy next day afternoon.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"So d'you have my meds?"&lt;/p&gt;
+
+&lt;p&gt;"What?  We don't have any meds for you on file."&lt;/p&gt;
+
+&lt;p&gt;"No, I mean my doctor said they'd fax today."&lt;/p&gt;
+
+&lt;p&gt;"Yeah, they didn't. For what?"&lt;/p&gt;
+
+&lt;p&gt;"The halfsies.  They also said you can do the substitution yourself when you're
+out-of-stock on something."&lt;/p&gt;
+
+&lt;p&gt;"Yeah, we can't do that, they're wrong."&lt;/p&gt;
+
+&lt;p&gt;"Fine. Okay, I'll call my doctor again about sending the fax."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;calls doctor&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Did you send them that fax?"&lt;/p&gt;
+
+&lt;p&gt;"We sent them the fax again.  We'll send it again again."&lt;/p&gt;
+
+&lt;p&gt;"Great, thanks."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;at this point life intervenes, and I still have one pill for tomorrow morning -
+so wait until next day to call&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi, do you have my halfsies?"&lt;/p&gt;
+
+&lt;p&gt;"We can have them for you day after tomorrow."&lt;/p&gt;
+
+&lt;p&gt;"Day after tomorrow!? ... Sorry for raising my voice but I'm on my last pill,
+what happened?"&lt;/p&gt;
+
+&lt;p&gt;"Well, they're not in stock."&lt;/p&gt;
+
+&lt;p&gt;"What."&lt;/p&gt;
+
+&lt;p&gt;"But you can get them from other pharmacies."&lt;/p&gt;
+
+&lt;p&gt;"I was told they were in stock here."&lt;/p&gt;
+
+&lt;p&gt;"They're not."&lt;/p&gt;
+
+&lt;p&gt;"Fine.  I'll call around."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;thinks angrily about the last time this happened and scrip was lost in limbo
+between two pharmacies and had to get re-prescribed&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Calls Other Pharmacy. On hold for 15 minutes.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi, do you have these meds?"&lt;/p&gt;
+
+&lt;p&gt;"What? No, nobody has them."&lt;/p&gt;
+
+&lt;p&gt;"I mean the halfsies."&lt;/p&gt;
+
+&lt;p&gt;"Oh!  Let me check."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;on hold even longer&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Yep, we've got them. We'll call your pharmacy and get the scrip transferred."&lt;/p&gt;
+
+&lt;p&gt;"Great!"&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;gives this an hour to work out, calls my pharmacy&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi!  Are my drugs transferred to Other Pharmacy?"&lt;/p&gt;
+
+&lt;p&gt;"We're just putting the scrip on hold and doing the paperwork, we'll get it sent
+to them in five, then call them."&lt;/p&gt;
+
+&lt;p&gt;"Great! I'll give them 20."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;15 minutes later, call Other Pharmacy anticipating being stuck on hold for a
+long time.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;phone picks up quickly!  Yay!&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Hi!  Have they transferred my scrip?"&lt;/p&gt;
+
+&lt;p&gt;"Let me check."&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;"Nope, they haven't.  I'll give them a call right away.  Can you call back in
+half an hour?"&lt;/p&gt;
+
+&lt;p&gt;"Okay."&lt;/p&gt;
+
+&lt;p&gt;(；￣д￣)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;calls Other Pharmacy half hour later&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;On hold.  Every few minutes get redirected back to main menu.  Go back on hold&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;run out of minutes on phone (I'm cheap, okay?), buy more minutes.  Call again.
+Go back on holdm&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Give up, drive out to Other Pharmacy, arrive and find pharmacist juggling phone
+in one hand and serving a mob of customers&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Uh..."&lt;/p&gt;
+
+&lt;p&gt;"Yeah, they still haven't faxed me yet, I'll call them now."&lt;/p&gt;
+
+&lt;p&gt;"Okay."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;more waiting&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Any luck?"&lt;/p&gt;
+
+&lt;p&gt;"They said they'd fax again."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;more waiting&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;even more waiting&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Uh, are my meds-"&lt;/p&gt;
+
+&lt;p&gt;"I'll call them again."&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;even more waiting&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;aimlessly wander the tiny drugstore playing on my phone&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;"Martin?"&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;perk up&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;"Yes?"&lt;/p&gt;
+
+&lt;p&gt;"They were faxing your prescription to the wrong number. They didn't figure it
+out until they got a confused call from Alberta. Gimme a minute to do the
+paperwork and we'll have you on your way."&lt;/p&gt;
+
+&lt;p&gt;And that's how I got my meds.&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/09/24/overwatch2-4v4/</id><title type="text">How I would've designed Overwatch 2</title><summary type="html">&lt;p&gt;Okay I’ve been playing the Overwatch 2 anniversary events and considering how
+many of them are small-group team-vs-team things (Catch the Patchmari,
+Starwatch). I slept on these the first time through and playing them now I’m
+surprised at how much I’m enjoying them, particularly StarWatch despite some of
+its dumber ideas (like the AI-controlled Doomfist). This has cemented my
+previous opinion:&lt;/p&gt;
+
+&lt;p&gt;OW2 should’ve been 4v4 (2 DPS, 1 tank, 1 healer) with some kind of
+fast-respawning mechanic for the healer, and a standard double-team mode (8v8)
+either in quickplay or the arcade or something&lt;/p&gt;
+
+&lt;p&gt;Then the number of heroes and the popularity of the roles reflects the number in
+play - there are twice as many DPS heroes to choose from, twice as many DPS
+players, and twice as many on the team.&lt;/p&gt;
+
+</summary><published>2023-09-24T00:00:00Z</published><updated>2023-09-24T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/09/24/overwatch2-4v4/" /><content type="html">&lt;p&gt;Okay I’ve been playing the Overwatch 2 anniversary events and considering how
+many of them are small-group team-vs-team things (Catch the Patchmari,
+Starwatch). I slept on these the first time through and playing them now I’m
+surprised at how much I’m enjoying them, particularly StarWatch despite some of
+its dumber ideas (like the AI-controlled Doomfist). This has cemented my
+previous opinion:&lt;/p&gt;
+
+&lt;p&gt;OW2 should’ve been 4v4 (2 DPS, 1 tank, 1 healer) with some kind of
+fast-respawning mechanic for the healer, and a standard double-team mode (8v8)
+either in quickplay or the arcade or something&lt;/p&gt;
+
+&lt;p&gt;Then the number of heroes and the popularity of the roles reflects the number in
+play - there are twice as many DPS heroes to choose from, twice as many DPS
+players, and twice as many on the team.&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;p&gt;Obviously they would’ve needed to rework some of the healers to be able to
+solo-carry the healing, and probably add more Soldier/Sombra-style off-healing
+abilities for DPS characters (eg: give Reaper a way to share his vampirism), but
+still: While the 5v5 gameplay is generally unpopular, a lot of competitive
+players celebrate how every play feels much more impactful at those smaller
+counts. In 4v4 or 3v3 games like StarWatch or Elimination, it’s even moreso -
+solo-healing is intense, but at the same time in StarWatch when the healer goes
+down it’s not as huge of a loss as losing both healers in regular games because
+of the respawn-in-place mechanic.&lt;/p&gt;
+
+&lt;p&gt;Anybody who played Team Fortress 2 knows the huge distinction between intense,
+competitive small-team 6v6 matches and the low-stress farting-around feel of the
+huge 12v12 lolgames in pubs that were vastly more popular, because the diffuse
+responsibility meant you weren’t letting down your whole team if you were
+breaking in a new character or a new strategy. Transferring that to OW2, it
+would only make sense to break away from the forced “every game must have the
+same playercount” thing and embrace offering 8v8 modes for more casual play, and
+4v4 modes for more competitive.&lt;/p&gt;
+
+&lt;p&gt;To my mind, this was the missed opportunity of the composition rejiggering of
+OW2.&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;Fundamentally, I think OW copied some things from TF2 without understanding how
+they interact with lower player-counts. They copied TF2’s long rollouts and
+respawn timers, but didn’t realize that this makes death way too costly in a
+small-team game. In 5v5 at a good level, a single kill can basically end the
+team-fight. If they want to drop player-count, they need to find a way to fix
+that. Imho that’s why so many of their “Arcade” modes play with alternate
+respawning mechanics, like freeze-tag.&lt;/p&gt;
+
+&lt;p&gt;Also they wanted big flashy ults without thinking how that interacts with the
+rest of the game. There’s a reason that most competitive twitch-FPS games don’t
+have nukes on the serious maps.&lt;/p&gt;
+
+&lt;p&gt;If it were up to me?  Nerf the ults in general. Either slower build or just
+lower-power. Although if you go slower-build, you need to come up with a sane
+way to have the charge carry between rounds, which would be tricky to get right.&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;Also they should make No Limits and Mystery Heroes 6v6 for old time’s sake.&lt;/p&gt;
+
+&lt;p&gt;...&lt;/p&gt;
+
+&lt;p&gt;Finally, on the subject of the story-mode: they keep trying to make PvE happen,
+when fundamentally Overwatch is designed as a PvP game.  Imho, the correct
+approach is to embrace that - accept the ludonarrative disconnect and make PvP
+missions that tell the story.  Regularly release a short film and a companion
+PvP mission.&lt;/p&gt;
+
+&lt;p&gt;Did the wrong team win for the story?  Who cares.  Does nobody want to play a
+character who's critical to the story?  Have them appear for a quick scripted
+scene at the beginning and end.&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/09/19/fzero99/</id><title type="text">F-Zero 99</title><summary type="html">&lt;p&gt;i got a little carried away with this nostalgia game.  I loved the old F-Zero and this remake lets you play the classic against 98 other players at once.&lt;/p&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/LPtVwbNEmvE?si=zVh2fj70O3vx2cBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;
+
+</summary><published>2023-09-19T00:00:00Z</published><updated>2023-09-19T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/09/19/fzero99/" /><content type="html">&lt;p&gt;i got a little carried away with this nostalgia game.  I loved the old F-Zero and this remake lets you play the classic against 98 other players at once.&lt;/p&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/LPtVwbNEmvE?si=zVh2fj70O3vx2cBs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;p&gt;Overall, the game is fun but too repetitive.&lt;/p&gt;
+
+&lt;p&gt;The game is excellent in some ways - the old Mode7 graphics look goddamned
+beautiful on a big modern HD screen, and they’ve done a brilliant job adapting
+the classic assets into new ways, like the new spin-attack. The game has a
+simple and clean design that adds only a little to the classic game - it handles
+like the original (which is similar to MarioKart without weapons), but now boost
+burns health and collisions drop coins that you can use to “superboost” which is
+a short-term access to an elevated faster track.&lt;/p&gt;
+
+&lt;p&gt;It feels very random, but in a fun way - like, if Fall Guys was too chaotic for
+you don’t pick this up. Getting into top ranks in a race seems to depend on a
+lucky melee kill (which gets you enough health to abuse the booster), or
+pummeling a fortunately-placed Gold Bumper or two (which quickly give you enough
+coins for the superboost). Both of those are available on a pretty random basis.
+The occasional lag-spike adds even more to the randomness of play. But still,
+I’m enjoying it.&lt;/p&gt;
+
+&lt;p&gt;The big flaw imho is lack of variety.&lt;/p&gt;
+
+&lt;p&gt;I’m so sick of Mute City and Big Blue, after only a few days playing. The main
+game currently only has a 4 track rotation with 2 voting options, and voters
+always take the easier option. It’s a problem that the original SNES F-Zero only
+had 15 tracks, and they’re trying to keep it to Knight (Easy) League for now
+except for the “expert tracks” mode which is just Port Town 2 and White Land 1.
+They’re obviously going to bring in the other leagues over time, but that’s
+still only 15 tracks and some of those are hard-mode-remakes of older ones.&lt;/p&gt;
+
+&lt;p&gt;There’s also only 4 cars to choose from - there’s the speedy one, the brawler
+(important in these crowded courses), the fast-recharger (remember that health
+is boost) and the all-arounder. So good options to match your playstyle, but
+still: only 4.&lt;/p&gt;
+
+&lt;p&gt;F-Zero was a SNES launch-title that smashed it out of the park with music and
+gameplay and graphics and style, but it was obviously made under a deadline and
+so it doesn’t have an amazing amount of content, and you really feel that
+playing F-Zero 99.&lt;/p&gt;
+
+&lt;p&gt;It’s just too repetitive. I loved the OG, but I’d sacrifice nostalgia for some
+new, unfamiliar courses.&lt;/p&gt;
+
+&lt;p&gt;But yeah, if you’ve got access to Nintendo Switch Online, I’d definitely give it
+a try. You can’t beat the price: Free is my favourite flavour. It’s easy to pick
+up, the tutorial is pretty quick, and it’s fun. And it’s a Nintendo “99”
+nostalgia game, which means it’s certainly going to be time-limited. Play it
+while you can.&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/09/12/more-rigid/</id><title type="text">More rigid</title><summary type="html">&lt;p&gt;If you watch "Well There's Your Problem" podcast (about engineering disasters),
+Alice has an iconoclastic opinion on things like expansion plates and swivel
+joints and the general flexibility of good engineering: "No, make it more
+rigid!" I have taken that to heart with some recent home improvement projects.&lt;/p&gt;
+
+</summary><published>2023-09-12T00:00:00Z</published><updated>2023-09-12T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/09/12/more-rigid/" /><content type="html">&lt;p&gt;If you watch "Well There's Your Problem" podcast (about engineering disasters),
+Alice has an iconoclastic opinion on things like expansion plates and swivel
+joints and the general flexibility of good engineering: "No, make it more
+rigid!" I have taken that to heart with some recent home improvement projects.&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-09-12-more-rigid/fencepost.jpg" alt="fencepost" /&gt;
+&lt;img src="http://pxtl.ca/images/2023-09-12-more-rigid/swing-chair-binding.jpg" alt="swing-chair-binding" /&gt;
+&lt;img src="http://pxtl.ca/images/2023-09-12-more-rigid/swing-chair.jpg" alt="swing-chair" /&gt;&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/08/31/sick-pupper/</id><title type="text">Sick Pupper</title><summary type="html">&lt;p&gt;So my dog made a mess in his crate overnight.  Not a big deal, he eats anything
+he can get his mouth on, upset tummies are expected.  I've parented 3 human
+babies, messes happen, I know the drill.&lt;/p&gt;
+
+&lt;p&gt;For Waffles, there's no good place in the house to wash him, so normally I take
+him out to the driveway and hold him by the collar and clean him off with the
+hose.  He doesn't love the cold hose-water, but I've seen him frolick in deep
+puddles in January.&lt;/p&gt;
+
+&lt;p&gt;And this time I had something new to help!  I fenced in my backyard.  But on the
+other hand, the back yard is all grass.  And mud.  And last time I was barefoot,
+this time I was wearing flipflops.&lt;/p&gt;
+
+</summary><published>2023-08-31T00:00:00Z</published><updated>2023-08-31T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/08/31/sick-pupper/" /><content type="html">&lt;p&gt;So my dog made a mess in his crate overnight.  Not a big deal, he eats anything
+he can get his mouth on, upset tummies are expected.  I've parented 3 human
+babies, messes happen, I know the drill.&lt;/p&gt;
+
+&lt;p&gt;For Waffles, there's no good place in the house to wash him, so normally I take
+him out to the driveway and hold him by the collar and clean him off with the
+hose.  He doesn't love the cold hose-water, but I've seen him frolick in deep
+puddles in January.&lt;/p&gt;
+
+&lt;p&gt;And this time I had something new to help!  I fenced in my backyard.  But on the
+other hand, the back yard is all grass.  And mud.  And last time I was barefoot,
+this time I was wearing flipflops.&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;p&gt;I made a strategic mistake.  &lt;/p&gt;
+
+&lt;p&gt;Do not underestimate the traction of a panicky Golden in his element.  He ran
+&lt;em&gt;hard&lt;/em&gt; and I skated along my now-muddy lawn in my flipflops, dragged by my
+fingers hooked under his collar.  He stopped just in time to bash me against the
+shed.&lt;/p&gt;
+
+&lt;p&gt;I have newfound respect for rodeo guys that hogtie livestock.&lt;/p&gt;
+
+&lt;p&gt;I'm black and blue but the most bruised part of me is my ego for getting
+beaten-up by a two-foot-tall 70 lb eunuch.&lt;/p&gt;
+
+&lt;p&gt;my poor sick pupper.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-08-31-poor-sick-pupper.jpg" alt="my poor sick pupper" /&gt;&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/06/03/covid-cocktails-8/</id><title type="text">Covid Cocktails 8</title><summary type="html">&lt;p&gt;This is a heavily delayed in blogging, back in August 2021 I did my 8th round of cocktails, and hit my big goal: 100 different cocktails in a year.  I had to fly out soon, so this was a hyper-compressed rush of cocktails.&lt;/p&gt;
+
+&lt;p&gt;Covid cocktails 8.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/Covid-cocktails-8-collage-1024.jpg" alt="Covid cocktails 8 collage" /&gt;&lt;/p&gt;
+
+</summary><published>2023-06-03T00:00:00Z</published><updated>2023-06-03T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/06/03/covid-cocktails-8/" /><content type="html">&lt;p&gt;This is a heavily delayed in blogging, back in August 2021 I did my 8th round of cocktails, and hit my big goal: 100 different cocktails in a year.  I had to fly out soon, so this was a hyper-compressed rush of cocktails.&lt;/p&gt;
+
+&lt;p&gt;Covid cocktails 8.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/Covid-cocktails-8-collage-1024.jpg" alt="Covid cocktails 8 collage" /&gt;&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;h1&gt;Covid Cocktails Final Bout&lt;/h1&gt;
+
+&lt;h2&gt;Day 1&lt;/h2&gt;
+
+&lt;p&gt;New ingredient! St Germain elderflower liqueur.&lt;/p&gt;
+
+&lt;p&gt;the &lt;strong&gt;Comte de Sureau&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1.5oz gin&lt;/li&gt;
+&lt;li&gt;1 oz St Germain&lt;/li&gt;
+&lt;li&gt;0.25 oz Campari&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mix with ice, pour to a rocks glass with big ice.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/comte-de-Sureau.jpg" alt="Comte de Sureau" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I liked it. The St Germain brings some sweetness and a nice floral note... but the the Collective Arts gin has such a floral flavor already I feel like it got lost a bit. I like Campari, but its effect here is subtle. In the end it mostly tasted like a sweetened and lengthened floral gin with a bitter undertone.&lt;/p&gt;
+
+&lt;p&gt;It's nice. Not really exciting, but nice.&lt;/p&gt;
+
+&lt;p&gt;I'm looking forward to playing more with it the St Germain.&lt;/p&gt;
+
+&lt;h2&gt;Day 2&lt;/h2&gt;
+
+&lt;p&gt;More St Germain! This time we make a &lt;strong&gt;Courtside&lt;/strong&gt; - a nice long summer drink.&lt;/p&gt;
+
+&lt;p&gt;In a shaker, muddle&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1 hulled strawberry&lt;/li&gt;
+&lt;li&gt;3 raspberries&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;add&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1.5 oz vodka&lt;/li&gt;
+&lt;li&gt;1.5 oz apple juice&lt;/li&gt;
+&lt;li&gt;0.5 oz elderflower liqueur&lt;/li&gt;
+&lt;li&gt;0.5 oz lime juice&lt;/li&gt;
+&lt;li&gt;0.33 oz sugar syrup&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Shake with ice, then double-strain to a Collins glass full of ice&lt;/p&gt;
+
+&lt;p&gt;Then, top with club soda.&lt;/p&gt;
+
+&lt;p&gt;Garnish with berries.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/courtside.jpg" alt="Courtside" /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is so incredibly easy to drink. It's a tangy berry soda. I've got to work things out with the shaker or my huge Collins glasses though - I had it with a straw so I had the strongest sip first, but after it was too dilute.&lt;/p&gt;
+
+&lt;p&gt;Also, double-straining berry sludge &lt;em&gt;sucks&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Day 3&lt;/h2&gt;
+
+&lt;p&gt;I subject my wife to one of the stranger drinks, "&lt;strong&gt;Follow That Black Rabbit&lt;/strong&gt;".&lt;/p&gt;
+
+&lt;p&gt;In a shaker:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.75 oz OJ&lt;/li&gt;
+&lt;li&gt;0.75 oz maple syrup&lt;/li&gt;
+&lt;li&gt;1.75 oz gin&lt;/li&gt;
+&lt;li&gt;0.75 oz Fernet Branca&lt;/li&gt;
+&lt;li&gt;0.5 oz lemon&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Shake with ice, pour to a highball with ice, garnish w orange twist.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/follow-that-black-rabbit.jpg" alt="Follow That Black Rabbit" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Oh wow this is a complex drink.  The Fernet and orange and maple attack your mouth in three different places at once.  At the same time, it's sweet enough to be kinda approachable.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;"So, honey, do you like it?"&lt;/p&gt;
+  
+  &lt;p&gt;"It's weird."&lt;/p&gt;
+  
+  &lt;p&gt;"Good weird or bad weird?"&lt;/p&gt;
+  
+  &lt;p&gt;"Uh... I don't know."&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Source: The Educated Barfly&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://theeducatedbarfly.com/follow-that-black-rabbit/"&gt;https://theeducatedbarfly.com/follow-that-black-rabbit/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Also, my pic above was bad because I was so excited to try this strange drink that I took a few sips before taking the photo and then handing it off to my wife.&lt;/p&gt;
+
+&lt;h2&gt;Day 4&lt;/h2&gt;
+
+&lt;p&gt;We pull in a slightly unorthodox ingredient for the &lt;strong&gt;Breakfast Martini&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;In a shaker, add:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1 heaping tsp orange marmalade&lt;/li&gt;
+&lt;li&gt;1.66 oz gin&lt;/li&gt;
+&lt;li&gt;0.5 oz triple sec&lt;/li&gt;
+&lt;li&gt;0.5 oz lemon juice&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Shake, double-strain to chilled cocktail glass.
+Garnish with orange twist.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/breakfast-martini.jpg" alt="Breakfast Martini" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Orange. Boozey orange.&lt;/p&gt;
+
+&lt;p&gt;With a sour aftertaste. The Cointreau and marmalade make it pleasantly sweet and with a strong orange flavor halfway between fruit juice and syrupy orange freezies, with a botanical undercurrent.  Then the lemon hits.&lt;/p&gt;
+
+&lt;p&gt;Easy and straightforward sweet.&lt;/p&gt;
+
+&lt;h2&gt;Day 5&lt;/h2&gt;
+
+&lt;p&gt;A little bit of wine crime.  This one's barely a cocktail, the &lt;strong&gt;Kir&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Just mix in glass&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;5 oz white wine (I'm using Pinot Grigio + Chardonnay)&lt;/li&gt;
+&lt;li&gt;0.25 oz creme de cassis...&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But my cassis has a pretty weak flavor so I bumped it up to 0.66 oz.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/kir.jpg" alt="kir" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Okay, it turned a dry-ish white wine into something a bit more dessert-y.  The cassis adds a little sugar, body and fruitiness.&lt;/p&gt;
+
+&lt;p&gt;Not much to it but that's what you'd expect from a simple 2-ingredient drink.&lt;/p&gt;
+
+&lt;h2&gt;Day 6&lt;/h2&gt;
+
+&lt;p&gt;For those keeping score, this is my 100th distinct cocktail since I started mixing a year ago!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="https://www.youtube.com/channel/UCioZY1p0bZ4Xt-yodw8_cBQ"&gt;How To Drink&lt;/a&gt; vids got me into this, I decided it would be good to mix one of the first h2d originals: the &lt;strong&gt;Gin Whisper&lt;/strong&gt; for the Centennial.&lt;/p&gt;
+
+&lt;p&gt;In a shaker, muddle&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;3 mint leaves&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then add&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;0.25 oz simple syrup&lt;/li&gt;
+&lt;li&gt;0.25 oz St Germain&lt;/li&gt;
+&lt;li&gt;2 oz gin&lt;/li&gt;
+&lt;li&gt;one egg white&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(I like to steep the mint in the simple syrup for a minute while I gather ingredients)&lt;/p&gt;
+
+&lt;p&gt;Dry shake, then shake with ice.&lt;/p&gt;
+
+&lt;p&gt;Double strain to glass, garnish w mint.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/gin-whisper.jpg" alt="gin whisper" /&gt;&lt;/p&gt;
+
+&lt;p&gt;I liked this.  Creamy, sweet, and intricate.  A bit of a bitter undercurrent from its booziness and the botanicals, but it starts with the mint and elderflower.&lt;/p&gt;
+
+&lt;p&gt;I'm surprised I could get a decent egg foam without acid from citrus fruit - afaik the acid causes the egg to foam.&lt;/p&gt;
+
+&lt;p&gt;That said, I hate shaken mint.  The ice pulverizes it so a few flakes always come through the strainer.&lt;/p&gt;
+
+&lt;h3&gt;Relevant How to Drink Vid&lt;/h3&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/rO3zlIPJTYI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;Day 7&lt;/h2&gt;
+
+&lt;p&gt;New ingredient!  I broke the bank and bought some artisanal rum from Halifax (!).  Compass Distillers' Daily Ration rum.  I'm combining that with How To Drink's &lt;strong&gt;Rum Old Fashioned&lt;/strong&gt; recipe.&lt;/p&gt;
+
+&lt;p&gt;In a rocks glass:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;3 thin (1/8" thick or less) slices of lime&lt;/li&gt;
+&lt;li&gt;2 bar-spoons demerara syrup&lt;/li&gt;
+&lt;li&gt;2 dashes of angostura bitters&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then muddle, and add&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2 oz rum&lt;/li&gt;
+&lt;li&gt;1 block of ice&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/rum-old-fashioned.jpg" alt="rum old fashioned" /&gt;&lt;/p&gt;
+
+&lt;p&gt;It's good.  Lime forward with a rum funk and the angostura spice undercurrent.  Refreshing despite its booziness.  It straddles the line between a daiquiri and an old fashioned.  A good drink for when you want something stiff but also it's summer.&lt;/p&gt;
+
+&lt;h3&gt;Relevant How To Drink vid&lt;/h3&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/Zuj8AuVWKx4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h2&gt;Day 8, Drink 1&lt;/h2&gt;
+
+&lt;p&gt;I'm flying out Monday so I'm rushing out the last few cocktails to finish out the set.&lt;/p&gt;
+
+&lt;p&gt;So, day 8, drink 1 of 2: &lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;East India No. 3&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In mixing glass w ice:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1.66oz brandy&lt;/li&gt;
+&lt;li&gt;0.33oz triple sec&lt;/li&gt;
+&lt;li&gt;0.5oz pineapple juice&lt;/li&gt;
+&lt;li&gt;1 barspoon simple syrup&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mix, strain to glass.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/East-India-no-3.jpg" alt="East India no 3" /&gt;&lt;/p&gt;
+
+&lt;p&gt;... tastes like Pineapple and brandy.  Which, all things considered, isn't bad.  Kind of sweet and boozy.  It's nice, but a bit one-note.&lt;/p&gt;
+
+&lt;p&gt;Wife approved - which is funny, she was apprehensive about brandy when I bought it, but likes all the brandy drinks I mixed.&lt;/p&gt;
+
+&lt;h2&gt;Day 8, Drink 2&lt;/h2&gt;
+
+&lt;p&gt;Another wine crime called an &lt;strong&gt;Elderflower Spritz&lt;/strong&gt;.  This calls for sauv blanc but I'm cheating and using a pinot grigio + chardonnay mix.&lt;/p&gt;
+
+&lt;p&gt;Build in a glass full of ice:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2 oz white wine&lt;/li&gt;
+&lt;li&gt;1.5 oz St. Germain&lt;/li&gt;
+&lt;li&gt;2 oz club soda&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Garnish w lime&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/elderflower-spritz.jpg" alt="elderflower spritz" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Okay, this is a super simple cocktail but I really liked it.  St Germain has a sort of sweet but acidic and floral stonefruity flavor to it - like a gourmet take on sour candy.  That's flavors you get naturally in some white wines but turned up to 11.  So mixing it with the pinot grigio/chardonnay mix works really well.&lt;/p&gt;
+
+&lt;p&gt;The result reminds me of a particularly good Vidal late harvest icewine I once had, but lengthened and fizzy.&lt;/p&gt;
+
+&lt;h2&gt;Day 9, Drink 1&lt;/h2&gt;
+
+&lt;p&gt;I didn't get around to taking my morning coffee until after noon today. Which means it's time to spike it.&lt;/p&gt;
+
+&lt;p&gt;Now, I don't have cream, or Grand Marnier (orange brandy), but I decided to make a Mexicano coffee anyways, or at least an approximation thereof. Let's call this a &lt;strong&gt;Mexicano con Leche&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;In a Toddy glass:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1 oz blanco tequila&lt;/li&gt;
+&lt;li&gt;0.25 oz Cointreau&lt;/li&gt;
+&lt;li&gt;0.25 oz brandy&lt;/li&gt;
+&lt;li&gt;2 bar-spoons demerara syrup&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Stir...&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;coffee to near the top&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Top with foamed hot milk, fresh nutmeg, and cocoa powder.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/Mexicano-con-leche.jpg" alt="Mexicano con leche" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nice.  A bit mild because of the substitutions.  First sip is especially nice with the cocoa and nutmeg nose, then you get into it with the coffee with a nice hint of brandy and orange.  I wish I still had a reposado, a more flavorful tequila would've been better.&lt;/p&gt;
+
+&lt;h2&gt;Day 9, Drink 2&lt;/h2&gt;
+
+&lt;p&gt;The &lt;strong&gt;Black Eyed Susan&lt;/strong&gt;.  No, not the 12-bottle-bar Black Eyed Susan I made before, this is the one they currently serve at Preakness Stakes.  The cocktail changes &lt;em&gt;drastically&lt;/em&gt; over the years, but this is the current standard (except I'm mixing the sour mix from scratch instead of pre-made).&lt;/p&gt;
+
+&lt;p&gt;Making it mostly because I picked up some peach schnapps.&lt;/p&gt;
+
+&lt;p&gt;In a shaker, add&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1 oz vodka&lt;/li&gt;
+&lt;li&gt;1 oz bourbon&lt;/li&gt;
+&lt;li&gt;1 oz peach schnapps&lt;/li&gt;
+&lt;li&gt;2 oz OJ&lt;/li&gt;
+&lt;li&gt;0.66 oz simple syrup&lt;/li&gt;
+&lt;li&gt;0.5 oz lemon&lt;/li&gt;
+&lt;li&gt;0.5 oz lime&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Shake with ice, double-strain to an ice-filled glass.&lt;/p&gt;
+
+&lt;p&gt;Garnish with cherry and orange.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/black-eyed-Susan.jpg" alt="Black Eyed Susan" /&gt;&lt;/p&gt;
+
+&lt;p&gt;... it's sweet.  And peachy.  And sweet.  And boozy.  The boozy flavor works with it but yeah it's really sweet. Probably wouldn't hurt to cut back the syrup - I was trying to approximate 2 oz sour mix with the sugar and lemon and lime.&lt;/p&gt;
+
+&lt;p&gt;Easy to drink and can get you in trouble.&lt;/p&gt;
+
+&lt;h2&gt;Day 9, Drink 3&lt;/h2&gt;
+
+&lt;p&gt;Okay, I gave wifey the Black Eyed Susan.&lt;/p&gt;
+
+&lt;p&gt;I made myself Erick Castro's "&lt;strong&gt;Kentucky Buck&lt;/strong&gt;", which is a nice summer ginger drink.  Although I don't have ginger syrup so I'm going to follow a redditor's version and use Ginger Beer instead of ginger syrup and club soda.&lt;/p&gt;
+
+&lt;p&gt;In a shaker:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1 strawberry&lt;/li&gt;
+&lt;li&gt;2 dashes angostura&lt;/li&gt;
+&lt;li&gt;0.5 oz simple&lt;/li&gt;
+&lt;li&gt;0.75 oz lemon&lt;/li&gt;
+&lt;li&gt;2 oz bourbon&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Shake with ice, then add&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2 oz ginger beer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Then double-strain to a Collins glass full of ice.  Garnish with lemon.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/Kentucky-buck.jpg" alt="Kentucky Buck" /&gt;&lt;/p&gt;
+
+&lt;p&gt;It didn't need the simple syrup, the ginger beer brings enough sweetness.  I think the simple came from the Reddit substitution, though.&lt;/p&gt;
+
+&lt;p&gt;The lemon subdues the ginger beer a bit so it doesn't bite as much.  Very refreshing.  The strawberry is a bit too subtle, but I wouldn't want a second berry in there for the strainer.  I like how the bourbon flavors aren't lost... they still come through nicely.&lt;/p&gt;
+
+&lt;p&gt;All in all I'm not sure who this is for.  I prefer the Dark n Stormy, but you have to really love ginger beer for that... But if you don't love ginger beer I'm not sure this will do it for you either.  I just feel like the rum funk goes better with ginger beer flavors than bourbon and lemon.&lt;/p&gt;
+
+&lt;h2&gt;Day 10, Drink 1&lt;/h2&gt;
+
+&lt;p&gt;I have a bottle of Rumchata for coffee, and googled a random cocktail to mix with it.&lt;/p&gt;
+
+&lt;p&gt;https://mantitlement.com/rumchata-double-chocolate-aperitif&lt;/p&gt;
+
+&lt;p&gt;Okay, "RumChata &lt;strong&gt;Double Chocolate Aperitif&lt;/strong&gt; will be the only thing your guests will want after dinner"... already a great start 🤨.&lt;/p&gt;
+
+&lt;p&gt;In a shaker, mix:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1.5 oz Rumchata&lt;/li&gt;
+&lt;li&gt;1 oz 360 double chocolate vodka&lt;/li&gt;
+&lt;li&gt;0.5 oz chocolate&lt;/li&gt;
+&lt;li&gt;0.5 Kahlua&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Rim a glass with chocolate sauce.&lt;/p&gt;
+
+&lt;p&gt;Mix with ice in the shaker (don't shake?  I'll just use a mixing glass then).  Strain to glass.&lt;/p&gt;
+
+&lt;p&gt;Garnish w mint and cherry.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/RumChata-double-chocolate-aperitif.jpg" alt="RumChata Double Chocolate Apertif" /&gt;&lt;/p&gt;
+
+&lt;p&gt;Wowww too sweet.  It's basically a liquified slice of coffee cake.  Which, if that's what you're into have at it.  I added ice to chill it and lengthen it a bit.&lt;/p&gt;
+
+&lt;p&gt;I'd garnish it with one of those skinny sandwich biscuits or a cake-pop or something instead of mint.  Dunk!&lt;/p&gt;
+
+&lt;h2&gt;Day 10, Drink 2&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Mr Bali Hai&lt;/strong&gt;.  A nice tiki drink with a coffee twist.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1.5 oz Jamaican-style rum&lt;/li&gt;
+&lt;li&gt;1 oz light rum&lt;/li&gt;
+&lt;li&gt;0.75 oz kahlua&lt;/li&gt;
+&lt;li&gt;1.5 oz pineapple juice&lt;/li&gt;
+&lt;li&gt;1 oz lemon juice&lt;/li&gt;
+&lt;li&gt;0.25 oz simple syrup&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Shake w ice, double strain to a glass of crushed ice.&lt;/p&gt;
+
+&lt;p&gt;Okay, I cheated, I didn't use crushed ice, just regular ice cubes.  It was late and I didn't want to make noise crushing ice.&lt;/p&gt;
+
+&lt;p&gt;Garnish with mint.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://pxtl.ca/images/2023-06-03-Covid-cocktails-8/mr-bali-hai.jpg" alt="Mr Bali Hai" /&gt;&lt;/p&gt;
+
+&lt;p&gt;This is a good one.  Interesting drink with a surprising mix of fruit and coffee flavors.  It's such a strange fusion that my wife started thinking "caramel?" from the color.  Approachable, surprising, and fun.  &lt;/p&gt;
+
+&lt;p&gt;A bit sweet - enthusiasts recommend Mr Black over Kahlua for that.  Definitely doesn't need the syrup.&lt;/p&gt;
+
+&lt;p&gt;And with that, I'm done another 14 drinks, this time in only 10 days.&lt;/p&gt;
+
+&lt;h1&gt;Final Thoughts&lt;/h1&gt;
+
+&lt;p&gt;I feel silly writing this almost two years later, but life happens.  Since this project I got the unfortunate talking-to from my doctor about blood sugar - diabetes sucks.  So cocktails are now a once-a-week treat for me, and often involve diet sodas.  Maybe someday I'll put together an article of my favorite "diet" cocktails.  Yes, I know alcohol gets metabolized into sugar, so yeah still gotta go easy on it.&lt;/p&gt;
+
+&lt;p&gt;Of the cocktails I made in this sprint, the one that sticks in my memory is the &lt;strong&gt;Follow That Black Rabbit&lt;/strong&gt;.  That drink was a journey.  But reading my old notes and the &lt;strong&gt;Elderflower Spritz&lt;/strong&gt; is definitely coming back to me as a good one.&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2022/11/24/birdsite/</id><title type="text">Birdsite</title><summary type="html">&lt;p&gt;On the birdsite: Musk's policy changes were about "Free Speech"... but it's
+become extremely clear that the particular speech he was focused on liberating
+was transphobia.  Most of the accounts he unbanned were banned for anti-trans
+hate-speech, and he's since gotten very chummy with notorious anti-trans
+extremists on Twitter. He's also tweeted anti-trans stuff himself.&lt;/p&gt;
+
+&lt;p&gt;It's hard to avoid that detail -- when he says he bought twitter for "free
+speech", its important to ask "about what?".&lt;/p&gt;
+
+&lt;hr /&gt;
+
+</summary><published>2022-11-24T00:00:00Z</published><updated>2022-11-24T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2022/11/24/birdsite/" /><content type="html">&lt;p&gt;On the birdsite: Musk's policy changes were about "Free Speech"... but it's
+become extremely clear that the particular speech he was focused on liberating
+was transphobia.  Most of the accounts he unbanned were banned for anti-trans
+hate-speech, and he's since gotten very chummy with notorious anti-trans
+extremists on Twitter. He's also tweeted anti-trans stuff himself.&lt;/p&gt;
+
+&lt;p&gt;It's hard to avoid that detail -- when he says he bought twitter for "free
+speech", its important to ask "about what?".&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;p&gt;As a person with trans family, this is a deal-breaker for me, and I'd hope for
+many others.  Many artists I follow have exited for the same reason, often in
+spectacularly pyrotechnic fashions, &lt;a href="https://www.cbc.ca/radio/day6/elon-musk-twitter-impersonations-1.6648071"&gt;such as the QuestionableContent comic artist
+Jeph Jacques&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, I'm really hoping this Mastodon thing takes off.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I know some people are going to other social networks like Tumblr, Hive, and
+Post.... but fundamentally, what's to stop their owners from ruining those sites
+too? Tumblr in particular already had an exodus because of bad moderation once
+before.&lt;/p&gt;
+
+&lt;p&gt;People have complained that Mastodon's governance model is like an HOA. Each
+server is a private nation with complicated political relationships to other
+servers. That's bad... but is a new hopefully-benevolent dictator better?&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Mastodon is flawed.  It's confusing, it's overloaded, and it's questionable how
+fiscally sound its servers are.  But Twitter's Muskpocalypse has proven how
+governance is important.  And Mastodon gives people the tools to care about
+governance.  We can emigrate to new servers. We can build our own servers that
+can be run as we see fit.  We can modify the code of our server. Nobody &lt;em&gt;owns&lt;/em&gt;
+the Fediverse network Mastodon's servers run on.&lt;/p&gt;
+
+&lt;p&gt;If Twitter's moderation matters, then ownership matters.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;I'm at &lt;a href="https://mastodon.social/@Pxtl"&gt;@Pxtl@Mastodon.Social&lt;/a&gt;&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2022/05/18/alcohol-in-parks/</id><title type="text">Alcohol in parks letter</title><summary type="html">&lt;p&gt;Text of an email I sent to council today, after they discovered we don't have an "alcohol in parks bylaw" and Ward 8 councilor JP Danko motioned looking into responsible ways to allow it.&lt;/p&gt;
+
+</summary><published>2022-05-18T00:00:00Z</published><updated>2022-05-18T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2022/05/18/alcohol-in-parks/" /><content type="html">&lt;p&gt;Text of an email I sent to council today, after they discovered we don't have an "alcohol in parks bylaw" and Ward 8 councilor JP Danko motioned looking into responsible ways to allow it.&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Councilor Wilson, Councilor Danko, Mr Mayor,&lt;/p&gt;
+
+&lt;p&gt;I'm writing to voice my support for opening up Hamilton city parks to drinking, and to thank councilor Danko for opening this subject up for study. I think we should be collectively ashamed that we didn't properly move on this in 2020 when COVID shutdown orders effectively declared that anybody who didn't have access to a private yard was effectively banned from socializing over drinks.&lt;/p&gt;
+
+&lt;p&gt;Ontario's puritanical attitude towards drinking only seems normal to people who don't travel enough to see other places where enjoying a drink out in public is normal and fine. It's time to begin relaxing these rules and allowing responsible consumption.  The Quebec approach (with a meal, daytime-only) seems perfectly reasonable, for example.&lt;/p&gt;
+
+&lt;p&gt;And to those who worry about garbage: picnics also cause garbage. Sports events cause garbage. &lt;em&gt;Use&lt;/em&gt; causes garbage. Too many people see the city's parks as extensions of their private gardens, meant only to be observed. Parks were meant to be enjoyed, and this program would offer a new way to do so.&lt;/p&gt;
+
+&lt;p&gt;Thanks for your time,&lt;/p&gt;
+
+&lt;p&gt;Martin Zarate&lt;/p&gt;
+
+&lt;p&gt;Ward 1 resident&lt;/p&gt;
+</content></entry></feed>
