@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="last-modified" content="2023-12-13T20:18:32.4753133+00:00" />
+    <meta http-equiv="last-modified" content="2023-12-13T20:22:17.1189017+00:00" />
     <meta name="keywords" content="" />
     <title>Bluesky API • Pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
@@ -121,7 +121,7 @@ password contains a ' char, you'll have to escape it.</p>
 submitting a form on a website) to the url
 <a href="https://bsky.social/xrpc/com.atproto.server.createSession">https://bsky.social/xrpc/com.atproto.server.createSession</a>.
 We know that the target is trustworthy with your Bluesky password because it's
-in the "bsky.social" domain -- that is, we're sending your password to Bluesky,
+in the <code>bsky.social</code> domain -- that is, we're sending your password to Bluesky,
 not to some stranger.</p>
 
 <p>The little backtick at the end of the line is just the simplest way to do
@@ -160,24 +160,24 @@ failing and complaining about security.</p>
 prove to Bluesky that we own the domain?  I mean, I could say I'm google.com or
 whatever if they don't check.  But they check.</p>
 
-<p>So, let's say you own "mydomain.com".  You'll have to go into your domain
-registrar's website and create a new TXT record on "mydomain.com" that proves to
+<p>So, let's say you own <code>mydomain.com</code>.  You'll have to go into your domain
+registrar's website and create a new TXT record on <code>mydomain.com</code> that proves to
 Bluesky you own it.  So get the <code>did</code> value from <code>$sessionResponse</code> by typing
 <code>$sessionResponse.did</code>.  For example, my <code>did</code> value is
 <code>did:plc:otu6mg5xkk47y3ghqpq2w3oo</code> (this isn't a secret it's fine that you know
 that).</p>
 
-<p>Create a new TXT record on "mydomain.com" called "<em>atproto", and give it a value
-of <code>did=YOURDIDGOESHERE</code>.  So for me, I created "</em>atproto" as a TXT record with
+<p>Create a new TXT record on <code>mydomain.com</code> called <code>_atproto</code>, and give it a value
+of <code>did=YOURDIDGOESHERE</code>.  So for me, I created <code>_atproto</code> as a TXT record with
 the value <code>did=did:plc:otu6mg5xkk47y3ghqpq2w3oo</code>.  Yes it's weirdly
 double-barreled with the did=did part.  This is fine.</p>
 
 <p>If you want your name to be some subdomain of your domain, you can even make
-"<em>atproto.somesubdomain".  I tried this out by making "</em>atproto.martin" so I
+<code>_atproto.somesubdomain</code>.  I tried this out by making <code>_atproto.martin</code> so I
 could be "@martin.pxtl.ca".  This is great if you're running an organization and
 you've got many users on that domain - you can create one TXT record per-user,
 each with their own subdomain, so like if my son got his own Bluesky account (it
-would have a different <code>did</code>) I could give him "_atproto.gooseguy" so he'd be
+would have a different <code>did</code>) I could give him <code>_atproto.gooseguy</code> so he'd be
 "@gooseguy.pxtl.ca".</p>
 
 <h2>Testing the Domain Record</h2>
@@ -215,7 +215,7 @@ domain.</p>
     -ContentType 'application/json'
 </code></pre>
 
-<p>So again, we're doing an HTTP POST to "bsky.social", but this time we're calling
+<p>So again, we're doing an HTTP POST to <code>bsky.social</code>, but this time we're calling
 <code>updateHandle</code> instead of <code>createSession</code>.  Since we've already <em>got</em> the
 session, we need to reference a token (that short-lived secret I mentioned
 before) to let them know "yes, I'm still the person you were talking to
@@ -224,7 +224,7 @@ $($sessionResponse.accessJwt)"}</code> which adds the <code>accessJwt</code> tok
 request as an <code>Authorization</code> header entry.</p>
 
 <p>Again, we're doing a JSON body, but this time the body is just a single entry in
-the object "handle".  That should match the @ handle you're trying to get, the
+the object <code>handle</code>.  That should match the @ handle you're trying to get, the
 same one you created a TXT entry for - like, since I did both
 <code>_atproto.martin.pxtl.ca</code> and <code>_atproto.pxtl.ca</code>, I can do either
 <code>handle='pxtl.ca'</code> or <code>handle=martin.pxtl.ca</code>.</p>
@@ -249,10 +249,10 @@ your user handle should be updated to match your domain.</p>
 <p>with your bluesky email and password.</p>
 
 <p>Get <code>$sessionResponse.did</code> and use that when you create a new TXT record on
-"yourdomain.com" called "<em>atproto", and give it a value of
-<code>did=YOURDIDGOESHERE</code>.  If you want to use a subdomain of "yourdomain.com"
+<code>yourdomain.com</code> called <code>_atproto</code>, and give it a value of
+<code>did=YOURDIDGOESHERE</code>.  If you want to use a subdomain of <code>yourdomain.com</code>
 because you feel like it or you've got friends who want to use the same domain,
-you can make "</em>atproto.mysubmodmain" to get that.</p>
+you can make <code>_atproto.mysubmodmain</code> to get that.</p>
 
 <p>Now, let Bluesky know about it by calling</p>
 
