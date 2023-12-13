@@ -1,5 +1,5 @@
 <rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Pxtl.ca</title><link>http://pxtl.ca/rss.xml</link><description>Pxtl.ca</description><item><guid isPermaLink="true">http://pxtl.ca/2023/12/13/bluesky-api/</guid><link>http://pxtl.ca/2023/12/13/bluesky-api/</link><author>pxtl@hotmail.com</author><category>Programming</category><title>Bluesky API</title><description>&lt;p&gt;Personally in the post-Muskening twitter world, I'm pulling for
-&lt;a href="https://mastodon.social/pxtl"&gt;Mastodon&lt;/a&gt;, but &lt;a href="https://bsky.app"&gt;Bluesky&lt;/a&gt; is a
+&lt;a href="https://mastodon.social/@pxtl"&gt;Mastodon&lt;/a&gt;, but &lt;a href="https://bsky.app"&gt;Bluesky&lt;/a&gt; is a
 somewhat interesting platform too.  One feature of Bluesky that stands out is
 that you can set your name to be based on a domain-name you own.  I own Pxtl.ca,
 so I thought I'd take a crack at leveraging that feature.&lt;/p&gt;
@@ -8,7 +8,7 @@ so I thought I'd take a crack at leveraging that feature.&lt;/p&gt;
 language you &lt;em&gt;already have installed&lt;/em&gt; if you use Windows.&lt;/p&gt;
 
 </description><pubDate>Wed, 13 Dec 2023 00:00:00 Z</pubDate><a10:updated>2023-12-13T00:00:00Z</a10:updated><a10:content type="html">&lt;p&gt;Personally in the post-Muskening twitter world, I'm pulling for
-&lt;a href="https://mastodon.social/pxtl"&gt;Mastodon&lt;/a&gt;, but &lt;a href="https://bsky.app"&gt;Bluesky&lt;/a&gt; is a
+&lt;a href="https://mastodon.social/@pxtl"&gt;Mastodon&lt;/a&gt;, but &lt;a href="https://bsky.app"&gt;Bluesky&lt;/a&gt; is a
 somewhat interesting platform too.  One feature of Bluesky that stands out is
 that you can set your name to be based on a domain-name you own.  I own Pxtl.ca,
 so I thought I'd take a crack at leveraging that feature.&lt;/p&gt;
