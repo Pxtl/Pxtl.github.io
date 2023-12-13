@@ -1,4 +1,229 @@
-<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://pxtl.ca/</id><updated>2023-12-04T19:17:40Z</updated><author><name>Martin Zarate</name><uri>http://pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://pxtl.ca/feed.xml" /><entry><id>http://pxtl.ca/2023/11/17/github-ci/</id><title type="text">Github CI</title><summary type="html">&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this
+<feed xmlns="http://www.w3.org/2005/Atom"><title type="text">Pxtl.ca</title><subtitle type="text">Pxtl.ca</subtitle><id>http://pxtl.ca/</id><updated>2023-12-13T19:09:15Z</updated><author><name>Martin Zarate</name><uri>http://pxtl.ca</uri><email>pxtl@hotmail.com</email></author><generator>Sandra.Snow Atom Generator</generator><link rel="alternate" href="http://pxtl.ca/feed.xml" /><link rel="self" type="text/html" title="Pxtl.ca" href="http://pxtl.ca/feed.xml" /><entry><id>http://pxtl.ca/2023/12/13/bluesky-api/</id><title type="text">Bluesky API</title><summary type="html">&lt;p&gt;Personally in the post-Muskening twitter world, I'm pulling for
+&lt;a href="https://mastodon.social/pxtl"&gt;Mastodon&lt;/a&gt;, but &lt;a href="https://bsky.app"&gt;Bluesky&lt;/a&gt; is a
+somewhat interesting platform too.  One feature of Bluesky that stands out is
+that you can set your name to be based on a domain-name you own.  I own Pxtl.ca,
+so I thought I'd take a crack at leveraging that feature.&lt;/p&gt;
+
+&lt;p&gt;What follows is a guide on how to do this in Powershell, which is a programming
+language you &lt;em&gt;already have installed&lt;/em&gt; if you use Windows.&lt;/p&gt;
+
+</summary><published>2023-12-13T00:00:00Z</published><updated>2023-12-13T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2023/12/13/bluesky-api/" /><content type="html">&lt;p&gt;Personally in the post-Muskening twitter world, I'm pulling for
+&lt;a href="https://mastodon.social/pxtl"&gt;Mastodon&lt;/a&gt;, but &lt;a href="https://bsky.app"&gt;Bluesky&lt;/a&gt; is a
+somewhat interesting platform too.  One feature of Bluesky that stands out is
+that you can set your name to be based on a domain-name you own.  I own Pxtl.ca,
+so I thought I'd take a crack at leveraging that feature.&lt;/p&gt;
+
+&lt;p&gt;What follows is a guide on how to do this in Powershell, which is a programming
+language you &lt;em&gt;already have installed&lt;/em&gt; if you use Windows.&lt;/p&gt;
+
+&lt;!--excerpt--&gt;
+
+&lt;h1&gt;Preamble&lt;/h1&gt;
+
+&lt;h2&gt;What you need&lt;/h2&gt;
+
+&lt;p&gt;I'm going to be doing this in Powershell 5.1, which is what's built into
+Windows.  If you're not on Windows or you're a pro-star, you can install
+Powershell 7 on any operating system.&lt;/p&gt;
+
+&lt;p&gt;Second, you need your own domain.  Those cost money annually, but that's how you
+can have your own snazzy site like "Pxtl.ca".  Personally I use Google Domains,
+but sadly this is a sunsetting product so going forwards I'm going to need a new
+service to run my domain-name subscription.&lt;/p&gt;
+
+&lt;h2&gt;Intro to Powershell&lt;/h2&gt;
+
+&lt;p&gt;First up, we open up our Powershell console.  You can type &lt;code&gt;⊞ Win&lt;/code&gt; + &lt;code&gt;R&lt;/code&gt; to
+launch the &lt;strong&gt;run&lt;/strong&gt; menu to access it, and then type "powershell" to use it.  If
+this is your first time running powershell you may need to do some fiddling to
+enable it properly.  This will give you a console to run powershell commands.&lt;/p&gt;
+
+&lt;p&gt;Now, if you're following along and copying and pasting Powershell code from this
+article into your Powershell window, a warning: Copying and pasting code from a
+stranger into your console and running it is very dangerous because a computer
+does what it's told and this stranger may have told your computer to do
+something very bad.  In this situation, I am basically a stranger with candy.&lt;/p&gt;
+
+&lt;p&gt;So, don't ever copy/paste code from an article without fully understanding what
+it does.  So, I'll be explaining everything I do.&lt;/p&gt;
+
+&lt;h1&gt;Logging In to the API&lt;/h1&gt;
+
+&lt;p&gt;We're going to be sending HTTP commands (like your web browser does, but through
+the Powershell console) using a powershell command called &lt;code&gt;Invoke-RestMethod&lt;/code&gt;.
+"Rest" is just a programmer-jargon for "HTTP that uses data structures instead
+of websites".&lt;/p&gt;
+
+&lt;p&gt;So first, we have to create a session in our console that we can use to do
+stuff.  Bluesky/Atproto (their programmer-interface protocol) makes you first
+"login" before you can do stuff.&lt;/p&gt;
+
+&lt;p&gt;So we run the following:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ps
+$sessionResponse = Invoke-RestMethod -Method POST -Uri https://bsky.social/xrpc/com.atproto.server.createSession `
+  -body (@{identifier = 'email@example.com'; password ='PASSWORDGOESHERE'} | ConvertTo-Json) `
+  -ContentType 'application/json'
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where "email@example.com" should be replaced with your own email address
+associated with your Bluesky account (we don't use your username, just the
+email) and PASSWORDGOESHERE is, obviously, your Bluesky password.  If your password
+contains a ' char, you'll have to escape it.&lt;/p&gt;
+
+&lt;p&gt;So, what this does: We're using Invoke-RestMethod to send a POST action (like
+submitting a form on a website) to the url
+&lt;a href="https://bsky.social/xrpc/com.atproto.server.createSession"&gt;https://bsky.social/xrpc/com.atproto.server.createSession&lt;/a&gt;.
+We know that the target is trustworthy with your Bluesky password because it's
+in the "bsky.social" domain -- that is, we're sending your password to Bluesky,
+not to some stranger.&lt;/p&gt;
+
+&lt;p&gt;The little backtick at the end of the line is just the simplest way to do
+multi-line commands in Powershell.  The backtick-line-continuation is considered
+bad form by Powershell people but Powershell is a bad language so imho turnabout
+is fair play.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;-body&lt;/code&gt; parameter is the body of data we're sending to Bluesky.
+&lt;code&gt;@{identifier = 'email@example.com'; password ='PASSWORDGOESHERE'}&lt;/code&gt; is a
+Powershell object we're building with the login and password, and then we're
+piping it into &lt;code&gt;| ConvertTo-Json&lt;/code&gt; to turn it into the JSON text format so it can
+be sent over the wire to Bluesky.&lt;/p&gt;
+
+&lt;p&gt;Finally we let Bluesky know we're sending it as JSON with the parameter
+&lt;code&gt;-ContentType 'application/json'&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;And we store the result of this command into &lt;code&gt;$sessionResponse&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2&gt;Inspecting the Result&lt;/h2&gt;
+
+&lt;p&gt;You can inspect &lt;code&gt;$sessionResponse&lt;/code&gt; by just running &lt;code&gt;$sessionResponse&lt;/code&gt; in your
+Powershell console.  You'll see an object with several members like &lt;code&gt;did&lt;/code&gt; and
+&lt;code&gt;handle&lt;/code&gt; and &lt;code&gt;email&lt;/code&gt; and &lt;code&gt;accessJwt&lt;/code&gt;.  The important bits of data we need going
+forwards are &lt;code&gt;did&lt;/code&gt;, which is your true user-account-ID in Bluesky, and
+&lt;code&gt;accessJwt&lt;/code&gt;, which is the temporary super-long secret code we use going forwards
+to do other commands.&lt;/p&gt;
+
+&lt;p&gt;Now, the &lt;code&gt;accessJwt&lt;/code&gt; code is short-lived (a few minutes) before the Bluesky
+server decides it doesn't like it anymore, so going forwards you might have to
+re-run the &lt;code&gt;createSession&lt;/code&gt; command above to get a new one if commands start
+failing and complaining about security.&lt;/p&gt;
+
+&lt;h1&gt;Creating the Domain Record&lt;/h1&gt;
+
+&lt;p&gt;Okay, so we've proven to Bluesky that we are who we say we are, but how do we
+prove to Bluesky that we own the domain?  I mean, I could say I'm google.com or
+whatever if they don't check.  But they check.&lt;/p&gt;
+
+&lt;p&gt;So, let's say you own "mydomain.com".  You'll have to go into your domain
+registrar's website and create a new TXT record on "mydomain.com" that proves to
+Bluesky you own it.  So get the &lt;code&gt;did&lt;/code&gt; value from &lt;code&gt;$sessionResponse&lt;/code&gt; by typing
+&lt;code&gt;$sessionResponse.did&lt;/code&gt;.  For example, my &lt;code&gt;did&lt;/code&gt; value is
+&lt;code&gt;did:plc:otu6mg5xkk47y3ghqpq2w3oo&lt;/code&gt; (this isn't a secret it's fine that you know
+that).&lt;/p&gt;
+
+&lt;p&gt;Create a new TXT record on "mydomain.com" called "&lt;em&gt;atproto", and give it a value
+of &lt;code&gt;did=YOURDIDGOESHERE&lt;/code&gt;.  So for me, I created "&lt;/em&gt;atproto" as a TXT record with
+the value &lt;code&gt;did=did:plc:otu6mg5xkk47y3ghqpq2w3oo&lt;/code&gt;.  Yes it's weirdly
+double-barreled with the did=did part.  This is fine.&lt;/p&gt;
+
+&lt;p&gt;If you want your name to be some subdomain of your domain, you can even make
+"&lt;em&gt;atproto.somesubdomain".  I tried this out by making "&lt;/em&gt;atproto.martin" so I
+could be "@martin.pxtl.ca".  This is great if you're running an organization and
+you've got many users on that domain - you can create one TXT record per-user,
+each with their own subdomain, so like if my son got his own Bluesky account (it would have a different &lt;code&gt;did&lt;/code&gt;) I
+could give him "_atproto.gooseguy" so he'd be "@gooseguy.pxtl.ca".&lt;/p&gt;
+
+&lt;h2&gt;Testing the Domain Record&lt;/h2&gt;
+
+&lt;p&gt;Once the domain record has been created, you can test that it exists with the Powershell command &lt;code&gt;Resolve-DnsName&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;So, to test it, mash together the TXT record's host name and your domain name, and call it as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ps
+Resolve-DnsName _atproto.mydomain.ca
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;So for example for my "@martin.pxtl.ca" name, it would be, &lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ps
+Resolve-DnsName _atproto.martin.pxtl.ca
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;If you get a result talking about the domain and servers and authorities?  It
+worked.  If you get ugly red error messages, it didn't.  That might mean you
+screwed up, or it just hasn't propagated yet (DNS/domain updates can be slow,
+give it a few more minutes).&lt;/p&gt;
+
+&lt;h1&gt;Updating your Username&lt;/h1&gt;
+
+&lt;p&gt;Finally, now that we can log into Bluesky and we've created proof for Bluesky
+that we own the domain, we can tell Bluesky to change our name to match our
+domain.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ps
+Invoke-RestMethod `
+  -Method POST `
+  -Uri https://bsky.social/xrpc/com.atproto.identity.updateHandle `
+  -Headers @{Authorization = "Bearer $($sessionResponse.accessJwt)"} `
+  -Body (@{handle ='mydomain.ca'} | ConvertTo-Json) `
+  -ContentType 'application/json'
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;So again, we're doing an HTTP POST to "bsky.social", but this time we're calling
+&lt;code&gt;updateHandle&lt;/code&gt; instead of &lt;code&gt;createSession&lt;/code&gt;.  Since we've already &lt;em&gt;got&lt;/em&gt; the
+session, we need to reference a token (that short-lived secret I mentioned
+before) to let them know "yes, I'm still the person you were talking to
+earlier".  So we use the parameter &lt;code&gt;-Headers @{Authorization = "Bearer
+$($sessionResponse.accessJwt)"}&lt;/code&gt; which adds the &lt;code&gt;accessJwt&lt;/code&gt; token to this
+request as an &lt;code&gt;Authorization&lt;/code&gt; header entry.&lt;/p&gt;
+
+&lt;p&gt;Again, we're doing a JSON body, but this time the body is just a single entry in
+the object "handle".  That should match the @ handle you're trying to get, the
+same one you created a TXT entry for - like, since I did both
+&lt;code&gt;_atproto.martin.pxtl.ca&lt;/code&gt; and &lt;code&gt;_atproto.pxtl.ca&lt;/code&gt;, I can do either
+&lt;code&gt;handle='pxtl.ca'&lt;/code&gt; or &lt;code&gt;handle=martin.pxtl.ca&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;This action won't send any result if it works.  It will only give you feedback
+if it fails.&lt;/p&gt;
+
+&lt;p&gt;So, check your Bluesky account.  There will be errors for a minute or so, but
+your user handle should be updated to match your domain.&lt;/p&gt;
+
+&lt;h1&gt;TL;DR&lt;/h1&gt;
+
+&lt;p&gt;To review, in Powershell:&lt;/p&gt;
+
+&lt;p&gt;Run&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ps
+$sessionResponse = Invoke-RestMethod -Method POST -Uri https://bsky.social/xrpc/com.atproto.server.createSession `
+  -body (@{identifier = 'email@example.com'; password ='PASSWORDGOESHERE'} | ConvertTo-Json) `
+  -ContentType 'application/json'
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;with your bluesky email and password.&lt;/p&gt;
+
+&lt;p&gt;Get &lt;code&gt;$sessionResponse.did&lt;/code&gt; and use that when you create a new TXT record on
+"yourdomain.com" called "&lt;em&gt;atproto", and give it a value of
+&lt;code&gt;did=YOURDIDGOESHERE&lt;/code&gt;.  If you want to use a subdomain of "yourdomain.com"
+because you feel like it or you've got friends who want to use the same domain,
+you can make "&lt;/em&gt;atproto.mysubmodmain" to get that.&lt;/p&gt;
+
+&lt;p&gt;Now, let Bluesky know about it by calling&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;ps
+Invoke-RestMethod `
+  -Method POST `
+  -Uri https://bsky.social/xrpc/com.atproto.identity.updateHandle `
+  -Headers @{Authorization = "Bearer $($sessionResponse.accessJwt)"} `
+  -Body (@{handle ='yourdomain.com'} | ConvertTo-Json) `
+  -ContentType 'application/json'
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;or whatever your domain (or subdomain or whatever) is.&lt;/p&gt;
+
+&lt;p&gt;Questions?  Scroll up to the detailed part.  Don't @ me.&lt;/p&gt;
+</content></entry><entry><id>http://pxtl.ca/2023/11/17/github-ci/</id><title type="text">Github CI</title><summary type="html">&lt;p&gt;Well, it took longer than I would've liked but I got Github CI working with this
 blog! Finally learned how to use Github workflows.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href="https://github.com/Pxtl/Sandra.Snow/tree/master/.github/workflows"&gt;Workflow files are
@@ -1096,25 +1321,4 @@ the Fediverse network Mastodon's servers run on.&lt;/p&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;I'm at &lt;a href="https://mastodon.social/@Pxtl"&gt;@Pxtl@Mastodon.Social&lt;/a&gt;&lt;/p&gt;
-</content></entry><entry><id>http://pxtl.ca/2022/05/18/alcohol-in-parks/</id><title type="text">Alcohol in parks letter</title><summary type="html">&lt;p&gt;Text of an email I sent to council today, after they discovered we don't have an "alcohol in parks bylaw" and Ward 8 councilor JP Danko motioned looking into responsible ways to allow it.&lt;/p&gt;
-
-</summary><published>2022-05-18T00:00:00Z</published><updated>2022-05-18T00:00:00Z</updated><link rel="alternate" href="http://pxtl.ca/2022/05/18/alcohol-in-parks/" /><content type="html">&lt;p&gt;Text of an email I sent to council today, after they discovered we don't have an "alcohol in parks bylaw" and Ward 8 councilor JP Danko motioned looking into responsible ways to allow it.&lt;/p&gt;
-
-&lt;!--excerpt--&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;Councilor Wilson, Councilor Danko, Mr Mayor,&lt;/p&gt;
-
-&lt;p&gt;I'm writing to voice my support for opening up Hamilton city parks to drinking, and to thank councilor Danko for opening this subject up for study. I think we should be collectively ashamed that we didn't properly move on this in 2020 when COVID shutdown orders effectively declared that anybody who didn't have access to a private yard was effectively banned from socializing over drinks.&lt;/p&gt;
-
-&lt;p&gt;Ontario's puritanical attitude towards drinking only seems normal to people who don't travel enough to see other places where enjoying a drink out in public is normal and fine. It's time to begin relaxing these rules and allowing responsible consumption.  The Quebec approach (with a meal, daytime-only) seems perfectly reasonable, for example.&lt;/p&gt;
-
-&lt;p&gt;And to those who worry about garbage: picnics also cause garbage. Sports events cause garbage. &lt;em&gt;Use&lt;/em&gt; causes garbage. Too many people see the city's parks as extensions of their private gardens, meant only to be observed. Parks were meant to be enjoyed, and this program would offer a new way to do so.&lt;/p&gt;
-
-&lt;p&gt;Thanks for your time,&lt;/p&gt;
-
-&lt;p&gt;Martin Zarate&lt;/p&gt;
-
-&lt;p&gt;Ward 1 resident&lt;/p&gt;
 </content></entry></feed>
