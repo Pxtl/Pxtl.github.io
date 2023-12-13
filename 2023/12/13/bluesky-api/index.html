@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="last-modified" content="2023-12-13T19:50:15.0232531+00:00" />
+    <meta http-equiv="last-modified" content="2023-12-13T20:18:32.4753133+00:00" />
     <meta name="keywords" content="" />
     <title>Bluesky API • Pxtl.ca</title>
     <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
@@ -54,10 +54,11 @@
     
         
     <p>Personally in the post-Muskening twitter world, I'm pulling for
-<a href="https://mastodon.social/@pxtl">Mastodon</a>, but <a href="https://bsky.app">Bluesky</a> is a
-somewhat interesting platform too.  One feature of Bluesky that stands out is
-that you can set your name to be based on a domain-name you own.  I own Pxtl.ca,
-so I thought I'd take a crack at leveraging that feature.</p>
+<a href="https://mastodon.social/@pxtl">Mastodon</a>, but
+<a href="https://bsky.app/profile/pxtl.ca">Bluesky</a> is a somewhat interesting platform
+too.  One feature of Bluesky that stands out is that you can set your name to be
+based on a domain-name you own.  I own Pxtl.ca, so I thought I'd take a crack at
+leveraging that feature.</p>
 
 <p>What follows is a guide on how to do this in Powershell, which is a programming
 language you <em>already have installed</em> if you use Windows.</p>
@@ -106,16 +107,15 @@ stuff.  Bluesky/Atproto (their programmer-interface protocol) makes you first
 
 <p>So we run the following:</p>
 
-<p><code>ps
-$sessionResponse = Invoke-RestMethod -Method POST -Uri https://bsky.social/xrpc/com.atproto.server.createSession `
-  -body (@{identifier = 'email@example.com'; password ='PASSWORDGOESHERE'} | ConvertTo-Json) `
-  -ContentType 'application/json'
-</code></p>
+<pre><code>$sessionResponse = Invoke-RestMethod -Method POST -Uri https://bsky.social/xrpc/com.atproto.server.createSession `
+    -body (@{identifier = 'email@example.com'; password ='PASSWORDGOESHERE'} | ConvertTo-Json) `
+    -ContentType 'application/json'
+</code></pre>
 
 <p>Where "email@example.com" should be replaced with your own email address
 associated with your Bluesky account (we don't use your username, just the
-email) and PASSWORDGOESHERE is, obviously, your Bluesky password.  If your password
-contains a ' char, you'll have to escape it.</p>
+email) and PASSWORDGOESHERE is, obviously, your Bluesky password.  If your
+password contains a ' char, you'll have to escape it.</p>
 
 <p>So, what this does: We're using Invoke-RestMethod to send a POST action (like
 submitting a form on a website) to the url
@@ -176,24 +176,25 @@ double-barreled with the did=did part.  This is fine.</p>
 "<em>atproto.somesubdomain".  I tried this out by making "</em>atproto.martin" so I
 could be "@martin.pxtl.ca".  This is great if you're running an organization and
 you've got many users on that domain - you can create one TXT record per-user,
-each with their own subdomain, so like if my son got his own Bluesky account (it would have a different <code>did</code>) I
-could give him "_atproto.gooseguy" so he'd be "@gooseguy.pxtl.ca".</p>
+each with their own subdomain, so like if my son got his own Bluesky account (it
+would have a different <code>did</code>) I could give him "_atproto.gooseguy" so he'd be
+"@gooseguy.pxtl.ca".</p>
 
 <h2>Testing the Domain Record</h2>
 
-<p>Once the domain record has been created, you can test that it exists with the Powershell command <code>Resolve-DnsName</code></p>
+<p>Once the domain record has been created, you can test that it exists with the
+Powershell command <code>Resolve-DnsName</code></p>
 
-<p>So, to test it, mash together the TXT record's host name and your domain name, and call it as follows:</p>
+<p>So, to test it, mash together the TXT record's host name and your domain name,
+and call it as follows:</p>
 
-<p><code>ps
-Resolve-DnsName _atproto.mydomain.ca
-</code></p>
+<pre><code>Resolve-DnsName _atproto.mydomain.ca
+</code></pre>
 
 <p>So for example for my "@martin.pxtl.ca" name, it would be, </p>
 
-<p><code>ps
-Resolve-DnsName _atproto.martin.pxtl.ca
-</code></p>
+<pre><code>Resolve-DnsName _atproto.martin.pxtl.ca
+</code></pre>
 
 <p>If you get a result talking about the domain and servers and authorities?  It
 worked.  If you get ugly red error messages, it didn't.  That might mean you
@@ -206,14 +207,13 @@ give it a few more minutes).</p>
 that we own the domain, we can tell Bluesky to change our name to match our
 domain.</p>
 
-<p><code>ps
-Invoke-RestMethod `
-  -Method POST `
-  -Uri https://bsky.social/xrpc/com.atproto.identity.updateHandle `
-  -Headers @{Authorization = "Bearer $($sessionResponse.accessJwt)"} `
-  -Body (@{handle ='mydomain.ca'} | ConvertTo-Json) `
-  -ContentType 'application/json'
-</code></p>
+<pre><code>Invoke-RestMethod `
+    -Method POST `
+    -Uri https://bsky.social/xrpc/com.atproto.identity.updateHandle `
+    -Headers @{Authorization = "Bearer $($sessionResponse.accessJwt)"} `
+    -Body (@{handle ='mydomain.ca'} | ConvertTo-Json) `
+    -ContentType 'application/json'
+</code></pre>
 
 <p>So again, we're doing an HTTP POST to "bsky.social", but this time we're calling
 <code>updateHandle</code> instead of <code>createSession</code>.  Since we've already <em>got</em> the
@@ -241,11 +241,10 @@ your user handle should be updated to match your domain.</p>
 
 <p>Run</p>
 
-<p><code>ps
-$sessionResponse = Invoke-RestMethod -Method POST -Uri https://bsky.social/xrpc/com.atproto.server.createSession `
-  -body (@{identifier = 'email@example.com'; password ='PASSWORDGOESHERE'} | ConvertTo-Json) `
-  -ContentType 'application/json'
-</code></p>
+<pre><code>$sessionResponse = Invoke-RestMethod -Method POST -Uri https://bsky.social/xrpc/com.atproto.server.createSession `
+    -body (@{identifier = 'email@example.com'; password ='PASSWORDGOESHERE'} | ConvertTo-Json) `
+    -ContentType 'application/json'
+</code></pre>
 
 <p>with your bluesky email and password.</p>
 
@@ -257,14 +256,13 @@ you can make "</em>atproto.mysubmodmain" to get that.</p>
 
 <p>Now, let Bluesky know about it by calling</p>
 
-<p><code>ps
-Invoke-RestMethod `
-  -Method POST `
-  -Uri https://bsky.social/xrpc/com.atproto.identity.updateHandle `
-  -Headers @{Authorization = "Bearer $($sessionResponse.accessJwt)"} `
-  -Body (@{handle ='yourdomain.com'} | ConvertTo-Json) `
-  -ContentType 'application/json'
-</code></p>
+<pre><code>Invoke-RestMethod `
+    -Method POST `
+    -Uri https://bsky.social/xrpc/com.atproto.identity.updateHandle `
+    -Headers @{Authorization = "Bearer $($sessionResponse.accessJwt)"} `
+    -Body (@{handle ='yourdomain.com'} | ConvertTo-Json) `
+    -ContentType 'application/json'
+</code></pre>
 
 <p>or whatever your domain (or subdomain or whatever) is.</p>
 
